@@ -1,0 +1,978 @@
+body {
+  width: 100%;
+  margin: 0px;
+}
+#navBar {
+  position: fixed;
+  padding: 10px 3px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 9fr 1fr 1fr 1fr 1fr 1fr 5fr;
+  grid-gap: 3px;
+  text-align: center;
+  background-color: rgb(43, 43, 49);
+  width: 100%;
+  z-index: 9999;
+}
+
+#btnFixed {
+  position: fixed;
+  color: rgb(172, 76, 76);
+  padding-top: 10px;
+  padding-left: 10px;
+}
+#btnFixed:hover {
+  position: fixed;
+  color: rgb(211, 119, 119);
+}
+#celaGlavna {
+  background-image: url(img/pozadina2.png);
+  background-size: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+#slogan {
+  border-top: rgb(236, 236, 236) solid 2px;
+  width: 56%;
+  margin: auto;
+  margin-top: 55px;
+  font-family: "font";
+  text-align: justify;
+  font-size: 17px;
+}
+#slogan h4 {
+  font-family: "font";
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  margin-top: -20px;
+  margin-left: 5%;
+  margin-bottom: 0px;
+}
+#slogan img {
+  width: 150px;
+}
+
+#slogan h2 {
+  font-family: "font";
+  font-size: 50px;
+  color: brown;
+  margin: 1% 0;
+}
+@font-face {
+  font-family: "font";
+  src: url(font/font.ttf);
+}
+@font-face {
+  font-family: "OSC";
+  src: url(font/OSC.ttf);
+}
+
+#oNama h1,
+h1 {
+  font-family: "font";
+  font-size: 60px;
+  color: brown;
+}
+#oNama p {
+  font-family: "font";
+  width: 350px;
+  font-size: 25px;
+}
+#tekst {
+  font-family: "font";
+  position: left;
+  width: 50%;
+}
+h3,
+h1,
+h4 {
+  font-family: "font";
+  color: white;
+}
+p {
+  font-family: "font";
+  color: white;
+  margin-bottom: 90px;
+}
+
+button {
+  font-family: "font";
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: 0px;
+  padding-bottom: 25px;
+  font-size: 16px;
+}
+
+button:focus {
+  outline: 0;
+}
+#navBar button {
+  font-family: "font";
+  color: rgb(255, 255, 255);
+  background-color: rgb(43, 43, 49);
+  padding: 9px;
+  border: 0px;
+
+  font-size: 16px;
+}
+
+#navBar button:hover {
+  font-family: "font";
+
+  border: 0px;
+  color: brown;
+}
+#img1 {
+  height: 36px;
+  width: 100%;
+}
+
+#img2 {
+  height: 100%;
+  width: 30px;
+}
+#demo {
+  margin-top: 20px;
+  width: 30%;
+  margin: auto;
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 10px;
+}
+#rez {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: rgb(255, 255, 255) solid 2px;
+  padding: 10px;
+}
+table {
+  background-color: rgb(121, 39, 50);
+  color: rgb(255, 210, 210);
+  margin: auto;
+  text-align: center;
+}
+table tr td {
+  border: 1px solid rgb(196, 88, 88);
+  padding: 5px;
+}
+table tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  border: 3px solid rgb(211, 59, 59);
+  padding: 5px;
+
+  margin: 10px;
+}
+table button {
+  background-color: rgb(139, 47, 59);
+  padding: 10px;
+}
+table button:hover {
+  background-color: rgb(151, 51, 64);
+}
+#termini {
+  text-align: center;
+  background-color: rgb(121, 39, 50);
+  color: rgb(255, 196, 196);
+  padding: 5px;
+}
+#red {
+  color: rgb(255, 68, 68);
+}
+#rezTermini {
+  background-color: rgb(133, 55, 65);
+  padding: 10px;
+  color: white;
+  width: 100px;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+  opacity: 0.5;
+}
+#rezTermini:hover {
+  background-color: rgb(134, 63, 72);
+  opacity: 0.9;
+}
+#green {
+  color: rgb(195, 255, 0);
+}
+.eng-word {
+  font-weight: bold;
+  font-family: OSC;
+}
+#login {
+  width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  background-color: rgb(121, 39, 50);
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  border-radius: 25px;
+}
+#login input {
+  width: 75%;
+  height: 30px;
+}
+
+
+.small-letter {
+  font-size:20px;
+}
+#langChange {
+  font-size:3px;
+  margin-top:1px;
+  position: fixed;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  font-family:Arial, Helvetica, sans-serif;
+}
+#langChange input {
+  height: 20px;
+}
+#langChange span  {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.801);
+  margin: 5px;
+}
+
+
+
+@media (min-width: 810px) {
+  #oNama {
+    font-family: "font";
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 7em;
+    width: 56%;
+    margin: auto;
+    padding-top: 30px;
+  }
+}
+
+#oNama img {
+  width: 78%;
+  height: 70%;
+}
+#oNama p {
+  font-family: "font";
+  color: brown;
+  text-align: justify;
+}
+#oNama #boxKontakt {
+  font-family: "font";
+  background-color: rgb(121, 39, 50);
+  margin-top: -180px;
+  margin-bottom: 15px;
+  height: 380px;
+  width: 78%;
+  padding: 25px;
+  font-size: 15px;
+  color: white;
+}
+#kontaktBtn {
+  font-family: "font";
+  border: white solid 3px;
+  text-align: center;
+  padding: 15px;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  width: 50%;
+  height: 50px;
+}
+#kontaktBtn:hover {
+  font-family: "font";
+  background-color: rgb(143, 53, 65);
+  text-align: center;
+  padding: 15px;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  width: 50%;
+  height: 50px;
+}
+#boxKontakt p {
+  font-family: "font";
+  padding: 5px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  color: white;
+  font-size: 15px;
+}
+#map a {
+  color: white;
+}
+#map a:hover {
+  color: rgb(158, 63, 63);
+}
+#boxKontakt h5 {
+  font-family: "font";
+  font-size: 15px;
+  color: white;
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
+#boxKontakt h4 {
+  font-family: "font";
+  font-size: 20px;
+  color: white;
+  margin-top: 5px;
+  padding: 5px;
+  margin-bottom: 3px;
+}
+#boxKontakt h3 {
+  font-family: "font";
+  font-size: 25px;
+  color: white;
+  margin-top: 5px;
+  padding: 5px;
+  margin-bottom: 3px;
+}
+#nasiRadovi {
+  font-family: "font";
+  background-image: url(img/pozadina.png);
+  width: 100%;
+  background-size:cover;
+  padding-bottom:30px;
+  margin: auto;
+  text-align: center;
+}
+#nasiRadovi h4 {
+  font-size: 20px;
+}
+.slider-nav {
+  height:100px ;
+  width: 80%;
+}
+.slider-nav img{
+  height: 90px ;
+  outline:none;
+  text-decoration: none;
+}
+.slider-for .slick-current {
+max-height: 500px;
+width: fit-content;
+object-fit: contain;
+outline:none;
+text-decoration: none;
+}
+.slick-list {
+  height:  500px;
+}
+.slick-track img {
+  margin: 15px 5px;
+}
+/* .slideshow-container {
+  width: 40%;
+  height: 255px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  margin: auto;
+} */
+#box1,
+#box2,
+#box3,
+#box4 {
+  font-family: "font";
+  background-color: rgb(46, 44, 44);
+  height: 105px;
+  width: 105px;
+}
+#box1 img,
+#box2 img,
+#box3 img,
+#box4 img {
+  height: 105px;
+  width: 105px;
+  opacity: 0.6;
+}
+#box1 img:hover {
+  opacity: 0.9;
+}
+#btnLeft,
+#btnRight {
+  margin-top: 0px;
+}
+#btnLeft:hover,
+#btnRight:hover {
+  color: brown;
+}
+#cenovnik {
+  font-family: "font";
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 50fr 1fr;
+  grid-gap: 10px;
+  background-image: url(img/img3.png);
+  background-position-y: 190px;
+}
+#cenovnik img {
+  width: 40px;
+  height: 100%;
+}
+#cene {
+  font-family: "font";
+  color: brown;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#cene h4 {
+  font-family: "font";
+  color: brown;
+  width: 33%;
+  margin: auto;
+}
+#cene h2 {
+  font-family: "font";
+  color: brown;
+  font-size: 30px;
+  text-align: justify;
+  margin: auto;
+  width: 29%;
+
+  margin-top: 20px;
+}
+#cene h1 {
+  font-family: "font";
+  background-color: rgba(255, 255, 255, 0.924);
+  color: brown;
+  width: 101%;
+  padding: 40px;
+  margin-top: 0px;
+  margin-left: -10px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding-top: 65px;
+  margin: auto;
+}
+
+#ceneSisanja {
+  font-family: "font";
+  font-size: 30px;
+}
+#zakazivanje {
+  font-family: "font";
+  background-color: rgb(121, 39, 50);
+  margin-top: -50px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+#zakazivanje h1 {
+  font-family: "font";
+  padding: 20px;
+  margin-bottom: 0px;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+#zakazivanje p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: rgb(207, 104, 104);
+  width: 70%;
+  margin: auto;
+}
+#zakaziOvde:hover {
+  color: rgb(197, 106, 106);
+}
+input {
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  text-align: center;
+}
+
+select {
+  width: 100%;
+  height: 53px;
+  font-size: 18px;
+  text-align: center;
+}
+#inputBoxes {
+  margin: auto;
+  text-align: justify;
+  width: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+#zakazivanje button {
+  font-family: "font";
+  padding: 20px 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  color: brown;
+  width: 200px;
+  font-size: 20px;
+}
+#zakazivanje button:hover {
+  background-color: rgb(231, 222, 222);
+}
+#footer {
+  font-family: "font";
+  background-color: rgb(16, 15, 22);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#footer h2 {
+  color: white;
+  font-size: 25px;
+}
+#footer button {
+  border: solid 2px white;
+  padding: 10px 20px;
+  margin-bottom: 50px;
+}
+#footer button:hover {
+  border: solid 2px white;
+  padding: 10px 20px;
+  background-color: rgb(27, 26, 37);
+}
+#footer i {
+  color: white;
+}
+
+#footer div {
+  margin: auto;
+  margin-top: 10px;
+}
+
+#vidiNaMapi a {
+  text-decoration: none;
+  color: rgb(243, 182, 182);
+}
+#vidiNaMapi a:hover {
+  text-decoration: none;
+  color: rgb(235, 98, 98);
+}
+#copyright {
+  font-family: sans-serif;
+  margin-bottom: 1px;
+  color: rgb(41, 38, 53);
+}
+#pAdresa {
+  margin-bottom: 40px;
+}
+#dMreze p {
+  margin-bottom: 60px;
+}
+@media (max-width: 1711px) {
+  #cene h2 {
+    width: 40%;
+  }
+  #cene h4 {
+    width: 40%;
+  }
+  #slogan h4 {
+    margin-left: 6%;
+  }
+}
+@media (max-width: 1431px) {
+  #cene h2 {
+    width: 43%;
+  }
+  #cene h4 {
+    width: 43%;
+    text-align: justify;
+  }
+
+  #nasiRadovi {
+    background-size: 150%;
+    background-position: center;
+  }
+  #slogan h4 {
+    margin-left: 7%;
+  }
+}
+@media (max-width: 1174px) {
+  #cene h2 {
+    width: 60%;
+  }
+  #navBar button {
+    width: 70px;
+  }
+  #cene h4 {
+    width: 60%;
+  }
+  #celaGlavna {
+    background-size: 150%;
+  }
+  #slogan h4 {
+    margin-left: 8%;
+  }
+}
+@media (max-width: 999px) {
+  #cene h2 {
+    width: 60%;
+  }
+  #cene h4 {
+    width: 60%;
+  }
+
+  #nasiRadovi {
+    background-size: 180%;
+    background-position: center;
+  }
+  #celaGlavna {
+    background-image: url(img/pozadina2.png);
+    background-size: 200%;
+    text-align: center;
+  }
+
+  #navBar {
+    margin: auto;
+  }
+  #slogan {
+    border-top: rgb(236, 236, 236) solid 2px;
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: "font";
+    text-align: justify;
+    font-size: 17px;
+    color: blue;
+  }
+  #slogan h4 {
+    font-family: "font";
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    margin-top: -15px;
+    margin-left: 45%;
+    margin-bottom: 5px;
+  }
+  #slogan img {
+    width: 150px;
+    margin: auto;
+  }
+
+  #slogan h2 {
+    font-family: "font";
+    font-size: 40px;
+    color: brown;
+    margin: auto;
+  }
+  #tekst {
+    font-family: "font";
+    margin: auto;
+    width: 90%;
+  }
+
+  #oNama {
+    font-family: "font";
+
+    width: 77%;
+    padding-top: 30px;
+  }
+
+  #oNama #boxKontakt {
+    margin-top: 0px;
+  }
+
+  #nasiRadovi {
+    background-size: 300%;
+    background-position: center;
+  }
+
+  #box1:hover {
+    background-color: rgb(87, 82, 82);
+    height: 105px;
+    width: 105px;
+  }
+
+  #footer {
+    font-family: "font";
+    background-color: rgb(16, 15, 22);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+  }
+  #demo {
+    margin-top: 20px;
+    width: 60%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+  #rez {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border: rgb(255, 255, 255) solid 2px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 810px) {
+  #oNama {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1px;
+    text-align: center;
+    padding-top: 30px;
+    width: 55%;
+    margin: auto;
+  }
+  #oNama div {
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
+  }
+  #cene {
+    text-align: center;
+  }
+
+  #slika1 #kontaktBtn {
+    padding-bottom: 15px;
+    margin-top: 15px;
+  }
+  #inputBoxes {
+    margin: auto;
+    text-align: justify;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  #demo {
+    margin-top: 20px;
+    width: 60%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+  #rez {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border: rgb(255, 255, 255) solid 2px;
+    padding: 10px;
+  }
+  #footer {
+    font-size: 15px;
+  }
+  #copyright {
+    font-size: 11px;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+  }
+  #celaGlavna {
+    background-size: 260%;
+  }
+
+  #navBar button {
+    width: 70px;
+  }
+  #cene {
+    text-align: center;
+  }
+
+  #cene h4 {
+    font-family: "font";
+    color: brown;
+    width: 100%;
+    font-size: 12px;
+  }
+  #cene h2 {
+    font-family: "font";
+    color: brown;
+    font-size: 30px;
+    margin-left: 0px;
+    width: 33%;
+    margin-top: 20px;
+  }
+  #cene h1 {
+    padding: 60px 20px;
+  }
+
+  #ceneSisanja {
+    font-family: "font";
+    font-size: 15px;
+  }
+  #slogan h4 {
+    margin-left: 41%;
+  }
+  #slika1 #kontaktBtn {
+    padding-bottom: 15px;
+    margin-top: 15px;
+  }
+  #oNama {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1px;
+    text-align: center;
+    padding-top: 30px;
+    width: 80%;
+    margin: auto;
+  }
+  #oNama div {
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
+  }
+  #footer {
+    font-size: 15px;
+  }
+  #copyright {
+    font-size: 11px;
+  }
+}
+@media (min-width: 2400px) {
+  #boxKontakt {
+    color: red;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 94.7%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.slideshow-container img {
+  height: 300px;
+}
+button #rezBtn {
+  margin: auto;
+  text-align: center;
+  padding: 2px;
+}
+#addImg {
+  background-color: rgb(121, 39, 50);
+  width: 35%;
+  margin: auto;
+  padding-top: 45px;
+  display: none;
+  font-family: "font";
+  text-align: center;
+  color: white;
+}
+#addBtn {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#addBtn:hover {
+  background-color: rgb(153, 51, 64);
+}
+#addImg input {
+  font-size: 12px;
+}
+#removeImg:hover{
+color: rgb(252, 103, 103);
+}
