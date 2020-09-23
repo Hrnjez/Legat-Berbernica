@@ -82,7 +82,8 @@ h1 {
 #tekst {
   font-family: "font";
   position: left;
-  width: 50%;
+  width: 40%;
+  font-size: 18px;
 }
 h3,
 h1,
