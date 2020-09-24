@@ -369,6 +369,7 @@ table button:hover {
 .slider-nav {
   height:100px ;
   width: 80%;
+  cursor: grab;
 }
 .slider-nav img{
   height: 90px ;
@@ -381,6 +382,7 @@ width: fit-content;
 object-fit: contain;
 outline:none;
 text-decoration: none;
+cursor: grab;
 }
 .slick-list {
   height:  500px;
