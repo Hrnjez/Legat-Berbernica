@@ -19,7 +19,9 @@ $(document).ready(function () {
         radnoVreme: 'Radno vreme',
         radnoVremePonPet: 'Ponedeqak - Petak ..11:00 - 21:00',
         radnoVremeSub: 'Subota .............10:00 - 16:00',
-        rezBtn: 'Rezervacija'
+        rezBtn: 'Rezervacija',
+        nasiRadoviH1: 'NA[I RADOVI',
+        nasiRadoviH4: 'Neki od na{ih zadovoqnih klijenata'
 
       }
     
@@ -42,7 +44,10 @@ $(document).ready(function () {
         radnoVreme: 'Working time',
         radnoVremePonPet: 'Monday - Friday ..11:00 - 21:00',
         radnoVremeSub: 'Saturday .............10:00 - 16:00',
-        rezBtn: 'Reservation'
+        rezBtn: 'Reservation',
+        nasiRadoviH1: 'Our Work',
+        nasiRadoviH4: 'Some of our satisfied customers'
+
     }
     
     $('#srb').on('click',function(){
@@ -83,6 +88,9 @@ $(document).ready(function () {
         <div id="kontaktBtn">
           <button id="rezBtn">${serbianLanguage.rezBtn}</button>
         </div>`);
+        $('#nasiRadovi h1').html(`<h1>${serbianLanguage.nasiRadoviH1}</h1>`);
+        $('#nasiRadovi h4').html(`<h4>${serbianLanguage.nasiRadoviH4}</h4>`);
+       
     });
     $('#eng').on('click',function(){
         $('#btnGlavna').text(`${englishLanguage.glavna}`);
@@ -133,5 +141,9 @@ $(document).ready(function () {
         </div>`);
         $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('font-family','OSC');
         $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('line-height','17px');
+        $('#nasiRadovi h1').html(`<h1>${englishLanguage.nasiRadoviH1}</h1>`);
+        $('#nasiRadovi h4').html(`<h4>${englishLanguage.nasiRadoviH4}</h4>`);
+        $('#nasiRadovi h1, #nasiRadovi h4').css('font-family','OSC');
+        $('#nasiRadovi h1, #nasiRadovi h4').css('margin','30px');
     });
 });

@@ -14,6 +14,27 @@ body {
   width: 100%;
   z-index: 9999;
 }
+#inputBoxes img {
+  border-radius: 300px;
+  border: 5px solid rgb(105, 30, 40);
+  transition: 400ms;
+  margin: auto;
+  background-color: #717171;
+  opacity: 0.5;
+  width:99%;
+  height: 300px;
+}
+#inputBoxes h3 {
+  text-align: center;
+  font-size: 25px;
+  margin:0;
+
+}
+#inputBoxes img:hover {
+  cursor: pointer;
+
+  opacity: 0.9;
+}
 
 #btnFixed {
   position: fixed;
@@ -566,15 +587,22 @@ select {
 #dMreze p {
   margin-bottom: 60px;
 }
+
 @media (max-width: 1711px) {
   #cene h2 {
-    width: 40%;
+    width: 39%;
   }
   #cene h4 {
-    width: 40%;
+    width: 39%;
+    text-align: justify;
+  }
+
+  #nasiRadovi {
+    background-size: 150%;
+    background-position: center;
   }
   #slogan h4 {
-    margin-left: 6%;
+    margin-left: 1%;
   }
 }
 @media (max-width: 1431px) {
@@ -592,6 +620,10 @@ select {
   }
   #slogan h4 {
     margin-left: 7%;
+  }
+  #inputBoxes img {
+
+    height: 200px;
   }
 }
 @media (max-width: 1174px) {
