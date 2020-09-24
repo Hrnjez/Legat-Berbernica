@@ -60,7 +60,7 @@ $(document).ready(function () {
         $('#navBar button').css('font-size','16px');
         $('#slogan').html(`
         <img src="img/legat-logo.png" alt="" />
-        <h4 id="legat">${serbianLanguage.logoTxt}</h4>
+  
         <h2>${serbianLanguage.slogan}</h2>
         <div id="tekst">
           <h3>${serbianLanguage.bradaIFriz}</h3>
@@ -102,7 +102,7 @@ $(document).ready(function () {
         $('#navBar button').css('font-size','15px');
         $('#slogan').html(`
         <img src="img/legat-logo.png" alt="" />
-        <h4 id="legat">${englishLanguage.logoTxt}</h4>
+
         <h2 id="logoH2">${englishLanguage.slogan}</h2>
         <div id="tekst">
           <h3>${englishLanguage.bradaIFriz}</h3>
