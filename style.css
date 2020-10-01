@@ -23,6 +23,10 @@ body {
   opacity: 0.5;
   width:99%;
   height: 300px;
+  background-position:top;
+}
+.active {
+  border: 5px solid rgb(42, 158, 32) !important;
 }
 #inputBoxes h3 {
   text-align: center;
