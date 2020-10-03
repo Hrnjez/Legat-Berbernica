@@ -15,18 +15,31 @@ body {
   z-index: 9999;
 }
 #inputBoxes img {
-  border-radius: 300px;
+  border-radius: 5px; 
   border: 5px solid rgb(105, 30, 40);
   transition: 400ms;
-  margin: auto;
+  margin: 10px auto;
   background-color: #717171;
   opacity: 0.5;
   width:99%;
-  height: 300px;
+  /* height: 300px; */
   background-position:top;
 }
+#inputBoxes .fas{
+  margin-top: 20px;
+  margin-left:-40px;
+  position: absolute;
+  color:rgba(255, 255, 255, 0.101);
+
+}
+#inputBoxes .fas:hover {
+  cursor: pointer;
+}
 .active {
-  border: 5px solid rgb(42, 158, 32) !important;
+  border: 5px solid rgb(58, 104, 47) !important;
+  opacity: 1 !important;
+  color: rgb(58, 104, 47)!important;
+  background: rgba(0,0,0,0);
 }
 #inputBoxes h3 {
   text-align: center;
@@ -629,7 +642,7 @@ select {
   }
   #inputBoxes img {
 
-    height: 200px;
+    /* height: 200px; */
   }
 }
 @media (max-width: 1174px) {
@@ -688,7 +701,7 @@ select {
     margin-bottom: 5px;
   }
   #slogan img {
-    width: 150px;
+    width: 100px;
     margin: auto;
   }
 
@@ -747,6 +760,11 @@ select {
     grid-template-columns: 1fr 3fr;
     border: rgb(255, 255, 255) solid 2px;
     padding: 10px;
+  }
+  #inputBoxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
   }
 }
 
@@ -952,10 +970,6 @@ select {
   transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
-  background-color: #717171;
-}
 
 /* Fading animation */
 .fade {

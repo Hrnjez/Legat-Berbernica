@@ -116,11 +116,15 @@ $(document).ready(function () {
   document.getElementById('cvija').addEventListener('click',birajCviju);
 function birajZabu(){
   $('#zabac').toggleClass('active');
+  $('#zabacCheck').toggleClass('active');
   $('#cvija').removeClass('active');
+  $('#cvijaCheck').removeClass('active');
   }
   function birajCviju(){
     $('#cvija').toggleClass('active');
+    $('#cvijaCheck').toggleClass('active');
     $('#zabac').removeClass('active');
+    $('#zabacCheck').removeClass('active');
     }
 //zakazivanje
   document.getElementById("zakazi").addEventListener("click", zakazivanje);
