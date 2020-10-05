@@ -26,8 +26,8 @@ body {
   background-position:top;
 }
 #inputBoxes .fas{
-  margin-top: 20px;
-  margin-left:-40px;
+  margin-top: 35px;
+  margin-left:-60px;
   position: absolute;
   color:rgba(255, 255, 255, 0.101);
 
@@ -36,9 +36,9 @@ body {
   cursor: pointer;
 }
 .active {
-  border: 5px solid rgb(58, 104, 47) !important;
+  border: 5px solid rgb(41, 59, 138) !important;
   opacity: 1 !important;
-  color: rgb(58, 104, 47)!important;
+  color: rgb(41, 59, 138)!important;
   background: rgba(0,0,0,0);
 }
 #inputBoxes h3 {
@@ -606,7 +606,23 @@ select {
 #dMreze p {
   margin-bottom: 60px;
 }
+@media (max-width: 1933px) {
+  #cene h2 {
+    width: 39%;
+  }
+  #cene h4 {
+    width: 39%;
+    text-align: justify;
+  }
 
+  #nasiRadovi {
+
+    background-position: center;
+  }
+  #slogan h4 {
+    margin-left: 1%;
+  }
+}
 @media (max-width: 1711px) {
   #cene h2 {
     width: 39%;

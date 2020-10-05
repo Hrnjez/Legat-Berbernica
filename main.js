@@ -156,12 +156,12 @@ function birajZabu(){
       // vreme.value !== "" &&
       // broj.value !== "" &&
       usluga.value !== "" && 
-      frizer.value !== ""
+      frizer !== undefined
       // && email.value !== "" &&
       // ime.value !== ""
     ) {
       console.warn("sva polja su popunjena");
-
+      demo.innerHTML = `<i  style="border:0px !important; color: #fff; margin-bottom:10px;" class="fas fa-check fa-2x"></i>`;
       // rez =
       //   '<span id="rez">' +
       //   "<h3>Rezervacija:</h3> <h3> Datum:  " +
@@ -185,7 +185,7 @@ function birajZabu(){
       // document.getElementById("otkazi").addEventListener("click", otkaziRez);
     } else {
       console.warn("Nisu sva polja popunjena");
-      demo.innerHTML = "<h3>Popunite sva poqa!</h3>";
+      demo.innerHTML = `<h3 style='margin-bottom:0px;'>Popunite sva poqa!</h3><h4 style="font-family:OSC; margin-top:0px;">Fill in all fields!</h4>`;
     }
   }
 

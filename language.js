@@ -21,8 +21,95 @@ $(document).ready(function () {
         radnoVremeSub: 'Subota .............10:00 - 16:00',
         rezBtn: 'Rezervacija',
         nasiRadoviH1: 'NA[I RADOVI',
-        nasiRadoviH4: 'Neki od na{ih zadovoqnih klijenata'
-
+        nasiRadoviH4: 'Neki od na{ih zadovoqnih klijenata',
+        cenovnik: `
+        <h1>Cenovnik usluga</h1>
+        <br />
+        <div>
+          <h2>[i{awe</h2>
+          <h4>
+            Vreme trajawa 45 minuta . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . . 
+            <span id="ceneSisanja">РСД 1200</span>
+          </h4>
+        </div>
+        <div>
+          <h2>[i{awe ma{inicom</h2>
+          <h4>
+            Vreme trajawa 30 minuta . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . .
+            <span id="ceneSisanja"> РСД 900</span>
+          </h4>
+        </div>
+  
+        <h2>[i{awe, Deca</h2>
+        <h4>
+          Vreme trajawa 45 minuta . . . . . . . . . . . . . . . . . . . . . . .
+          . . . . . 
+          <span id="ceneSisanja">РСД 800</span>
+        </h4>
+        <h2>Brijawe</h2>
+        <h4>
+          Vreme trajawa 30 minuta . . . . . . . . . . . . . . . . . . . . . . .
+          . . . . . 
+          <span id="ceneSisanja">РСД 1000</span>
+        </h4>
+        <h2>Korekcija brade</h2>
+        <h4>
+          Vreme trajawa 30 minuta . . . . . . . . . . . . . . . . . . . . . . .
+          . . . . . 
+          <span id="ceneSisanja">РСД 800</span>
+        </h4>
+        <h2>Komplet 1</h2>
+        <h4>
+          [i{awe i korekcija brade
+        </h4>
+        <h4>
+          Vreme trajawa 1 sat i 45 minuta . . . . . . . . . . . . . . . . . . .
+          . . . 
+          <span id="ceneSisanja">РСД 1800</span>
+        </h4>
+        <h2>Komplet 2</h2>
+        <h4>
+          [i{awe i brijawe
+        </h4>
+        <h4>
+          Vreme trajawa 1 sat i 45 minuta . . . . . . . . . . . . . . . . . . .
+          . . . 
+          <span id="ceneSisanja">РСД 2000</span>
+        </h4>
+        <h2>Komplet 3</h2>
+        <h4>
+          [i{awe ma{inicom i brijawe
+        </h4>
+        <h4>
+          Vreme trajawa 1 sat i 45 minuta . . . . . . . . . . . . . . . . . . .
+          . . . 
+          <span id="ceneSisanja">РСД 1750</span>
+        </h4>
+        <h2>Prawe kose i stilizovawe</h2>
+        <h4>
+          Vreme trajawa 30 minuta . . . . . . . . . . . . . . . . . . . . . . .
+          . . . . . 
+          <span id="ceneSisanja">РСД 700</span>
+        </h4>
+        `,
+        zakazivanjeH1: 'Zakazivawe',
+        dusan: 'Du{an',
+        jovan: 'Jovan',
+        izaberiDatum: 'Izaberi datum:',
+        vrstaUsluge: 'Vrsta Usluge:',
+        btnZakazi: 'Zaka`i',
+        usluge: `
+          <option>Šišanje (45min)</option>
+          <option>Šišanje Mašinicom (30min)</option>
+          <option>Šišanje, Deca (45min)</option>
+          <option>Brijanje (30min)</option>
+          <option>Korekcija brade (30min)</option>
+          <option>Komplet 1 (1h 45min)</option>
+          <option>Komplet 2 (1h 45min)</option>
+          <option>Komplet 3 (1h 45min)</option>
+          <option>Pranje kose i stilizovanje (30min)</option>`
       }
     
     const englishLanguage = {
@@ -46,9 +133,95 @@ $(document).ready(function () {
         radnoVremeSub: 'Saturday .............10:00 - 16:00',
         rezBtn: 'Reservation',
         nasiRadoviH1: 'Our Work',
-        nasiRadoviH4: 'Some of our satisfied customers'
-
-    }
+        nasiRadoviH4: 'Some of our satisfied customers',
+        cenovnik:` <h1>Price list of services</h1>
+        <br />
+        <div>
+          <h2>Haircut</h2>
+          <h4>
+              Duration 45 minutes . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . . . . .
+            <span id="ceneSisanja">RSD 1200</span>
+          </h4>
+        </div>
+        <div>
+          <h2>Haircut with a Clipper</h2>
+          <h4>
+          Duration 30 minutes . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . . . . .
+            <span id="ceneSisanja"> RSD 900</span>
+          </h4>
+        </div>
+  
+        <h2>Haircut, Children</h2>
+        <h4>
+            Duration 45 minutes  . . . . . . . . . . . . . . . . . . . . . . .
+          . . . . . . . .
+          <span id="ceneSisanja">RSD 800</span>
+        </h4>
+        <h2>Shaving</h2>
+        <h4>
+           Duration 45 minutes  . . . . . . . . . . . . . . . . . . . . . . .
+          . . . . . . . .
+          <span id="ceneSisanja">RSD 1000</span>
+        </h4>
+        <h2>Chin correction</h2>
+        <h4>
+            Duration 30 minutes  . . . . . . . . . . . . . . . . . . . . . . .
+          . . . . . . . .
+          <span id="ceneSisanja">RSD 800</span>
+        </h4>
+        <h2>Set 1</h2>
+        <h4>
+            Haircut and Chin Correction
+        </h4>
+        <h4>
+            Duration 1 hour and 45 minutes . . . . . . . . . . . . . . . . . . .
+          . . . . . .
+          <span id="ceneSisanja">RSD 1800</span>
+        </h4>
+        <h2>Set 2</h2>
+        <h4>
+            Haircut and Shaving
+        </h4>
+        <h4>
+            Duration 1 hour and 45 minutes . . . . . . . . . . . . . . . . . . .
+          . . . . . .
+          <span id="ceneSisanja">RSD 2000</span>
+        </h4>
+        <h2>Set 3</h2>
+        <h4>
+           Machine trimming and shaving
+        </h4>
+        <h4>
+           Duration 1 hour and 45 minutes . . . . . . . . . . . . . . . . . . .
+          . . . . . .
+          <span id="ceneSisanja">RSD 1750</span>
+        </h4>
+        <h2>Hair Washing and Styling</h2>
+        <h4>
+            Duration 30 minutes  . . . . . . . . . . . . . . . . . . . . . . .
+          . . . . . . . .
+          <span id="ceneSisanja">RSD 700</span>
+        </h4>
+        `,
+        zakazivanjeH1: 'Scheduling',
+        dusan: 'Dusan',
+        jovan: 'Jovan',
+        izaberiDatum: 'Select a Date:',
+        vrstaUsluge: 'Type of Service:',
+        btnZakazi: 'Schedule',
+        usluge: `
+          <option>Haircut (45min)</option>
+          <option>Haircut with a Clipper (30min)</option>
+          <option>Haircut, Children (45min)</option>
+          <option>Shaving (30min)</option>
+          <option>Chin correction (30min)</option>
+          <option>Set 1 (1h 45min)</option>
+          <option>Set 2 (1h 45min)</option>
+          <option>Set 3 (1h 45min)</option>
+          <option>Hair Washing and Styling (30min)</option>`
+}
     
     $('#srb').on('click',function(){
         $('#btnGlavna').text(`${serbianLanguage.glavna}`);
@@ -88,9 +261,23 @@ $(document).ready(function () {
         <div id="kontaktBtn">
           <button id="rezBtn">${serbianLanguage.rezBtn}</button>
         </div>`);
+        $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('font-family','font');
         $('#nasiRadovi h1').html(`<h1>${serbianLanguage.nasiRadoviH1}</h1>`);
         $('#nasiRadovi h4').html(`<h4>${serbianLanguage.nasiRadoviH4}</h4>`);
-       
+        $('#cene h1, #cene h2, #cene h4, #cene span').css('font-family','font');
+        $('#cene').html(`${serbianLanguage.cenovnik}`);
+        $('#cene span').css('float','right');
+        $('#cene span').css('margin-top','-15px');
+        $('#zakazivanje h1').html(`${serbianLanguage.zakazivanjeH1} `);
+        $('#dusan').html(`${serbianLanguage.dusan}`);
+        $('#jovan').html(`${serbianLanguage.jovan}`);
+        $('#izaberi-datum').html(`${serbianLanguage.izaberiDatum}`);
+        $('#vrsta-usluge').html(`${serbianLanguage.vrstaUsluge}`);
+        $('#zakazivanje h1, #zakazivanje h3, #zakazivanje h4').css('font-family','font');
+        $('#zakazi strong').html(`${serbianLanguage.btnZakazi}`);
+        $('#zakazi strong').css('font-family','font');
+        $('#usluga').html(`${serbianLanguage.usluge}`)
+        $('#usluga option').css('font-family','font');
     });
     $('#eng').on('click',function(){
         $('#btnGlavna').text(`${englishLanguage.glavna}`);
@@ -145,5 +332,19 @@ $(document).ready(function () {
         $('#nasiRadovi h4').html(`<h4>${englishLanguage.nasiRadoviH4}</h4>`);
         $('#nasiRadovi h1, #nasiRadovi h4').css('font-family','OSC');
         $('#nasiRadovi h1, #nasiRadovi h4').css('margin','30px');
+        $('#cene').html(`${englishLanguage.cenovnik}`);
+        $('#cene h1, #cene h2, #cene h4, #cene span').css('font-family','OSC');
+        $('#cene span').css('float','right');
+        $('#cene span').css('margin-top','-20px');
+        $('#zakazivanje h1').html(`${englishLanguage.zakazivanjeH1} `);
+        $('#dusan').html(`${englishLanguage.dusan}`);
+        $('#jovan').html(`${englishLanguage.jovan}`);
+        $('#izaberi-datum').html(`${englishLanguage.izaberiDatum}`);
+        $('#vrsta-usluge').html(`${englishLanguage.vrstaUsluge}`);
+        $('#zakazivanje h1, #zakazivanje h3, #zakazivanje h4').css('font-family','OSC');
+        $('#zakazi strong').html(`${englishLanguage.btnZakazi}`);
+        $('#zakazi strong').css('font-family','OSC');
+        $('#usluga').html(`${englishLanguage.usluge}`)
+        $('#usluga option').css('font-family','OSC');
     });
 });
