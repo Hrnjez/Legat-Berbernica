@@ -14,6 +14,16 @@ body {
   width: 100%;
   z-index: 9999;
 }
+#ui-datepicker-div{
+  width:400px;
+}
+#ui-datepicker-div table tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  border: 3px solid rgb(211, 59, 59);
+  padding: 5px;
+  margin: 10px;
+}
 #inputBoxes img {
   border-radius: 5px; 
   border: 5px solid rgb(105, 30, 40);

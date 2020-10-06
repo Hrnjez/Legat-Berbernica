@@ -161,7 +161,7 @@ function birajZabu(){
       // ime.value !== ""
     ) {
       console.warn("sva polja su popunjena");
-      demo.innerHTML = `<i  style="border:0px !important; color: #fff; margin-bottom:10px;" class="fas fa-check fa-2x"></i>`;
+      demo.innerHTML = `<p style='font-family:OSC;'>${datum.value},  ${usluga.value} <i  style="border:0px !important; color: #ab4646; margin-bottom:10px;" class="fas fa-check fa-2x"></i> </p>`;
       // rez =
       //   '<span id="rez">' +
       //   "<h3>Rezervacija:</h3> <h3> Datum:  " +
@@ -271,6 +271,24 @@ function birajZabu(){
   //   $("#demo").fadeOut(2000);
   //   console.log("Otkazano");
   // }
+  var unavailableDates = ["9-10-2020", "14-10-2020", "15-10-2020"];
+  function unavailable(date) {
+      dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+      if ($.inArray(dmy, unavailableDates) == -1) {
+          return [true, ""];
+      } else {
+          return [false, "", "Unavailable"];
+      }
+  }
+  $(function() {
+      $("#datum").datepicker({
+          dateFormat: 'dd MM yy',
+          beforeShowDay: unavailable
+      });
 
-
+  });
 });
+
+
+
+
