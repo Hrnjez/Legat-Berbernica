@@ -161,6 +161,24 @@ function birajZabu(){
       // ime.value !== ""
     ) {
       console.warn("sva polja su popunjena");
+      var url = 'http://localhost:8080/freeTerms';
+
+      $.ajax({
+        url: url + "/" + frizer + "/" + datum.value + "/" + usluga.value,
+        contentType: "application/json",
+        dataType: 'json',
+        success: function (result) {
+          var terms = document.getElementById("vreme");
+          terms.innerHTML = '';
+          for (var i = 0; i < result.length; i++) {
+            var option = document.createElement("option");
+            option.text = result[i];
+            terms.add(option);
+          }
+        }
+      });
+
+      console.log(usluga.value)
       demo.innerHTML = `<p style='font-family:OSC;'>${datum.value},  ${usluga.value} <i  style="border:0px !important; color: #ab4646; margin-bottom:10px;" class="fas fa-check fa-2x"></i> </p>`;
       // rez =
       //   '<span id="rez">' +

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css"/>
+	<title>ADMIN PANEL</title>
+</head>
+<body onload="autoRedirect()">
+
+<h2>ADMIN PANE</h2>
+
+<script type= "text/javascript">
+
+    async function autoRedirect() {
+        const validLogin = await isLoggedIn();
+        console.log("test");
+        if (!validLogin && location.pathname !== '/login/') window.location.href = 'login.html'
+        if (validLogin && location.pathname === '/login/')  window.location.href = '/'
+    }
+
+    async function isLoggedIn() {
+        const token = window.localStorage.getItem('token')
+        if (!token) return false
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LOG-IN</title>
+</head>
+<body>
+<h1> Legat Login Form </h1>
+<form>
+	<div class="container">
+		<label>Username : </label>
+		<input type="text" placeholder="Enter Username" id="username" required>
+		<label>Password : </label>
+		<input type="password" placeholder="Enter Password" id="password" required>
+		<button type="submit" onclick="login(document.getElementById('username').value,document.getElementById('password').value)">Login</button>
+	</div>
+</form>
+
+</body>
+<script>
+
+    function login(username, password) {
+        console.log(username, password);
+
+        $.ajax({
+            url:  "http://localhost:8080/freeTerms/" + username + "/" + password + "/" ,
+            contentType: "application/json",
+            dataType: 'json',
+            success: function (result) {
+                var terms = document.getElementById("vreme");
+                terms.innerHTML = '';
+                for (var i = 0; i < result.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = result[i];
+                    terms.add(option);
+                }
+            }
+        });
+
+        // $.ajax({
+        //     type: "POST",
+        //     url: "http://localhost:8080/login",
+        //     dataType: 'json',
+        //     data: {
+        //         username: username,
+        //         password: password
+        //     },
+        //     success: function (result) {
+        //         console.log(result);
+		//
+        //     }
+        // });
+    }
+
+</script>
+</html>
