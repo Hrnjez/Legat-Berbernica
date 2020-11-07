@@ -8,41 +8,67 @@
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<script src="jquery.min.js"></script>
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<title>ADMIN PANEL</title>
 </head>
 <body onload="autoRedirect()">
 
-<div>
-	<label for="berberin">Izaberi bererina:</label>
-	<select name="berberin" id="berberin">
-		<option value="cvija">Dusan</option>
-		<option value="zabac">Jovan</option>
-	</select>
 
-	<div>
-		<label for="datum">Izaberi datum:</label>
-		<input type="date" id="datum" placeholder="01/01/2019"/>
-	</div>
+<section id="zakazivanje" style="height:100vh;">
+	<form action="">
+		<h1>
+			Zakazivawe
+		</h1>
+		<span id="zakaziOvde"><i class="fas fa-chevron-down fa-2x"></i> </span>
 
-</div>
+
+		<div id="inputBoxes" style="display:block;">
+
+			<div>
+				<div>
+					<h4>Izaberi berberina:</h4>
+				<select name="berberin" id="berberin">
+					<option value="cvija">Dusan</option>
+					<option value="zabac">Jovan</option>
+				</select>
+			</div>
+				<div>
+					<h4 id="izaberi-datum">Izaberi datum:</h4>
+					<input required id="datum" placeholder="01/01/2019"/>
+				</div>
+			</div>
+
+
+		
+			
+
+		</div>
+		<button id="zakazi">
+			<strong>Zaka`i</strong>
+		</button>
+		<div id="demo"></div>
+	</form>
+</section>
+
 
 <script type="text/javascript">
 
-    function autoRedirect() {
-        const validLogin = isLoggedIn();
-        console.log("test:", validLogin);
-        if (!validLogin && location.pathname !== '/login/') window.location.href = 'login.html'
-    }
+    // function autoRedirect() {
+    //     const validLogin = isLoggedIn();
+    //     console.log("test:", validLogin);
+    //     if (!validLogin && location.pathname !== '/login/') window.location.href = 'login.html'
+    // }
 
-    function isLoggedIn() {
-        const token = window.localStorage.getItem('token')
-        if (token == null || token == undefined) {
-            return false;
-        } else {
-            console.log(token);
-            return true;
-        }
-    }
+    // function isLoggedIn() {
+    //     const token = window.localStorage.getItem('token')
+    //     if (token == null || token == undefined) {
+    //         return false;
+    //     } else {
+    //         console.log(token);
+    //         return true;
+    //     }
+    // }
 
 </script>
 <script src="admin.js"></script>

@@ -1,3 +1,4 @@
+$(document).ready(function () {
 document.getElementById("datum").addEventListener("change", dohvatiTermine);
 document.getElementById("berberin").addEventListener("change", dohvatiTermine);
 
@@ -27,3 +28,11 @@ function dohvatiTermine() {
 
 }
 
+$(function () {
+    $("#datum").datepicker({
+        dateFormat: 'dd MM yy',
+        beforeShowDay: unavailable
+    });
+
+});
+});
