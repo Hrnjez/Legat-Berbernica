@@ -27,7 +27,16 @@ function dohvatiTermine() {
     xhr.send(null);
 
 }
+var unavailableDates = ["9-10-2020", "14-10-2020", "15-10-2020"];
 
+function unavailable(date) {
+    dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+    if ($.inArray(dmy, unavailableDates) == -1) {
+        return [true, ""];
+    } else {
+        return [false, "", "Unavailable"];
+    }
+}
 $(function () {
     $("#datum").datepicker({
         dateFormat: 'dd MM yy',

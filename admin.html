@@ -54,21 +54,21 @@
 
 <script type="text/javascript">
 
-    // function autoRedirect() {
-    //     const validLogin = isLoggedIn();
-    //     console.log("test:", validLogin);
-    //     if (!validLogin && location.pathname !== '/login/') window.location.href = 'login.html'
-    // }
+     function autoRedirect() {
+         const validLogin = isLoggedIn();
+         console.log("test:", validLogin);
+         if (!validLogin && location.pathname !== '/login/') window.location.href = 'login.html'
+     }
 
-    // function isLoggedIn() {
-    //     const token = window.localStorage.getItem('token')
-    //     if (token == null || token == undefined) {
-    //         return false;
-    //     } else {
-    //         console.log(token);
-    //         return true;
-    //     }
-    // }
+     function isLoggedIn() {
+         const token = window.localStorage.getItem('token')
+         if (token == null || token == undefined) {
+             return false;
+         } else {
+             console.log(token);
+             return true;
+         }
+     }
 
 </script>
 <script src="admin.js"></script>
