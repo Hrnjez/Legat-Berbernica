@@ -184,7 +184,9 @@ $(document).ready(function () {
         ) {
 
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'http://localhost:8080/term', true);
+            var url = 'http://134.122.112.114:8080/legat/term';
+            var urlLocal = 'http://localhost:8080/term';
+            xhr.open('POST', url, true);
 
             xhr.onload = function () {
                 console.log(xhr.status);
@@ -225,22 +227,31 @@ $(document).ready(function () {
             frizer !== undefined
         ) {
             console.warn("sva polja su popunjena");
-            var url = 'http://localhost:8080/freeTerms';
 
-            $.ajax({
-                url: url + "/" + frizer + "/" + datum.value + "/" + usluga.value,
-                contentType: "application/json",
-                dataType: 'json',
-                success: function (result) {
+            var url = 'http://134.122.112.114:8080/legat/freeTerms';
+            var urlLocal = 'http://localhost:8080/freeTerms';
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url + "/" + frizer + "/" + datum.value + "/" + usluga.value, true);
+
+            xhr.onload = function () {
+                console.log(xhr.status);
+                console.log(xhr.responseText);
+                var data = JSON.parse(xhr.responseText);
+                if (xhr.status != '200') {
+                    window.alert("error");
+                } else {
                     var terms = document.getElementById("vreme");
                     terms.innerHTML = '';
-                    for (var i = 0; i < result.length; i++) {
+                    for (var key in data) {
                         var option = document.createElement("option");
-                        option.text = result[i];
+                        option.text = data[key];
                         terms.add(option);
                     }
                 }
-            });
+            };
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(null);
 
             console.log(usluga.value)
             demo.innerHTML = `<p style='font-family:OSC;'>${datum.value},  ${usluga.value} <i  style="border:0px !important; color: #ab4646; margin-bottom:10px;" class="fas fa-check fa-2x"></i> </p>`;
