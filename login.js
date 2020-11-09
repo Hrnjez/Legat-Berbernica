@@ -1,13 +1,15 @@
 document.getElementById("login").addEventListener("click", login);
 
-function login() {
+function login(e) {
+
+    e.preventDefault();
 
     console.log("login atempmt")
     username = document.getElementById('username').value;
     password = document.getElementById('password').value;
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost:8080/login?username=' + username + '&password=' + password, true);
+    xhr.open('POST', 'http://134.122.112.114:8080/legat/login?username=' + username + '&password=' + password, false);
 
     xhr.onload = function () {
         console.log(xhr.status);
@@ -16,7 +18,8 @@ function login() {
             window.alert("pogresna lozinka");
         } else {
             localStorage.setItem('token', xhr.responseText);
-            window.location.href='admin.html';
+             window.location.href='admin.html';
+           
         }
     };
 

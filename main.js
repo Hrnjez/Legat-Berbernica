@@ -1,5 +1,7 @@
 //Buttons-Events iz NavBar-a
 $(document).ready(function () {
+    $('.popup-box').hide();
+    $('.popup-btn button').click(function() {$('.popup-box').fadeOut(500);});
     document.getElementById("btnGlavna").addEventListener("click", glavna);
 
     function glavna() {
@@ -146,7 +148,8 @@ $(document).ready(function () {
     document.getElementById("datum").addEventListener("change", dohvatiTermine);
     document.getElementById("usluga").addEventListener("change", dohvatiTermine);
 
-    function zakazivanje() {
+    function zakazivanje(e) {
+        e.preventDefault();
         $("#demo").show();
         var demo = document.getElementById("demo");
         var datum = document.getElementById("datum");
@@ -194,7 +197,12 @@ $(document).ready(function () {
                 if (xhr.status != '200') {
                     window.alert("wrong request");
                 } else {
-                    window.alert("reserved");
+                    console.log('rezervisao!')
+                    $('#zakazi').hide(500);
+                    $('#inputBoxes').hide(500, function(){
+                        $('.popup-box').fadeIn(1000);
+                    });
+
                 }
             };
             xhr.setRequestHeader('Content-Type', 'application/json');
@@ -254,7 +262,7 @@ $(document).ready(function () {
             xhr.send(null);
 
             console.log(usluga.value)
-            demo.innerHTML = `<p style='font-family:OSC;'>${datum.value},  ${usluga.value} <i  style="border:0px !important; color: #ab4646; margin-bottom:10px;" class="fas fa-check fa-2x"></i> </p>`;
+            // demo.innerHTML = `<p style='font-family:OSC;'>${datum.value},  ${usluga.value} <i  style="border:0px !important; color: #ab4646; margin-bottom:10px;" class="fas fa-check fa-2x"></i> </p>`;
             // rez =
             //   '<span id="rez">' +
             //   "<h3>Rezervacija:</h3> <h3> Datum:  " +
@@ -278,7 +286,7 @@ $(document).ready(function () {
             // document.getElementById("otkazi").addEventListener("click", otkaziRez);
         } else {
             console.warn("Nisu sva polja popunjena");
-            demo.innerHTML = `<h3 style='margin-bottom:0px;'>Popunite sva poqa!</h3><h4 style="font-family:OSC; margin-top:0px;">Fill in all fields!</h4>`;
+            // demo.innerHTML = `<h3 style='margin-bottom:0px;'>Popunite sva poqa!</h3><h4 style="font-family:OSC; margin-top:0px;">Fill in all fields!</h4>`;
         }
     }
 
@@ -382,6 +390,7 @@ $(document).ready(function () {
         });
 
     });
+
 });
 
 
