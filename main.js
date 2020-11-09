@@ -186,7 +186,7 @@ $(document).ready(function () {
             var xhr = new XMLHttpRequest();
             var url = 'http://134.122.112.114:8080/legat/term';
             var urlLocal = 'http://localhost:8080/term';
-            xhr.open('POST', url, true);
+            xhr.open('POST', url, false);
 
             xhr.onload = function () {
                 console.log(xhr.status);
@@ -232,7 +232,7 @@ $(document).ready(function () {
             var urlLocal = 'http://localhost:8080/freeTerms';
 
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', url + "/" + frizer + "/" + datum.value + "/" + usluga.value, true);
+            xhr.open('GET', url + "/" + frizer + "/" + datum.value + "/" + usluga.value, false);
 
             xhr.onload = function () {
                 console.log(xhr.status);
