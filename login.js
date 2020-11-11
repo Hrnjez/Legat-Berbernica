@@ -9,7 +9,16 @@ function login(e) {
     password = document.getElementById('password').value;
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://134.122.112.114:8080/legat/login?username=' + username + '&password=' + password, false);
+    let url = 'http://134.122.112.114:8080/legat/login';
+    let urlLocal = 'http://localhost:8080/login';
+    xhr.open('POST', url, false);
+
+    var user = {
+        "username": username,
+        "password": password
+    };
+
+    var json = JSON.stringify(user);
 
     xhr.onload = function () {
         console.log(xhr.status);
@@ -18,26 +27,13 @@ function login(e) {
             window.alert("pogresna lozinka");
         } else {
             localStorage.setItem('token', xhr.responseText);
-             window.location.href='admin.html';
-           
+            window.location.href = 'admin.html';
+
         }
     };
 
-    xhr.send(null);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(json);
 
-    // $.ajax('http://localhost:8080/login', {
-    //     type: 'POST',
-    //     contentType: 'application/json',
-    //     data: JSON.stringify({"username": username, "password": password}),
-    //     dataType:'json',
-    //     success: function() {
-    //         window.alert("test")
-    //     }
-    //     ,
-    //     error: function (request, status, err) {
-    //         window.alert("pogresna lozinka" + err);
-    //     }
-    //
-    // });
 }
 

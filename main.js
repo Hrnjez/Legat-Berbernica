@@ -1,7 +1,9 @@
 //Buttons-Events iz NavBar-a
 $(document).ready(function () {
     $('.popup-box').hide();
-    $('.popup-btn button').click(function() {$('.popup-box').fadeOut(500);});
+    $('.popup-btn button').click(function () {
+        $('.popup-box').fadeOut(500);
+    });
     document.getElementById("btnGlavna").addEventListener("click", glavna);
 
     function glavna() {
@@ -199,7 +201,7 @@ $(document).ready(function () {
                 } else {
                     console.log('rezervisao!')
                     $('#zakazi').hide(500);
-                    $('#inputBoxes').hide(500, function(){
+                    $('#inputBoxes').hide(500, function () {
                         $('.popup-box').fadeIn(1000);
                     });
 
@@ -236,11 +238,11 @@ $(document).ready(function () {
         ) {
             console.warn("sva polja su popunjena");
 
-            var url = 'http://134.122.112.114:8080/legat/freeTerms';
-            var urlLocal = 'http://localhost:8080/freeTerms';
+            var url = 'http://134.122.112.114:8080/legat/freeTerms/';
+            var urlLocal = 'http://localhost:8080/freeTerms/';
 
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', url + "/" + frizer + "/" + datum.value + "/" + usluga.value, false);
+            xhr.open('GET', url + frizer + "/" + datum.value + "/" + usluga.value, false);
 
             xhr.onload = function () {
                 console.log(xhr.status);

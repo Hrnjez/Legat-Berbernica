@@ -28,20 +28,17 @@
 			<div>
 				<div>
 					<h4>Izaberi berberina:</h4>
-				<select name="berberin" id="berberin">
-					<option value="cvija">Dusan</option>
-					<option value="zabac">Jovan</option>
-				</select>
-			</div>
+					<select name="berberin" id="berberin">
+						<option value="cvija">Dusan</option>
+						<option value="zabac">Jovan</option>
+					</select>
+				</div>
 				<div>
 					<h4 id="izaberi-datum">Izaberi datum:</h4>
-					<input required id="datum" placeholder="01/01/2019"/>
+					<input id="datum" placeholder="01/01/2019"/>
 				</div>
 			</div>
 
-
-		
-			
 
 		</div>
 		<button id="zakazi">
@@ -51,25 +48,57 @@
 	</form>
 </section>
 
+<div id="term_results">
+
+</div>
+
+<div id="scheduler">
+	<h2>Radno vreme:</h2>
+	<label for="startTime">Od: </label>
+	<input style="width: 100px" type="text" id="startTime"><br><br>
+	<label for="endTime">Do: </label>
+	<input style="width: 100px" type="text" id="endTime"><br><br>
+	<input style="width: 100px" id="changeWorkingHours" value="Promeni">
+</div>
 
 <script type="text/javascript">
 
-function autoRedirect() {
-         const validLogin = isLoggedIn();
-         console.log("test:", validLogin);
-		 if (!validLogin && location.pathname !== '/login/')window.location.href = 'login.html'
-		 
-     }
+    function autoRedirect() {
 
-     function isLoggedIn() {
-         const token = window.localStorage.getItem('token')
-         if (token == null || token == undefined) {
-             return false;
-         } else {
-             console.log(token);
-             return true;
-         }
-     }
+        const validLogin = isLoggedIn();
+        console.log("test:", validLogin);
+        if (!validLogin && location.pathname !== '/login/') window.location.href = 'login.html'
+
+    }
+
+    function isLoggedIn() {
+        // e.preventDefault();
+
+        const token = window.localStorage.getItem('token');
+        if (token == null || token == undefined) {
+            return false;
+        } else {
+            return true;
+            // var xhr = new XMLHttpRequest();
+            // let urlTokenLocal = 'http://localhost:8080/admin/isTokenValid/';
+            // let urlToken = 'http://134.122.112.114:8080/legat/admin/isTokenValid/';
+            // xhr.open('GET', urlTokenLocal + token, false);
+            // xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+            //
+            // xhr.onload = function () {
+            //     if (xhr.status != '200') {
+            //         localStorage.removeItem('token');
+            //         return false;
+            //     } else {
+            //         console.log("Token je validan");
+            //         return true;
+            //     }
+            // };
+            //
+            // xhr.send(null);
+
+        }
+    }
 
 </script>
 <script src="admin.js"></script>
