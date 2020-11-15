@@ -122,6 +122,20 @@ select option {
     border: 0;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
+.rem-btn {
+    background-color: rgb(150, 50, 63);
+    border: 0;
+    padding: 3px 16px;
+    color: #fff;
+    
+}
+.rem-btn:focus {
+    outline: none;
+}
+.rem-btn:hover {
+    background-color: rgb(168, 56, 71);
+
+}
 @media  (max-width:1024px){
     #zakazivanje {
         font-family: 'OSC';

@@ -114,7 +114,7 @@ $(document).ready(function () {
                         //TODO
                         btn.setAttribute('id', data[key].id);
                         btn.setAttribute('value', "Obrisi");
-
+                        btn.setAttribute('class', 'rem-btn');
                         tr.appendChild(tdTime);
                         tr.appendChild(tdService);
                         tr.appendChild(tdCustomer);
@@ -163,9 +163,7 @@ $(document).ready(function () {
 
     function removeTerm() {
     $(this).parent().parent().remove();
-        // alert('here be dragons' + id);
-     
-        
+        // alert('here be dragons' + id); 
     }
 
     var unavailableDates = ["9-10-2020", "14-10-2020", "15-10-2020"];
