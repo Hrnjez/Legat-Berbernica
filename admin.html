@@ -4,7 +4,7 @@
 	<meta charset="UTF-8"/>
 	<meta name="Legat" content="Berbernica, Legat"/>
 	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="admin.css"/>
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<script src="jquery.min.js"></script>
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -18,7 +18,7 @@
 <section id="zakazivanje" style="height:100vh;">
 	<form action="">
 		<h1>
-			Zakazivawe
+			Zakazivanje
 		</h1>
 		<span id="zakaziOvde"><i class="fas fa-chevron-down fa-2x"></i> </span>
 
@@ -35,31 +35,36 @@
 				</div>
 				<div>
 					<h4 id="izaberi-datum">Izaberi datum:</h4>
-					<input id="datum" placeholder="01/01/2019"/>
+					<input id="datum" autocomplete="off" >
 				</div>
+				<div><h4>Radno vreme:</h4></div>
+				<div id="scheduler">
+					<label for="startTime">Od: </label>
+					<input  type="text" id="startTime">
+					<label for="endTime">Do: </label>
+					<input type="text" id="endTime">
+				</div>
+				<div  id="btn-promeni" style='text-align:center; padding:20px;'>
+				<span  id="changeWorkingHours" value="Promeni" > Promeni</span>
+				</div>
+				<button id="zakazi">
+					<strong>Zakazi</strong>
+				</button>
 			</div>
 
 
 		</div>
-		<button id="zakazi">
-			<strong>Zaka`i</strong>
-		</button>
+		
 		<div id="demo"></div>
 	</form>
+	<div id="term_results">
+
+	</div>
+	
 </section>
 
-<div id="term_results">
 
-</div>
 
-<div id="scheduler">
-	<h2>Radno vreme:</h2>
-	<label for="startTime">Od: </label>
-	<input style="width: 100px" type="text" id="startTime"><br><br>
-	<label for="endTime">Do: </label>
-	<input style="width: 100px" type="text" id="endTime"><br><br>
-	<input style="width: 100px" id="changeWorkingHours" value="Promeni">
-</div>
 
 <script type="text/javascript">
 

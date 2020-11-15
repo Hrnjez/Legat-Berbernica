@@ -544,6 +544,7 @@ cursor: grab;
   margin-top: -50px;
   text-align: center;
   margin-bottom: 0px;
+
 }
 #zakazivanje h1 {
   font-family: "font";
@@ -584,6 +585,7 @@ select {
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
+
 
 #zakazivanje button {
   font-family: "font";

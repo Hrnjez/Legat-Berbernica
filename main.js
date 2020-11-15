@@ -122,6 +122,9 @@ $(document).ready(function () {
         $("#rezTermini").toggle(1000);
         $("input ").val("");
         $("select ").val("");
+        $('#ime').css('border','0px');
+        $('#broj').css('border','0px');
+        $('#broj').val(+381);
     });
 
     // Zakazivanje termina js
@@ -185,7 +188,10 @@ $(document).ready(function () {
         if (
             datum.value !== "" &&
             usluga.value !== "" &&
-            frizer !== undefined
+            frizer !== undefined &&
+            vreme.value !== "" &&
+            ime.value !== "" &&
+            broj.value !== ""
         ) {
 
             var xhr = new XMLHttpRequest();
@@ -209,10 +215,15 @@ $(document).ready(function () {
             };
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.send(json);
-
+            
         } else {
             console.warn("Nisu sva polja popunjena");
+            if (ime.value == "") {$('#ime').css('border','3px solid red'); }
+            else {$('#ime').css('border','0px');}
+            if (broj.value == "") {$('#broj').css('border','3px solid red'); }
+            else {$('#broj').css('border','0px');}
         }
+        
     }
 
     function dohvatiTermine() {
@@ -236,7 +247,7 @@ $(document).ready(function () {
             usluga.value !== "" &&
             frizer !== undefined
         ) {
-            console.warn("sva polja su popunjena");
+            console.warn("neophodna polja su popunjena");
 
             var url = 'http://134.122.112.114:8080/legat/freeTerms/';
             var urlLocal = 'http://localhost:8080/freeTerms/';
