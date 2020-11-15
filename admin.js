@@ -104,9 +104,14 @@ $(document).ready(function () {
                         tdPhone.appendChild(document.createTextNode(data[key].customerPhone));
 
                         var tdRemove = document.createElement('TD');
-                        var btn = document.createElement('input');
+                        var btn = document.createElement('button');
 
+                        
                         //TODO: za KUMICA - svaki red u tabeli treba da poziva funckiju "removeTerm()" sa id-jem kao parametrom, id se nalazi u polju data[key].id :) SRECNO!
+                        btn.innerText='Obrisi';
+                        tdRemove.appendChild(btn)
+                        
+                        //TODO
                         btn.setAttribute('id', data[key].id);
                         btn.setAttribute('value', "Obrisi");
 
@@ -117,13 +122,19 @@ $(document).ready(function () {
                         tr.appendChild(tdRemove);
 
                         tableBody.appendChild(tr);
-
+                     
                     }
-                    termResults.appendChild(table)
+                    termResults.appendChild(table);
+
+                    //TODO
+                    for (var key in data) {
+                        document.getElementById(`${data[key].id}`).addEventListener("click", removeTerm);
+                    }
+                    //TODO
                 }
 
             };
-
+            
             xhr.send(null);
 
 
@@ -150,9 +161,11 @@ $(document).ready(function () {
 
     }
 
-    function removeTerm(id) {
+    function removeTerm() {
+    $(this).parent().parent().remove();
         // alert('here be dragons' + id);
-        console.log("remove term by id: ", id);
+     
+        
     }
 
     var unavailableDates = ["9-10-2020", "14-10-2020", "15-10-2020"];
