@@ -162,8 +162,8 @@ $(document).ready(function () {
     }
 
     function removeTerm() {
-    $(this).parent().parent().remove();
-        // alert('here be dragons' + id); 
+    console.log('evo ga kumicc'+ ' ' + $(this).attr('id'));
+       
     }
 
     var unavailableDates = ["9-10-2020", "14-10-2020", "15-10-2020"];
