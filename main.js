@@ -220,7 +220,7 @@ $(document).ready(function () {
             console.warn("Nisu sva polja popunjena");
             if (ime.value == "") {$('#ime').css('border','3px solid red'); }
             else {$('#ime').css('border','0px');}
-            if (broj.value == "") {$('#broj').css('border','3px solid red'); }
+            if (broj.value == "" ||broj.value == 381 ) {$('#broj').css('border','3px solid red'); }
             else {$('#broj').css('border','0px');}
         }
         
