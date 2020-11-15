@@ -149,9 +149,9 @@ $(document).ready(function () {
         dohvatiTermine();
     }
 
-    document.getElementById("zakazi").addEventListener("click", zakazivanje);
-    document.getElementById("datum").addEventListener("change", dohvatiTermine);
-    document.getElementById("usluga").addEventListener("change", dohvatiTermine);
+    $("#zakazi").on("click", zakazivanje);
+    $("#datum").on("change", dohvatiTermine);
+    $("#usluga").on("change", dohvatiTermine);
 
     function zakazivanje(e) {
         e.preventDefault();

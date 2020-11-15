@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
-    document.getElementById("datum").addEventListener("change", dohvatiTermine);
-    document.getElementById("berberin").addEventListener("change", dohvatiTermine);
-    document.getElementById("changeWorkingHours").addEventListener("click", changeWorkingHours);
+    $("#datum").on("change", dohvatiTermine);
+    $("#berberin").on("change", dohvatiTermine);
+    $("#changeWorkingHours").on("click", changeWorkingHours);
 
     function changeWorkingHours() {
 
