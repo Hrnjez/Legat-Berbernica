@@ -130,14 +130,13 @@ $(document).ready(function () {
             var xhrScheduler = new XMLHttpRequest();
             let urlSchedulerLocal = 'http://localhost:8080/admin/scheduler/';
             let urlScheduler = 'http://134.122.112.114:8080/legat/admin/scheduler/';
-            xhrScheduler.open('GET', urlSchedulerLocal + barber + '/' + date, true);
+            xhrScheduler.open('GET', urlScheduler + barber + '/' + date, true);
             xhrScheduler.setRequestHeader('Authorization', 'Bearer ' + token);
 
             xhrScheduler.onload = function () {
                 if (xhrScheduler.status != '200') {
                     window.alert("Doslo je do greske prilikom dohvatanja radnog vremena, pokusajte ponovo ili kontaktirajte podrsku: milosevic.etf@gmail.com, h.nemanja@yahoo.com");
                 } else {
-
                     var data = JSON.parse(xhrScheduler.responseText);
                     document.getElementById("startTime").value = data.startTime;
                     document.getElementById("endTime").value = data.endTime;
