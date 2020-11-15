@@ -28,7 +28,9 @@
 }
 #zakazivanje #term_results {
     width:80%;
-    margin: 135px 0px 0 0;
+    margin: auto;
+    margin: 135px auto 0 auto;
+
 }
 #zakazivanje h1 {
     margin:0;
