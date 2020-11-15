@@ -113,7 +113,13 @@ table tr th {
 table tr th {
     background:rgba(183, 58, 58, 0.23);
 }
-
+select option {
+    margin: 40px;
+    background: rgb(145, 46, 59);
+    color: #fff;
+    border: 0;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
 @media  (max-width:1024px){
     #zakazivanje {
         font-family: 'OSC';
