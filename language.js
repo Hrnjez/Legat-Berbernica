@@ -230,7 +230,7 @@ $(document).ready(function () {
         $('#btnRez').text(`${serbianLanguage.rezervacija}`);
         $('#btnKontakt').text(`${serbianLanguage.kontakt}`);
         $('#navBar button').css('font-family','font');
-        $('#navBar button').css('font-size','16px');
+        // $('#navBar button').css('font-size','16px');
         $('#slogan').html(`
         <img src="img/legat-logo.png" alt="" />
   
@@ -242,7 +242,7 @@ $(document).ready(function () {
           </p>
         </div>
         `)
-        $('#navBar').css('padding','10px 3px');
+        // $('#navBar').css('padding','10px 3px');
         $('#oNamaTekst h1').html(`<h1>${serbianLanguage.oNamaH1}</h1>`);
         $('#oNamaTekst p').html(`<p>${serbianLanguage.oNamaP}</p>`);
         $('#oNamaTekst p').css('line-height','24px');
@@ -286,7 +286,7 @@ $(document).ready(function () {
         $('#btnRez').text(`${englishLanguage.rezervacija}`);
         $('#btnKontakt').text(`${englishLanguage.kontakt}`);
         $('#navBar button').css('font-family','OSC');
-        $('#navBar button').css('font-size','15px');
+        // $('#navBar button').css('font-size','15px');
         $('#slogan').html(`
         <img src="img/legat-logo.png" alt="" />
 
@@ -298,19 +298,19 @@ $(document).ready(function () {
           </p>
         </div>
         `)
-        $('#navBar').css('padding','8px 3px');
-        $('#legat').css('font-size','16px');
-        $('#legat').css('letter-spacing','4px');
-        $('#tekst h3').css('margin','0px');
-        $('#tekst p').css('line-height','16px');
-        $('#logoH2').css('font-size','40px');
+        // $('#navBar').css('padding','8px 3px');
+        // $('#legat').css('font-size','16px');
+        // $('#legat').css('letter-spacing','4px');
+        // $('#tekst h3').css('margin','0px');
+        // $('#tekst p').css('line-height','16px');
+        // $('#logoH2').css('font-size','40px');
         $('#slogan h2, #slogan h4, #tekst h3, #tekst p').css('font-family','OSC');
         $('#oNamaTekst h1').html(`<h1>${englishLanguage.oNamaH1}</h1>`);
         $('#oNamaTekst p').html(` <p> ${englishLanguage.oNamaP}</p>`);
         $('#oNamaTekst h1').css('font-family','OSC');
-        $('#oNamaTekst h1').css('font-size','40px');
+        // $('#oNamaTekst h1').css('font-size','40px');
         $('#oNamaTekst p').css('font-family','OSC');
-        $('#oNamaTekst p').css('line-height','27px');
+        // $('#oNamaTekst p').css('line-height','27px');
         $('#boxKontakt').html(` 
         <h3>${englishLanguage.kontaktH3}</h3>
         <p>${englishLanguage.kontaktP}</p>
@@ -327,7 +327,7 @@ $(document).ready(function () {
           <button id="rezBtn">${englishLanguage.rezBtn}</button>
         </div>`);
         $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('font-family','OSC');
-        $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('line-height','17px');
+        $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('line-height','35px');
         $('#nasiRadovi h1').html(`<h1>${englishLanguage.nasiRadoviH1}</h1>`);
         $('#nasiRadovi h4').html(`<h4>${englishLanguage.nasiRadoviH4}</h4>`);
         $('#nasiRadovi h1, #nasiRadovi h4').css('font-family','OSC');

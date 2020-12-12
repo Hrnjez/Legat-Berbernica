@@ -736,7 +736,7 @@ select {
   }
   #celaGlavna {
     background-image: url(img/pozadina2.png);
-    background-size: 200%;
+    background-size: cover;
     text-align: center;
   }
 
