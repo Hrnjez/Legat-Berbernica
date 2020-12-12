@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 	<title>Berbernica Legat</title>
 </head>
 
@@ -25,12 +26,10 @@
 	<button id="btnKontakt">Kontakt</button>
 </div>
 
-
 <div id="langChange">
 	<input type="radio" id="srb" name="lang" value="srb" checked><span>Srb</span>
 	<input type="radio" id="eng" name="lang" value="eng"><span>Eng</span>
 </div>
-
 
 <section id="glavna">
 	<div id="celaGlavna">
@@ -39,7 +38,7 @@
 		<!-- </button> -->
 		<div id="slogan">
 			<img src="img/legat-logo.png" alt=""/>
-			<!-- <h4 id="legat">Legat</h4> -->
+		
 			<h2 id="logoH2">Negujemo tradiciju dok pratimo novitete</h2>
 			<div id="tekst">
 				<h3>Brada i frizura</h3>
@@ -55,6 +54,7 @@
 </section>
 
 <section id="oNama">
+
 	<div id="oNamaTekst">
 		<h1>O nama</h1>
 		<p>
@@ -221,13 +221,12 @@
 	<img src="img/img2.png" alt=""/>
 </section>
 
-<section id="zakazivanje">
+<section id="zakazivanje" >
 	<form action="">
-		<h1>
+		<h1 id="zakaziOvde">
 			Zakazivawe
 		</h1>
-		<span id="zakaziOvde"><i class="fas fa-chevron-down fa-2x"></i> </span>
-
+		
 
 		<div id="inputBoxes">
 			<div>
@@ -297,15 +296,15 @@
 				Vidi na mapi</a>
 		</button>
 		<br/>
-		<p id="copyright">Copyright &copy; 2019 - Berbernica Legat</p>
+
 	</div>
 	<div id="radnoVreme">
 		<h2>Radno vreme :</h2>
 
 		<p>
-			Ponedeqak - Petak . . . . . . . . . . . . . . . 11:00 - 21:00 <br/>
+			Ponedeqak - Petak . . . 11:00 - 21:00 <br/>
 			<br/>
-			Subota . . . . . . . . . . . . . . . . . . . . . . . . 10:00 - 16:00
+			Subota . . . . . . . . . . . . 10:00 - 16:00
 		</p>
 	</div>
 	<div id="dMreze">
@@ -319,7 +318,11 @@
 			<a href="https://www.instagram.com/berbernica_legat_/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
 		</button>
 	</div>
+	<div>
+		<p id="copyright">Copyright &copy; 2019 - Berbernica Legat</p>
+	</div>
 </section>
+
 <section id="login">
 	<h3>Administrator</h3>
 	<input type="text" id="adminIme" placeholder="Ime"/>
@@ -352,6 +355,7 @@
 <script src="language.js"></script>
 <script src="slick.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </body>
 
 </html>
