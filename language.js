@@ -278,6 +278,7 @@ $(document).ready(function () {
         $('#zakazi strong').css('font-family','font');
         $('#usluga').html(`${serbianLanguage.usluge}`)
         $('#usluga option').css('font-family','font');
+        $('#footer').html(`${serbianLanguage.footer}`);
     });
     $('#eng').on('click',function(){
         $('#btnGlavna').text(`${englishLanguage.glavna}`);
