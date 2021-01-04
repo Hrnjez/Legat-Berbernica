@@ -117,7 +117,7 @@ body {
   margin: auto;
   margin-top: 55px;
   font-family: "font";
-  text-align: justify;
+  text-align: start;
   font-size: 17px;
 }
 #slogan h4 {
@@ -134,7 +134,7 @@ body {
 
 #slogan h2 {
   font-family: "font";
-  font-size: 50px;
+  font-size: 40px;
   color: brown;
   margin: 1% 0;
 }
@@ -609,7 +609,7 @@ select {
   grid-template-columns: 1fr 1fr 1fr;
 }
 #footer h2 {
-  color: white;
+  color: rgba(255, 255, 255, 0.815);
   font-size: 25px;
 }
 #footer button {
@@ -763,7 +763,7 @@ select {
     display: grid;
     grid-template-columns: 1fr;
     font-family: "font";
-    text-align: justify;
+    text-align: start;
     font-size: 17px;
     color: blue;
     margin-top:120px;
@@ -783,9 +783,9 @@ select {
 
   #slogan h2 {
     font-family: "font";
-    font-size: 70px;
+    font-size: 50px;
     color: brown;
-    margin: auto;
+    margin:1rem auto;
     text-align: start;
   }
   #tekst {
@@ -794,10 +794,11 @@ select {
     width: 100%;
   }
   #tekst h3 {
-    font-size: 55px;
+    font-size: 45px;
+    margin: 1rem 0;
   }
   #tekst p {
-    font-size: 40px;
+    font-size: 39px;
     text-align: start;
   }
 
@@ -896,6 +897,7 @@ select {
   #footer p {
     font-size: 15px !important;
     text-align:center;
+    color: rgba(255, 255, 255, 0.801);
   }
   #footer p {
     font-size: 11px !important;

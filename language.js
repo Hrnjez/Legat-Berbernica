@@ -8,7 +8,7 @@ $(document).ready(function () {
         kontakt: 'Kontakt',
         // logoTxt: 'Logo',
         slogan: 'Negujemo tradiciju dok pratimo novitete',
-        bradaIFriz: 'Brada i Frizura',
+        bradaIFriz: 'Brada i frizura',
         bradaIFrizP: 'Verujemo u kvalitet i nastojimo da vam pru`imo prvoklasnu uslugu. Britva je na{ omiljeni alat, zato je brijawe na{a u`a specijalnost.',
         oNamaH1: ' O nama',
         oNamaP: "Berbernica Legat se nalazi u jednom od najlep{ih delova  Vra<span class='small-letter'>^</span>ara, u samom srcu Beograda. Legat nije obi<span class='small-letter'>^</span>na berberbnica, to je klub u kome }e svaki gospodin u`ivati u komforu entrerijera fino}i pi}a i visokom kvalitetu usluga. Verujemo da svaki mu{karac treba da nosi frizuru koja pristaje wegovom karakteru, stilu i na<span class='small-letter'>^</span>inu `ivota. Bilo da `elite klasi<span class='small-letter'>^</span>nu frizuru '50-ih,  <span class='eng-word'>fade</span> sa bezbroj varijacija ili neprevaziđeni <span class='eng-word'>rockabilly</span> stil,na{i berberi }e biti na visini zadatka. Negujemo tradiciju dok pratimo novitete. Poredfrizura, tu smo da se postaramo i za izgled Va{e brade i brkova. Verujemo u kvalitet i nastojimo da vam pru`imo prvoklasnu uslugu. Britva je na{ omiljeni alat, zato je brijawe na{a u`a specijalnost.",
@@ -100,6 +100,9 @@ $(document).ready(function () {
         izaberiDatum: 'Izaberi datum:',
         vrstaUsluge: 'Vrsta Usluge:',
         btnZakazi: 'Zaka`i',
+        izaberiVreme: 'Izaberi vreme',
+        napisiIme: 'Ime',
+        brojTel: 'Broj telefona',
         usluge: `
           <option>Šišanje (45min)</option>
           <option>Šišanje Mašinicom (30min)</option>
@@ -109,7 +112,49 @@ $(document).ready(function () {
           <option>Komplet 1 (1h 45min)</option>
           <option>Komplet 2 (1h 45min)</option>
           <option>Komplet 3 (1h 45min)</option>
-          <option>Pranje kose i stilizovanje (30min)</option>`
+          <option>Pranje kose i stilizovanje (30min)</option>`,
+          footer: `
+          
+            <div id="adresa">
+              <h2>Адреса :</h2>
+              <p id="pAdresa">
+                Цара Николаја 2-86. Београд <br/>
+                <br/>
+                Србија
+              </p>
+              <button id="vidiNaMapi">
+                <a href="https://goo.gl/maps/rKbjUWZPrmwat5fa7"
+                  target="_blank">
+                  Види На мапи</a>
+              </button>
+              <br/>
+
+            </div>
+            <div id="radnoVreme">
+              <h2>Радно време :</h2>
+
+              <p>
+                Понедељак - Петак . . . 11:00 - 21:00 <br/>
+                <br/>
+                Субота . . . . . . . . . . . . 10:00 - 16:00
+              </p>
+            </div>
+            <div id="dMreze">
+              <h2>Друштвене мреже :</h2>
+              <p>Пратите нас на друштвеним мрежама.</p>
+              <button id="btnFace">
+                <a href="https://www.facebook.com/berbernica.legat" target="_blank"><i
+                    class="fab fa-facebook-square fa-2x"></i></a>
+              </button>
+              <button id="btnInsta">
+                <a href="https://www.instagram.com/berbernica_legat_/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+              </button>
+            </div>
+            <div>
+              <p id="copyright">Copyright &copy; 2020 - Берберница Легат</p>
+            </div>
+          
+          `
       }
     
     const englishLanguage = {
@@ -211,6 +256,9 @@ $(document).ready(function () {
         izaberiDatum: 'Select a Date:',
         vrstaUsluge: 'Type of Service:',
         btnZakazi: 'Schedule',
+        izaberiVreme: 'Choose a time',
+        napisiIme: 'Name',
+        brojTel: 'Phone number',
         usluge: `
           <option>Haircut (45min)</option>
           <option>Haircut with a Clipper (30min)</option>
@@ -220,7 +268,49 @@ $(document).ready(function () {
           <option>Set 1 (1h 45min)</option>
           <option>Set 2 (1h 45min)</option>
           <option>Set 3 (1h 45min)</option>
-          <option>Hair Washing and Styling (30min)</option>`
+          <option>Hair Washing and Styling (30min)</option>`,
+          footer: `
+          
+          <div id="adresa">
+            <h2>Adress :</h2>
+            <p id="pAdresa">
+              Cara Nikolaja 2-86. Beograd <br/>
+              <br/>
+              Serbia
+            </p>
+            <button id="vidiNaMapi">
+              <a href="https://goo.gl/maps/rKbjUWZPrmwat5fa7"
+                target="_blank">
+                See on the map</a>
+            </button>
+            <br/>
+
+          </div>
+          <div id="radnoVreme">
+            <h2>Working time :</h2>
+
+            <p>
+              Monday - Fridayk . . . 11:00 - 21:00 <br/>
+              <br/>
+              Saturday . . . . . . . . . . . . 10:00 - 16:00
+            </p>
+          </div>
+          <div id="dMreze">
+            <h2>Social media :</h2>
+            <p>Follow us on social media.</p>
+            <button id="btnFace">
+              <a href="https://www.facebook.com/berbernica.legat" target="_blank"><i
+                  class="fab fa-facebook-square fa-2x"></i></a>
+            </button>
+            <button id="btnInsta">
+              <a href="https://www.instagram.com/berbernica_legat_/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+            </button>
+          </div>
+          <div>
+            <p id="copyright">Copyright &copy; 2020 - Berbernica Legat</p>
+          </div>
+        
+        `
 }
     
     $('#srb').on('click',function(){
@@ -230,7 +320,7 @@ $(document).ready(function () {
         $('#btnRez').text(`${serbianLanguage.rezervacija}`);
         $('#btnKontakt').text(`${serbianLanguage.kontakt}`);
         $('#navBar button').css('font-family','font');
-        // $('#navBar button').css('font-size','16px');
+        $('#navBar').css('padding','10px 3px');
         $('#slogan').html(`
         <img src="img/legat-logo.png" alt="" />
   
@@ -279,6 +369,11 @@ $(document).ready(function () {
         $('#usluga').html(`${serbianLanguage.usluge}`)
         $('#usluga option').css('font-family','font');
         $('#footer').html(`${serbianLanguage.footer}`);
+        $('#izaberi-vreme').html(`${serbianLanguage.izaberiVreme}`);
+        $('#napisi-ime').html(`${serbianLanguage.napisiIme}`);
+        $('#broj-telefona').html(`${serbianLanguage.brojTel}`);
+        $('#footer').html(`${serbianLanguage.footer}`);
+        $('#footer, #footer h2, #footer p, #footer a').css('font-family','OSC');
     });
     $('#eng').on('click',function(){
         $('#btnGlavna').text(`${englishLanguage.glavna}`);
@@ -299,7 +394,7 @@ $(document).ready(function () {
           </p>
         </div>
         `)
-        // $('#navBar').css('padding','8px 3px');
+         $('#navBar').css('padding','7px 3px');
         // $('#legat').css('font-size','16px');
         // $('#legat').css('letter-spacing','4px');
         // $('#tekst h3').css('margin','0px');
@@ -328,7 +423,7 @@ $(document).ready(function () {
           <button id="rezBtn">${englishLanguage.rezBtn}</button>
         </div>`);
         $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('font-family','OSC');
-        $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('line-height','35px');
+        $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('line-height','95%');
         $('#nasiRadovi h1').html(`<h1>${englishLanguage.nasiRadoviH1}</h1>`);
         $('#nasiRadovi h4').html(`<h4>${englishLanguage.nasiRadoviH4}</h4>`);
         $('#nasiRadovi h1, #nasiRadovi h4').css('font-family','OSC');
@@ -347,5 +442,10 @@ $(document).ready(function () {
         $('#zakazi strong').css('font-family','OSC');
         $('#usluga').html(`${englishLanguage.usluge}`)
         $('#usluga option').css('font-family','OSC');
+        $('#izaberi-vreme').html(`${englishLanguage.izaberiVreme}`);
+        $('#napisi-ime').html(`${englishLanguage.napisiIme}`);
+        $('#broj-telefona').html(`${englishLanguage.brojTel}`);
+        $('#footer').html(`${englishLanguage.footer}`);
+        $('#footer, #footer h2, #footer p, #footer a').css('font-family','OSC');
     });
 });
