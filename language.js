@@ -99,42 +99,47 @@ $(document).ready(function () {
         jovan: 'Jovan',
         izaberiDatum: 'Izaberi datum:',
         vrstaUsluge: 'Vrsta Usluge:',
+        nameLabel: 'Ime:',
+        phoneLabel: 'Broj telefona:',
+        timeLabel: 'Izaberi vreme:',
         btnZakazi: 'Zaka`i',
         usluge: `
-          <option>Šišanje (45min)</option>
-          <option>Šišanje Mašinicom (30min)</option>
-          <option>Šišanje, Deca (45min)</option>
-          <option>Brijanje (30min)</option>
-          <option>Korekcija brade (30min)</option>
-          <option>Komplet 1 (1h 45min)</option>
-          <option>Komplet 2 (1h 45min)</option>
-          <option>Komplet 3 (1h 45min)</option>
-          <option>Pranje kose i stilizovanje (30min)</option>`
-      }
-    
+        <option value="sisanje">Haircut (45min)</option>
+        <option value="sisanjeMasinica">Buzz cut (30min)</option>
+        <option value="decjeSisanje">Children's haircut (30min)</option>
+        <option value="brijanje">Shaving (30min)</option>
+        <option value="korekcijaBrade">Beard trim (30min)</option>
+        <option value="komplet1">Set 1 (1h15min)</option>
+        <option value="komplet2">Set 2 (1h15min)</option>
+        <option value="komplet3">Set 3 (1h)</option>
+        <option value="komplet4">Set 4 (1h)</option>
+        <option value="pranjeStilizovanje">Hair wash and Styling(20min)</option>
+        `
+    }
+
     const englishLanguage = {
-        glavna: 'Home',
-        oNama: 'About',
+        glavna: 'Home page',
+        oNama: 'About us',
         cene: 'Prices',
-        rezervacija: 'Reservation',
+        rezervacija: 'Booking',
         kontakt: 'Contact',
         // logoTxt: 'Logo',
-        slogan: 'We nurture the tradition while following the newspapers',
-        bradaIFriz: 'Beard and Hairstyle',
-        bradaIFrizP: 'We believe in quality and strive to provide you with first-class service. The razor is our favorite tool, so shaving is our specialty.',
-        oNamaH1 : 'About Us',
+        slogan: '',
+        bradaIFriz: '',
+        bradaIFrizP: '',
+        oNamaH1: 'About Us',
         oNamaP: 'Тhe barbershop “Legacy”  is located in one of the most beautiful parts of Vracar, in the heart of Belgrade.The “Legacy” is not an ordinary barbershop, it is a club where every gentleman can enjoy in the comfort of the interior, fine liquor  and the high quality services. We believe that every man should wear a hairstyle that suits his character, and lifestyle. Whether you want a classic ’50s hairstyle, a fade, with countless variations, or a superior rockabilly style, our barbers will be up to the task. While we respect the old school, we keep up with new trends.Aside from hairstyling, we are here to take care of your beard and mustache.  We belive in quality, аnd we take our  time to ensure you get the best haircut and shave possible. The razor is our favorite tool,therefore, shaving is our specialty.',
         kontaktH3: 'Contact',
         kontaktP: 'Visit us at our address',
-        kontaktH4: 'Adress:',
+        kontaktH4: 'Address:',
         vidiNaMapi: 'See Map',
-        radnoVreme: 'Working time',
+        radnoVreme: 'Working hours',
         radnoVremePonPet: 'Monday - Friday ..11:00 - 21:00',
         radnoVremeSub: 'Saturday .............10:00 - 16:00',
-        rezBtn: 'Reservation',
+        rezBtn: 'Booking',
         nasiRadoviH1: 'Our Work',
         nasiRadoviH4: 'Some of our satisfied customers',
-        cenovnik:` <h1>Price list of services</h1>
+        cenovnik: ` <h1>Price List</h1>
         <br />
         <div>
           <h2>Haircut</h2>
@@ -145,7 +150,7 @@ $(document).ready(function () {
           </h4>
         </div>
         <div>
-          <h2>Haircut with a Clipper</h2>
+          <h2>Buzz cut</h2>
           <h4>
           Duration 30 minutes . . . . . . . . . . . . . . . . . . . . . .
             . . . . . . . . .
@@ -153,19 +158,19 @@ $(document).ready(function () {
           </h4>
         </div>
   
-        <h2>Haircut, Children</h2>
+        <h2>Children's haircut</h2>
         <h4>
-            Duration 45 minutes  . . . . . . . . . . . . . . . . . . . . . . .
+            Duration 30 minutes  . . . . . . . . . . . . . . . . . . . . . . .
           . . . . . . . .
           <span id="ceneSisanja">RSD 800</span>
         </h4>
         <h2>Shaving</h2>
         <h4>
-           Duration 45 minutes  . . . . . . . . . . . . . . . . . . . . . . .
+           Duration 30 minutes  . . . . . . . . . . . . . . . . . . . . . . .
           . . . . . . . .
           <span id="ceneSisanja">RSD 1000</span>
         </h4>
-        <h2>Chin correction</h2>
+        <h2>Beard trim</h2>
         <h4>
             Duration 30 minutes  . . . . . . . . . . . . . . . . . . . . . . .
           . . . . . . . .
@@ -173,63 +178,76 @@ $(document).ready(function () {
         </h4>
         <h2>Set 1</h2>
         <h4>
-            Haircut and Chin Correction
+            Haircut and beard trim
         </h4>
         <h4>
-            Duration 1 hour and 45 minutes . . . . . . . . . . . . . . . . . . .
+            Duration 1 hour and 15 minutes . . . . . . . . . . . . . . . . . . .
           . . . . . .
           <span id="ceneSisanja">RSD 1800</span>
         </h4>
         <h2>Set 2</h2>
         <h4>
-            Haircut and Shaving
+            Haircut and straight razor shave
         </h4>
         <h4>
-            Duration 1 hour and 45 minutes . . . . . . . . . . . . . . . . . . .
+            Duration 1 hour and 15 minutes . . . . . . . . . . . . . . . . . . .
           . . . . . .
           <span id="ceneSisanja">RSD 2000</span>
         </h4>
         <h2>Set 3</h2>
         <h4>
-           Machine trimming and shaving
+           Buzz cut and beard trim
         </h4>
         <h4>
-           Duration 1 hour and 45 minutes . . . . . . . . . . . . . . . . . . .
+           Duration 1 hour . . . . . . . . . . . . . . . . . . . .
+          . . . . . .
+          <span id="ceneSisanja">RSD 1650</span>
+        </h4>
+        <h2>Set 4</h2>
+        <h4>
+           Buzz cut and straight razor shave
+        </h4>
+        <h4>
+           Duration 1 hour . . . . . . . . . . . . . . . . . . .
           . . . . . .
           <span id="ceneSisanja">RSD 1750</span>
         </h4>
-        <h2>Hair Washing and Styling</h2>
+        <h2>Hair Wash and Styling</h2>
         <h4>
-            Duration 30 minutes  . . . . . . . . . . . . . . . . . . . . . . .
+            Duration 20 minutes  . . . . . . . . . . . . . . . . . . . . . . .
           . . . . . . . .
           <span id="ceneSisanja">RSD 700</span>
         </h4>
         `,
-        zakazivanjeH1: 'Scheduling',
+        zakazivanjeH1: 'Booking',
         dusan: 'Dusan',
         jovan: 'Jovan',
         izaberiDatum: 'Select a Date:',
-        vrstaUsluge: 'Type of Service:',
-        btnZakazi: 'Schedule',
+        nameLabel: 'Your name:',
+        phoneLabel: 'Your phone number:',
+        timeLabel: 'Select time:',
+        vrstaUsluge: 'Service:',
+        btnZakazi: 'Book',
         usluge: `
-          <option>Haircut (45min)</option>
-          <option>Haircut with a Clipper (30min)</option>
-          <option>Haircut, Children (45min)</option>
-          <option>Shaving (30min)</option>
-          <option>Chin correction (30min)</option>
-          <option>Set 1 (1h 45min)</option>
-          <option>Set 2 (1h 45min)</option>
-          <option>Set 3 (1h 45min)</option>
-          <option>Hair Washing and Styling (30min)</option>`
-}
-    
-    $('#srb').on('click',function(){
+          <option value="sisanje">Haircut (45min)</option>
+        <option value="sisanjeMasinica">Buzz cut (30min)</option>
+        <option value="decjeSisanje">Children's haircut (30min)</option>
+        <option value="brijanje">Shaving (30min)</option>
+        <option value="korekcijaBrade">Beard trim (30min)</option>
+        <option value="komplet1">Set 1 (1h15min)</option>
+        <option value="komplet2">Set 2 (1h15min)</option>
+        <option value="komplet3">Set 3 (1h)</option>
+        <option value="komplet4">Set 4 (1h)</option>
+        <option value="pranjeStilizovanje">Hair wash and Styling(20min)</option>`
+    }
+
+    $('#srb').on('click', function () {
         $('#btnGlavna').text(`${serbianLanguage.glavna}`);
         $('#btnONama').text(`${serbianLanguage.oNama}`);
         $('#btnCene').text(`${serbianLanguage.cene}`);
         $('#btnRez').text(`${serbianLanguage.rezervacija}`);
         $('#btnKontakt').text(`${serbianLanguage.kontakt}`);
-        $('#navBar button').css('font-family','font');
+        $('#navBar button').css('font-family', 'font');
         // $('#navBar button').css('font-size','16px');
         $('#slogan').html(`
         <img src="img/legat-logo.png" alt="" />
@@ -245,7 +263,7 @@ $(document).ready(function () {
         // $('#navBar').css('padding','10px 3px');
         $('#oNamaTekst h1').html(`<h1>${serbianLanguage.oNamaH1}</h1>`);
         $('#oNamaTekst p').html(`<p>${serbianLanguage.oNamaP}</p>`);
-        $('#oNamaTekst p').css('line-height','24px');
+        $('#oNamaTekst p').css('line-height', '24px');
         $('#boxKontakt').html(` 
         <h3>${serbianLanguage.kontaktH3}</h3>
         <p>${serbianLanguage.kontaktP}</p>
@@ -261,32 +279,35 @@ $(document).ready(function () {
         <div id="kontaktBtn">
           <button id="rezBtn">${serbianLanguage.rezBtn}</button>
         </div>`);
-        $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('font-family','font');
+        $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('font-family', 'font');
         $('#nasiRadovi h1').html(`<h1>${serbianLanguage.nasiRadoviH1}</h1>`);
         $('#nasiRadovi h4').html(`<h4>${serbianLanguage.nasiRadoviH4}</h4>`);
-        $('#cene h1, #cene h2, #cene h4, #cene span').css('font-family','font');
+        $('#cene h1, #cene h2, #cene h4, #cene span').css('font-family', 'font');
         $('#cene').html(`${serbianLanguage.cenovnik}`);
-        $('#cene span').css('float','right');
-        $('#cene span').css('margin-top','-15px');
+        $('#cene span').css('float', 'right');
+        $('#cene span').css('margin-top', '-15px');
         $('#zakazivanje h1').html(`${serbianLanguage.zakazivanjeH1} `);
         $('#dusan').html(`${serbianLanguage.dusan}`);
         $('#jovan').html(`${serbianLanguage.jovan}`);
         $('#izaberi-datum').html(`${serbianLanguage.izaberiDatum}`);
         $('#vrsta-usluge').html(`${serbianLanguage.vrstaUsluge}`);
-        $('#zakazivanje h1, #zakazivanje h3, #zakazivanje h4').css('font-family','font');
+        $('#time-label').html(`${serbianLanguage.timeLabel}`);
+        $('#name-label').html(`${serbianLanguage.nameLabel}`);
+        $('#phone-label').html(`${serbianLanguage.phoneLabel}`);
+        $('#zakazivanje h1, #zakazivanje h3, #zakazivanje h4').css('font-family', 'font');
         $('#zakazi strong').html(`${serbianLanguage.btnZakazi}`);
-        $('#zakazi strong').css('font-family','font');
+        $('#zakazi strong').css('font-family', 'font');
         $('#usluga').html(`${serbianLanguage.usluge}`)
-        $('#usluga option').css('font-family','font');
+        $('#usluga option').css('font-family', 'font');
         $('#footer').html(`${serbianLanguage.footer}`);
     });
-    $('#eng').on('click',function(){
+    $('#eng').on('click', function () {
         $('#btnGlavna').text(`${englishLanguage.glavna}`);
         $('#btnONama').text(`${englishLanguage.oNama}`);
         $('#btnCene').text(`${englishLanguage.cene}`);
         $('#btnRez').text(`${englishLanguage.rezervacija}`);
         $('#btnKontakt').text(`${englishLanguage.kontakt}`);
-        $('#navBar button').css('font-family','OSC');
+        $('#navBar button').css('font-family', 'OSC');
         // $('#navBar button').css('font-size','15px');
         $('#slogan').html(`
         <img src="img/legat-logo.png" alt="" />
@@ -305,12 +326,12 @@ $(document).ready(function () {
         // $('#tekst h3').css('margin','0px');
         // $('#tekst p').css('line-height','16px');
         // $('#logoH2').css('font-size','40px');
-        $('#slogan h2, #slogan h4, #tekst h3, #tekst p').css('font-family','OSC');
+        $('#slogan h2, #slogan h4, #tekst h3, #tekst p').css('font-family', 'OSC');
         $('#oNamaTekst h1').html(`<h1>${englishLanguage.oNamaH1}</h1>`);
         $('#oNamaTekst p').html(` <p> ${englishLanguage.oNamaP}</p>`);
-        $('#oNamaTekst h1').css('font-family','OSC');
+        $('#oNamaTekst h1').css('font-family', 'OSC');
         // $('#oNamaTekst h1').css('font-size','40px');
-        $('#oNamaTekst p').css('font-family','OSC');
+        $('#oNamaTekst p').css('font-family', 'OSC');
         // $('#oNamaTekst p').css('line-height','27px');
         $('#boxKontakt').html(` 
         <h3>${englishLanguage.kontaktH3}</h3>
@@ -327,25 +348,28 @@ $(document).ready(function () {
         <div id="kontaktBtn">
           <button id="rezBtn">${englishLanguage.rezBtn}</button>
         </div>`);
-        $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('font-family','OSC');
-        $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('line-height','35px');
+        $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('font-family', 'OSC');
+        $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('line-height', '35px');
         $('#nasiRadovi h1').html(`<h1>${englishLanguage.nasiRadoviH1}</h1>`);
         $('#nasiRadovi h4').html(`<h4>${englishLanguage.nasiRadoviH4}</h4>`);
-        $('#nasiRadovi h1, #nasiRadovi h4').css('font-family','OSC');
-        $('#nasiRadovi h1, #nasiRadovi h4').css('margin','30px');
+        $('#nasiRadovi h1, #nasiRadovi h4').css('font-family', 'OSC');
+        $('#nasiRadovi h1, #nasiRadovi h4').css('margin', '30px');
         $('#cene').html(`${englishLanguage.cenovnik}`);
-        $('#cene h1, #cene h2, #cene h4, #cene span').css('font-family','OSC');
-        $('#cene span').css('float','right');
-        $('#cene span').css('margin-top','-20px');
+        $('#cene h1, #cene h2, #cene h4, #cene span').css('font-family', 'OSC');
+        $('#cene span').css('float', 'right');
+        $('#cene span').css('margin-top', '-20px');
         $('#zakazivanje h1').html(`${englishLanguage.zakazivanjeH1} `);
         $('#dusan').html(`${englishLanguage.dusan}`);
         $('#jovan').html(`${englishLanguage.jovan}`);
         $('#izaberi-datum').html(`${englishLanguage.izaberiDatum}`);
         $('#vrsta-usluge').html(`${englishLanguage.vrstaUsluge}`);
-        $('#zakazivanje h1, #zakazivanje h3, #zakazivanje h4').css('font-family','OSC');
+        $('#time-label').html(`${englishLanguage.timeLabel}`);
+        $('#name-label').html(`${englishLanguage.nameLabel}`);
+        $('#phone-label').html(`${englishLanguage.phoneLabel}`);
+        $('#zakazivanje h1, #zakazivanje h3, #zakazivanje h4').css('font-family', 'OSC');
         $('#zakazi strong').html(`${englishLanguage.btnZakazi}`);
-        $('#zakazi strong').css('font-family','OSC');
+        $('#zakazi strong').css('font-family', 'OSC');
         $('#usluga').html(`${englishLanguage.usluge}`)
-        $('#usluga option').css('font-family','OSC');
+        $('#usluga option').css('font-family', 'OSC');
     });
 });
