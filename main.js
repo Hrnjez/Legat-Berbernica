@@ -385,7 +385,6 @@ $(document).ready(function () {
     //   $("#demo").fadeOut(2000);
     //   console.log("Otkazano");
     // }
-    var unavailableDates = ["9-10-2020", "14-10-2020", "15-10-2020"];
 
     function unavailable(date) {
         dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();

@@ -106,11 +106,11 @@ $(document).ready(function () {
                         var tdRemove = document.createElement('TD');
                         var btn = document.createElement('button');
 
-                        
+
                         //TODO: za KUMICA - svaki red u tabeli treba da poziva funckiju "removeTerm()" sa id-jem kao parametrom, id se nalazi u polju data[key].id :) SRECNO!
                         btn.innerText='Obrisi';
                         tdRemove.appendChild(btn)
-                        
+
                         //TODO
                         btn.setAttribute('id', data[key].id);
                         btn.setAttribute('value', "Obrisi");
@@ -122,7 +122,7 @@ $(document).ready(function () {
                         tr.appendChild(tdRemove);
 
                         tableBody.appendChild(tr);
-                     
+
                     }
                     termResults.appendChild(table);
 
@@ -134,7 +134,7 @@ $(document).ready(function () {
                 }
 
             };
-            
+
             xhr.send(null);
 
 
@@ -162,26 +162,24 @@ $(document).ready(function () {
     }
 
     function removeTerm() {
-    console.log('evo ga kumicc'+ ' ' + $(this).attr('id'));
-       
+        const token = window.localStorage.getItem('token');
+
+        var xhrRemove = new XMLHttpRequest();
+        let urlRemoveLocal = 'http://localhost:8080/admin/term/';
+        let urlRemove = 'http://134.122.112.114:8080/legat/admin/term/';
+        xhrRemove.open('DELETE', urlRemove + $(this).attr('id'), true);
+        xhrRemove.setRequestHeader('Authorization', 'Bearer ' + token);
+
+        xhrRemove.onload = function () {
+            if (xhrRemove.status != '200') {
+                window.alert("Doslo je do greske prilikom brisanja termina.");
+            } else {
+                window.alert("Uspesno ste obrisali termin.")
+                dohvatiTermine();
+            }
+        };
+
+        xhrRemove.send(null);
     }
 
-    var unavailableDates = ["9-10-2020", "14-10-2020", "15-10-2020"];
-
-    function unavailable(date) {
-        dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
-        if ($.inArray(dmy, unavailableDates) == -1) {
-            return [true, ""];
-        } else {
-            return [false, "", "Unavailable"];
-        }
-    }
-
-    $(function () {
-        $("#datum").datepicker({
-            dateFormat: 'dd MM yy',
-            beforeShowDay: unavailable
-        });
-
-    });
 });
