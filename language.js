@@ -161,7 +161,7 @@ $(document).ready(function () {
       }
     
     const englishLanguage = {
-        glavna: 'Home page',
+        glavna: 'Home',
         oNama: 'About us',
         cene: 'Prices',
         rezervacija: 'Booking',

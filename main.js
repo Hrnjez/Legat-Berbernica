@@ -130,16 +130,16 @@ $(document).ready(function () {
     // Zakazivanje termina js
 
     //izbor frizera
-    document.getElementById('zabac').addEventListener('click', birajZabu);
-    document.getElementById('cvija').addEventListener('click', birajCviju);
+    // document.getElementById('zabac').addEventListener('click', birajZabu);
+    // document.getElementById('cvija').addEventListener('click', birajCviju);
 
-    function birajZabu() {
-        $('#zabac').toggleClass('active');
-        $('#zabacCheck').toggleClass('active');
-        $('#cvija').removeClass('active');
-        $('#cvijaCheck').removeClass('active');
-        dohvatiTermine();
-    }
+    // function birajZabu() {
+    //     $('#zabac').toggleClass('active');
+    //     $('#zabacCheck').toggleClass('active');
+    //     $('#cvija').removeClass('active');
+    //     $('#cvijaCheck').removeClass('active');
+    //     dohvatiTermine();
+    // }
 
     function birajCviju() {
         $('#cvija').toggleClass('active');
@@ -148,6 +148,7 @@ $(document).ready(function () {
         $('#zabacCheck').removeClass('active');
         dohvatiTermine();
     }
+    birajCviju(); //direktno biranje cvije
 
     $("#zakazi").on("click", zakazivanje);
     $("#datum").on("change", dohvatiTermine);
@@ -404,7 +405,24 @@ $(document).ready(function () {
     });
 
 });
+//initial srb flag
+$('#srb').addClass('focusClass');
+$('#eng').removeClass('focusClass');
+console.log('srb')
+$('#eng').addClass('blurClass');
 
 
+//toggle flags
+$("#srb").on("click", function(){
+    $('#srb').addClass('focusClass');
+    $('#eng').removeClass('focusClass');
+    console.log('srb')
+    $('#eng').addClass('blurClass');
+});
 
-
+$("#eng").on("click", function(){
+    $('#eng').addClass('focusClass');
+    $('#srb').removeClass('focusClass');
+    console.log('eng')
+    $('#srb').addClass('blurClass');
+});
