@@ -386,9 +386,15 @@ $(document).ready(function () {
     //   console.log("Otkazano");
     // }
 
-    function unavailable(date,unavailableDates) {
-        dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
-        if ($.inArray(dmy, unavailableDates) == -1) {
+    function unavailable(date) {
+
+        var today = new Date();
+        today.setDate((today.getDate() - 1));
+
+        var lastDate = new Date(today);
+        lastDate.setDate(lastDate.getDate() + 30);
+
+        if (date >= today && date <= lastDate) {
             return [true, ""];
         } else {
             return [false, "", "Unavailable"];
