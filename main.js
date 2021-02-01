@@ -386,7 +386,7 @@ $(document).ready(function () {
     //   console.log("Otkazano");
     // }
 
-    function unavailable(date) {
+    function unavailable(date,unavailableDates) {
         dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
         if ($.inArray(dmy, unavailableDates) == -1) {
             return [true, ""];
