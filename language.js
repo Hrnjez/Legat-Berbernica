@@ -7,9 +7,9 @@ $(document).ready(function () {
         rezervacija: 'Rezervacija',
         kontakt: 'Kontakt',
         // logoTxt: 'Logo',
-        slogan: 'Negujemo tradiciju dok pratimo novitete',
-        bradaIFriz: 'Brada i frizura',
-        bradaIFrizP: 'Verujemo u kvalitet i nastojimo da vam pru`imo prvoklasnu uslugu. Britva je na{ omiljeni alat, zato je brijawe na{a u`a specijalnost.',
+        // slogan: 'Negujemo tradiciju dok pratimo novitete',
+        // bradaIFriz: 'Brada i frizura',
+        // bradaIFrizP: 'Verujemo u kvalitet i nastojimo da vam pru`imo prvoklasnu uslugu. Britva je na{ omiljeni alat, zato je brijawe na{a u`a specijalnost.',
         oNamaH1: ' O nama',
         oNamaP: "Berbernica Legat se nalazi u jednom od najlep{ih delova  Vra<span class='small-letter'>^</span>ara, u samom srcu Beograda. Legat nije obi<span class='small-letter'>^</span>na berberbnica, to je klub u kome }e svaki gospodin u`ivati u komforu entrerijera fino}i pi}a i visokom kvalitetu usluga. Verujemo da svaki mu{karac treba da nosi frizuru koja pristaje wegovom karakteru, stilu i na<span class='small-letter'>^</span>inu `ivota. Bilo da `elite klasi<span class='small-letter'>^</span>nu frizuru '50-ih,  <span class='eng-word'>fade</span> sa bezbroj varijacija ili neprevaziđeni <span class='eng-word'>rockabilly</span> stil,na{i berberi }e biti na visini zadatka. Negujemo tradiciju dok pratimo novitete. Poredfrizura, tu smo da se postaramo i za izgled Va{e brade i brkova. Verujemo u kvalitet i nastojimo da vam pru`imo prvoklasnu uslugu. Britva je na{ omiljeni alat, zato je brijawe na{a u`a specijalnost.",
         kontaktH3: 'Kontakt',
@@ -42,7 +42,7 @@ $(document).ready(function () {
           </h4>
         </div>
   
-        <h2>[i{awe, Deca</h2>
+        <h2>[i{awe, Deca </h2>
         <h4>
           Vreme trajawa 45 minuta . . . . . . . . . . . . . . . . . . . . . . .
           . . . . . 
@@ -333,17 +333,17 @@ $(document).ready(function () {
         $('#btnKontakt').text(`${serbianLanguage.kontakt}`);
         $('#navBar button').css('font-family','font');
         $('#navBar').css('padding','10px 3px');
-        $('#slogan').html(`
-        <img src="img/legat-logo.png" alt="" />
+        // $('#slogan').html(`
+        // <img src="img/legat-logo.png" alt="" />
   
-        <h2>${serbianLanguage.slogan}</h2>
-        <div id="tekst">
-          <h3>${serbianLanguage.bradaIFriz}</h3>
-          <p>
-            ${serbianLanguage.bradaIFrizP}
-          </p>
-        </div>
-        `)
+        // <h2>${serbianLanguage.slogan}</h2>
+        // <div id="tekst">
+        //   <h3>${serbianLanguage.bradaIFriz}</h3>
+        //   <p>
+        //     ${serbianLanguage.bradaIFrizP}
+        //   </p>
+        // </div>
+        // `)
         // $('#navBar').css('padding','10px 3px');
         $('#oNamaTekst h1').html(`<h1>${serbianLanguage.oNamaH1}</h1>`);
         $('#oNamaTekst p').html(`<p>${serbianLanguage.oNamaP}</p>`);

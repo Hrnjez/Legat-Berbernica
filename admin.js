@@ -182,4 +182,13 @@ $(document).ready(function () {
         xhrRemove.send(null);
     }
 
+
+
+$(function () {
+    $("#datum").datepicker({
+        dateFormat: 'dd MM yy',
+
+    });
+
+});
 });
