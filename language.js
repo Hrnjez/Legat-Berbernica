@@ -286,7 +286,7 @@ $(document).ready(function () {
           <div id="adresa">
             <h2>Adress :</h2>
             <p id="pAdresa">
-              Cara Nikolaja 2-86. Beograd <br/>
+              Cara Nikolaja II-86. Beograd <br/>
               <br/>
               Serbia
             </p>
@@ -352,7 +352,7 @@ $(document).ready(function () {
         <h3>${serbianLanguage.kontaktH3}</h3>
         <p>${serbianLanguage.kontaktP}</p>
         <h4>${serbianLanguage.kontaktH4}</h4>
-        <p>Cara Nikolaja 2-86. Beograd, Srbija</p>
+        <p>Cara Nikolaja II-86. Beograd, Srbija</p>
         <button id="vidiNaMapi">
           <a href="https://www.google.com/maps/place/Cara+Nikolaja+II+86,+Beograd/@44.7980169,20.4830692,18.67z/data=!4m5!3m4!1s0x475a70779cd6ef27:0x117c4bc8ac219f3d!8m2!3d44.7980837!4d20.4836535"
             target="_blank">${serbianLanguage.vidiNaMapi}</a>
@@ -426,7 +426,7 @@ $(document).ready(function () {
         <h3>${englishLanguage.kontaktH3}</h3>
         <p>${englishLanguage.kontaktP}</p>
         <h4>${englishLanguage.kontaktH4}</h4>
-        <p>Cara Nikolaja 2-86. Beograd, Srbija</p>
+        <p>Cara Nikolaja II-86. Beograd, Srbija</p>
         <button id="vidiNaMapi">
           <a href="https://www.google.com/maps/place/Cara+Nikolaja+II+86,+Beograd/@44.7980169,20.4830692,18.67z/data=!4m5!3m4!1s0x475a70779cd6ef27:0x117c4bc8ac219f3d!8m2!3d44.7980837!4d20.4836535"
             target="_blank">${englishLanguage.vidiNaMapi}</a>

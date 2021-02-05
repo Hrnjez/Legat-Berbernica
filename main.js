@@ -166,8 +166,7 @@ $(document).ready(function () {
             "date": datum.value,
             "time": vreme.value,
             "customerName": ime.value,
-            "customerPhone": broj.value,
-            "unitsOfTime": 3
+            "customerPhone": broj.value
         };
 
         var json = JSON.stringify(term);
@@ -185,13 +184,13 @@ $(document).ready(function () {
             var xhr = new XMLHttpRequest();
             var url = 'http://134.122.112.114:8080/legat/term';
             var urlLocal = 'http://localhost:8080/term';
-            xhr.open('POST', urlLocal, false);
+            xhr.open('POST', url, false);
 
             xhr.onload = function () {
                 console.log(xhr.status);
                 console.log(xhr.responseText);
                 if (xhr.status != '200') {
-                    window.alert("wrong request");
+                    window.alert("Došlo je do grekse, molimo pokušajte ponovo.");
                 } else {
                     console.log('rezervisao!')
                     $('#zakazi').hide(500);
@@ -230,6 +229,8 @@ $(document).ready(function () {
         var zabac = document.getElementById('zabac');
         var frizer = undefined;
 
+        console.log("get terms: ", datum.value);
+
         if (cvija.className == 'active') {
             frizer = cvija.id;
         } else if (zabac.className == 'active') {
@@ -247,14 +248,14 @@ $(document).ready(function () {
             var urlLocal = 'http://localhost:8080/freeTerms/';
 
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', urlLocal + frizer + "/" + datum.value + "/" + usluga.value, false);
+            xhr.open('GET', url + frizer + "/" + datum.value + "/" + usluga.value, false);
 
             xhr.onload = function () {
                 console.log(xhr.status);
                 console.log(xhr.responseText);
                 var data = JSON.parse(xhr.responseText);
                 if (xhr.status != '200') {
-                    window.alert("error");
+                    window.alert("Došlo je do grekse, molimo pokušajte ponovo.");
                 } else {
                     var terms = document.getElementById("vreme");
                     terms.innerHTML = '';
@@ -288,7 +289,7 @@ $(document).ready(function () {
         var lastDate = new Date(today);
         lastDate.setDate(lastDate.getDate() + 30);
 
-        if (date >= today && date <= lastDate) {
+        if (date >= today && date <= lastDate && date.getDay() !== 0) {
             return [true, ""];
         } else {
             return [false, "", "Unavailable"];
@@ -297,7 +298,8 @@ $(document).ready(function () {
 
     $(function () {
         $("#datum").datepicker({
-            dateFormat: 'dd MM yy',
+            firstDay: 1,
+            dateFormat: 'dd.mm.yy',
             beforeShowDay: unavailable
         });
 

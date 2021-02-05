@@ -1,20 +1,23 @@
 @font-face {
     font-family: "font";
     src: url(font/font.ttf);
-  }
-  @font-face {
+}
+
+@font-face {
     font-family: "OSC";
     src: url(font/OSC.ttf);
-  }
+}
 
-  input:focus{
+input:focus {
     outline: none;
 }
- body {
-     margin:0;
-     border:0;
-     box-sizing: border-box;
- } 
+
+body {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
 #zakazivanje {
     font-family: 'OSC';
     background-color: rgb(121, 39, 50);
@@ -22,61 +25,83 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
 #zakazivanje form {
-    width:60%;
+    width: 60%;
     margin: 50px auto;
 }
+
 #zakazivanje #term_results {
-    width:80%;
+    width: 80%;
     margin: auto;
     margin: 135px auto 0 auto;
 
 }
+
 #zakazivanje h1 {
-    margin:0;
+    margin: 0;
     color: #fff;
     font-size: 40px;
 }
+
 #zakazivanje h4,
 #zakazivanje h2,
 #zakazivanje label,
 #berberin,
-#scheduler ,
+#scheduler,
+#booking,
+#break,
 #zakazi,
 #datum,
 #changeWorkingHours,
-#btn-promeni  {
-    color: #fff; 
+#bookTerm,
+#setBreak,
+#btn-pauza,
+#zakazi,
+#btn-promeni {
+    color: #fff;
     background: #b73a3a3b;
     padding: 10px 20px;
     border: 0;
-    color:#fff;
+    color: #fff;
     text-decoration: none;
     outline: none;
 }
+
 #changeWorkingHours:hover,
-#zakazi:hover {
+#bookTerm:hover,
+#setBreak:hover {
     cursor: pointer;
     background: #994f4fdc;
 }
+
 #inputBoxes {
     padding: 10px 50px;
 }
 
-#scheduler {
+#scheduler,
+#booking,
+#break {
     display: grid;
-    grid-template-columns: 1fr 2fr  ;
+    grid-template-columns: 1fr 2fr;
 }
-#scheduler label {
+
+#scheduler label,
+#booking label,
+#break label {
     border: 2px solid rgba(112, 42, 42, 0.479);
 }
-#scheduler input {
+
+#scheduler input,
+#booking input,
+#break input {
     width: 120px;
     height: 25px;
     margin: auto;
     background: #994f4fdc;
-    border:0;
+    border: 0;
 }
+
 #ui-datepicker-div,
 #ui-datepicker-div table tr,
 #ui-datepicker-div table tr td a {
@@ -85,36 +110,42 @@
     border: 0;
     background: rgb(136, 37, 50);
     color: #fff;
-  }
-  #ui-datepicker-div table tr td {
+}
+
+#ui-datepicker-div table tr td {
     background: rgb(109, 34, 44);
-  }
-  #ui-datepicker-div table tr td:hover {
+}
+
+#ui-datepicker-div table tr td:hover {
     background: rgb(238, 74, 95);
-  }
-  #zakazi {
+}
+
+#zakazi {
     font-family: 'OSC';
     text-align: center;
     width: 100%;
     margin: 10px 0px;
 
 }
+
 table,
-table tr
- {
+table tr {
     border: rgb(145, 46, 59) 3px solid;
     padding: 5px 10px;
-    color:#fff;
+    color: #fff;
 }
+
 table tr td,
 table tr th {
     padding: 10px 20px;
-    border:1px solid rgb(145, 46, 59);
+    border: 1px solid rgb(145, 46, 59);
     font-family: 'OSC';
 }
+
 table tr th {
-    background:rgba(183, 58, 58, 0.23);
+    background: rgba(183, 58, 58, 0.23);
 }
+
 select option {
     margin: 40px;
     background: rgb(145, 46, 59);
@@ -122,42 +153,46 @@ select option {
     border: 0;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
+
 .rem-btn {
     background-color: rgb(150, 50, 63);
     border: 0;
     padding: 3px 16px;
     color: #fff;
-    
+
 }
+
 .rem-btn:focus {
     outline: none;
 }
+
 .rem-btn:hover {
     background-color: rgb(168, 56, 71);
 
 }
-@media  (max-width:1024px){
+
+@media (max-width: 1024px) {
     #zakazivanje {
         font-family: 'OSC';
         background-color: rgb(121, 39, 50);
         margin: auto;
         display: grid;
-        grid-template-columns: 1fr ;
+        grid-template-columns: 1fr;
     }
+
     #zakazivanje form {
-        width:60%;
+        width: 60%;
         margin: 50px auto;
         height: 30vh !important;
     }
+
     #zakazivanje #term_results {
-        width:80%;
+        width: 80%;
         margin: 0 auto;
-        
+
     }
-    #zakazivanje {
-        height:130vh ;
-    }
+
     table {
-        margin:auto;
+        margin: auto;
     }
 }
