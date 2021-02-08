@@ -377,10 +377,13 @@ table button:hover {
   text-align: center;
   padding: 15px;
   margin: auto;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-bottom: 5px;
   width: 50%;
   height: 50px;
+}
+#kontaktBtn button:hover {
+  cursor:pointer;
 }
 #kontaktBtn:hover {
   font-family: "font";
@@ -388,18 +391,30 @@ table button:hover {
   text-align: center;
   padding: 15px;
   margin: auto;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-bottom: 5px;
   width: 50%;
   height: 50px;
+  cursor:pointer;
 }
-#boxKontakt p {
+#boxKontakt p{
   font-family: "font";
   padding: 5px;
   margin-top: 1px;
   margin-bottom: 1px;
   color: white;
-  font-size: 15px;
+  font-size: 16px;
+  text-decoration: none;
+}
+#boxKontakt a {
+  text-decoration: none;
+  color: white;
+  float:right; 
+  font-size:20px;
+  margin-top: 1px;
+}
+#boxKontakt a:hover {
+  color:rgb(179, 67, 67);
 }
 #map a {
   color: white;
@@ -714,16 +729,15 @@ select {
   }
 
   #nasiRadovi {
-  
     background-position: center;
   }
   #slogan h4 {
     margin-left: 7%;
   }
-  #inputBoxes img {
+  /* #inputBoxes img {
 
-    /* height: 200px; */
-  }
+     height: 200px; 
+  } */
 }
 @media (max-width: 1174px) {
   #cene h2 {
@@ -743,11 +757,14 @@ select {
   }
 }
 @media (max-width: 999px) {
+  .small-letter {
+    font-size:14px;
+  }
   #cene h2 {
     width: 60%;
   }
   #cene h4 {
-    width: 60%;
+    width: 61.5%;
   }
 
   #nasiRadovi {
@@ -759,7 +776,14 @@ select {
     background-size: cover;
     text-align: center;
   }
-
+  #boxKontakt a {
+    text-decoration: none;
+    color: white;
+    font-size:30px !important;
+    margin-top: 1px;
+    margin: auto;
+    float: none;
+  }
   #navBar {
     padding: 2rem 0;
     display: grid;
@@ -1000,6 +1024,7 @@ select {
   #copyright {
     font-size: 11px;
   }
+
 }
 @media (max-width: 600px) {
   body {
@@ -1067,6 +1092,7 @@ select {
   #copyright {
     font-size: 11px;
   }
+
 }
 @media (min-width: 2400px) {
   #boxKontakt {
