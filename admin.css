@@ -24,11 +24,13 @@ body {
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
 }
 
 #zakazivanje form {
-    width: 60%;
+    width: 66%;
     margin: 50px auto;
+    border-bottom: 5px solid rgb(121, 39, 50);
 }
 
 #zakazivanje #term_results {
@@ -48,6 +50,7 @@ body {
 #zakazivanje h2,
 #zakazivanje label,
 #berberin,
+#usluga,
 #scheduler,
 #booking,
 #break,
@@ -76,7 +79,7 @@ body {
 }
 
 #inputBoxes {
-    padding: 10px 50px;
+    padding: 10px 30px;
 }
 
 #scheduler,
@@ -123,7 +126,7 @@ body {
 #zakazi {
     font-family: 'OSC';
     text-align: center;
-    width: 100%;
+    /* width: 100%; */
     margin: 10px 0px;
 
 }
@@ -183,7 +186,7 @@ select option {
     #zakazivanje form {
         width: 60%;
         margin: 50px auto;
-        height: 30vh !important;
+        height: 99vh !important;
     }
 
     #zakazivanje #term_results {

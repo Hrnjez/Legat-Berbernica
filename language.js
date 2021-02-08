@@ -121,7 +121,7 @@ $(document).ready(function () {
             <div id="adresa">
               <h2>Адреса :</h2>
               <p id="pAdresa">
-                Цара Николаја 2-86. Београд <br/>
+                Цара Николаја <span style="font-family:'Open Sans',sans-serif">II</span>-86. Београд <br/>
                 <br/>
                 Србија
               </p>
