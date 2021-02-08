@@ -20,6 +20,10 @@ function pauza(e) {
 
     const token = window.localStorage.getItem('token');
 
+    const headers = {
+        headers: {Authorization: `Bearer ${token}`}
+    };
+
     barber = document.getElementById('berberin').value;
 
     e.preventDefault();
@@ -39,30 +43,23 @@ function pauza(e) {
         "unitsOfTime": unitsOfTime.value
     };
 
-    var json = JSON.stringify(term);
-
     if (
         datum.value !== "" &&
         barber !== undefined &&
         vreme.value !== ""
     ) {
 
-        var xhr = new XMLHttpRequest();
         var url = 'http://134.122.112.114:8080/legat/admin/break';
         var urlLocal = 'http://localhost:8080/admin/break';
-        xhr.open('POST', url, false);
-        xhr.setRequestHeader('Authorization', 'Bearer ' + token);
 
-        xhr.onload = function () {
-            if (xhr.status != '200') {
-                window.alert("Došlo je do grekse, molimo pokušajte ponovo.");
-            } else {
-                window.alert("Rezervisan termin");
+        axios.post(url, term, headers)
+            .then((response) => {
+                window.alert("Uspešno ste dodali vreme za pauzu u raspored.");
                 dohvatiTermine();
-            }
-        };
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.send(json);
+            }, (error) => {
+                window.alert("Došlo je do greške, molimo pokušajte ponovo.");
+
+            });
 
     } else {
         if (ime.value == "") {
@@ -80,10 +77,20 @@ function pauza(e) {
 
 function changeWorkingHours() {
 
+    const token = window.localStorage.getItem('token');
+
+    const headers = {
+        headers: {Authorization: `Bearer ${token}`}
+    };
+
     date = document.getElementById('datum').value;
     barber = document.getElementById('berberin').value;
     startTime = document.getElementById('startTime').value;
+
     endTime = document.getElementById('endTime').value;
+
+    let url = 'http://134.122.112.114:8080/legat/admin/scheduler';
+    let urlLocal = 'http://localhost:8080/admin/scheduler';
 
     var scheduler = {
         "date": date,
@@ -92,30 +99,22 @@ function changeWorkingHours() {
         "endTime": endTime
     };
 
-    var json = JSON.stringify(scheduler);
-
-    var xhr = new XMLHttpRequest();
-    let url = 'http://134.122.112.114:8080/legat/admin/scheduler';
-    let urlLocal = 'http://localhost:8080/admin/scheduler';
-    xhr.open('POST', url, false);
-    const token = window.localStorage.getItem('token');
-    xhr.setRequestHeader('Authorization', 'Bearer ' + token);
-    xhr.onload = function () {
-        if (xhr.status != '200') {
-            window.alert("Doslo je do greske!" + xhr.responseText);
-        } else {
-            window.alert("Uspesno ste setovali vreme.")
-        }
-    };
-
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(json);
+    axios.post(url, scheduler, headers)
+        .then((response) => {
+            window.alert("Uspešno ste promenili radno vreme.")
+        }, (error) => {
+            window.alert("Došlo je do greške, molimo pokušajte ponovo.");
+        });
 
 }
 
 function zakazivanje(e) {
 
     const token = window.localStorage.getItem('token');
+
+    const headers = {
+        headers: {Authorization: `Bearer ${token}`}
+    };
 
     e.preventDefault();
     $("#demo").show();
@@ -137,8 +136,6 @@ function zakazivanje(e) {
         "customerPhone": broj.value
     };
 
-    var json = JSON.stringify(term);
-
     if (
         datum.value !== "" &&
         usluga.value !== "" &&
@@ -147,34 +144,23 @@ function zakazivanje(e) {
         ime.value !== "" &&
         broj.value !== ""
     ) {
-
-        var xhr = new XMLHttpRequest();
         var url = 'http://134.122.112.114:8080/legat/admin/term';
         var urlLocal = 'http://localhost:8080/admin/term';
-        xhr.open('POST', url, false);
-        xhr.setRequestHeader('Authorization', 'Bearer ' + token);
 
-        xhr.onload = function () {
-            if (xhr.status != '200') {
-                window.alert("Došlo je do grekse, molimo pokušajte ponovo.");
-            } else {
-                window.alert("Rezervisan termin");
-                dohvatiTermine();
-            }
-        };
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.send(json);
+        axios.post(url, term, headers)
+            .then((response) => {
+                window.alert("Uspešno ste rezervisali termin.");
+                dohvatiTermine()
+                č
+            }, (error) => {
+                window.alert("Došlo je do greške, molimo pokušajte ponovo.");
+            });
 
     } else {
         if (ime.value == "") {
             $('#ime').css('border', '3px solid red');
         } else {
             $('#ime').css('border', '0px');
-        }
-        if (broj.value == "" || broj.value == 381) {
-            $('#broj').css('border', '3px solid red');
-        } else {
-            $('#broj').css('border', '0px');
         }
     }
 
@@ -183,25 +169,30 @@ function zakazivanje(e) {
 function removeTerm() {
     const token = window.localStorage.getItem('token');
 
-    var xhrRemove = new XMLHttpRequest();
-    let urlRemoveLocal = 'http://localhost:8080/admin/term/';
-    let urlRemove = 'http://134.122.112.114:8080/legat/admin/term/';
-    xhrRemove.open('DELETE', urlRemove + $(this).attr('id'), true);
-    xhrRemove.setRequestHeader('Authorization', 'Bearer ' + token);
-
-    xhrRemove.onload = function () {
-        if (xhrRemove.status != '200') {
-            window.alert("Doslo je do greske prilikom brisanja termina.");
-        } else {
-            window.alert("Uspesno ste obrisali termin.")
-            dohvatiTermine();
-        }
+    const headers = {
+        headers: {Authorization: `Bearer ${token}`}
     };
 
-    xhrRemove.send(null);
+    let urlRemoveLocal = 'http://localhost:8080/admin/term/';
+    let urlRemove = 'http://134.122.112.114:8080/legat/admin/term/';
+
+    axios.delete(urlRemove + $(this).attr('id'), headers)
+        .then((response) => {
+            window.alert("Uspešno ste obrisali termin.")
+            dohvatiTermine();
+        }, (error) => {
+            window.alert("Došlo je do greške, molimo pokušajte ponovo.");
+        });
+
 }
 
 function dohvatiTermine() {
+
+    const token = window.localStorage.getItem('token');
+
+    const headers = {
+        headers: {Authorization: `Bearer ${token}`}
+    };
 
     date = document.getElementById('datum').value;
     barber = document.getElementById('berberin').value;
@@ -212,17 +203,11 @@ function dohvatiTermine() {
         barber !== ""
     ) {
 
-        var xhr = new XMLHttpRequest();
         let urlLocal = 'http://localhost:8080/admin/terms/';
         let url = 'http://134.122.112.114:8080/legat/admin/terms/';
-        xhr.open('GET', url + barber + '/' + date, true);
-        const token = window.localStorage.getItem('token');
-        xhr.setRequestHeader('Authorization', 'Bearer ' + token);
-        xhr.onload = function () {
-            if (xhr.status != '200') {
-                window.alert("Doslo je do greske prilikom preuzimanja termina, pokusajte ponovo ili kontaktirajte podrsku: milosevic.etf@gmail.com, h.nemanja@yahoo.com");
-            } else {
-                var data = JSON.parse(xhr.responseText);
+
+        axios.get(url + barber + '/' + date, headers).then(
+            (response) => {
                 var termResults = document.getElementById("term_results");
                 termResults.innerText = '';
                 var table = document.createElement('TABLE');
@@ -244,31 +229,29 @@ function dohvatiTermine() {
                 }
 
                 //TABLE ROWS
-                for (var key in data) {
+                for (var key in response.data) {
 
                     var tr = document.createElement('TR');
                     var tdTime = document.createElement('TD');
-                    tdTime.appendChild(document.createTextNode(data[key].time));
+                    tdTime.appendChild(document.createTextNode(response.data[key].time));
 
                     var tdService = document.createElement('TD');
-                    tdService.appendChild(document.createTextNode(data[key].service));
+                    tdService.appendChild(document.createTextNode(response.data[key].service));
 
                     var tdCustomer = document.createElement('TD');
-                    tdCustomer.appendChild(document.createTextNode(data[key].customerName));
+                    tdCustomer.appendChild(document.createTextNode(response.data[key].customerName));
 
                     var tdPhone = document.createElement('TD');
-                    tdPhone.appendChild(document.createTextNode(data[key].customerPhone));
+                    tdPhone.appendChild(document.createTextNode(response.data[key].customerPhone));
 
                     var tdRemove = document.createElement('TD');
                     var btn = document.createElement('button');
 
 
-                    //TODO: za KUMICA - svaki red u tabeli treba da poziva funckiju "removeTerm()" sa id-jem kao parametrom, id se nalazi u polju data[key].id :) SRECNO!
                     btn.innerText = 'Obrisi';
                     tdRemove.appendChild(btn)
 
-                    //TODO
-                    btn.setAttribute('id', data[key].id);
+                    btn.setAttribute('id', response.data[key].id);
                     btn.setAttribute('value', "Obrisi");
                     btn.setAttribute('class', 'rem-btn');
                     tr.appendChild(tdTime);
@@ -282,36 +265,27 @@ function dohvatiTermine() {
                 }
                 termResults.appendChild(table);
 
-                //TODO
-                for (var key in data) {
-                    document.getElementById(`${data[key].id}`).addEventListener("click", removeTerm);
+                for (var key in response.data) {
+                    document.getElementById(`${response.data[key].id}`).addEventListener("click", removeTerm);
                 }
-                //TODO
+            },
+            (error) => {
+                window.alert("Došlo je do greške prilikom preuzimanja termina, pokušajte da osvežite stranicu.");
             }
+        );
 
-        };
-
-        xhr.send(null);
-
-
-        var xhrScheduler = new XMLHttpRequest();
         let urlSchedulerLocal = 'http://localhost:8080/admin/scheduler/';
         let urlScheduler = 'http://134.122.112.114:8080/legat/admin/scheduler/';
-        xhrScheduler.open('GET', urlScheduler + barber + '/' + date, true);
-        xhrScheduler.setRequestHeader('Authorization', 'Bearer ' + token);
 
-        xhrScheduler.onload = function () {
-            if (xhrScheduler.status != '200') {
-                window.alert("Doslo je do greske prilikom dohvatanja radnog vremena, pokusajte ponovo ili kontaktirajte podrsku: milosevic.etf@gmail.com, h.nemanja@yahoo.com");
-            } else {
-                var data = JSON.parse(xhrScheduler.responseText);
-                document.getElementById("startTime").value = data.startTime;
-                document.getElementById("endTime").value = data.endTime;
-
+        axios.get(urlScheduler + barber + '/' + date, headers).then(
+            (response) => {
+                document.getElementById("startTime").value = response.data.startTime;
+                document.getElementById("endTime").value = response.data.endTime;
+            },
+            (error) => {
+                window.alert("Došlo je do greške prilikom dohvatanja radnog vremena, pokušajte da osvežite stranicu.");
             }
-        };
-
-        xhrScheduler.send(null);
+        );
 
     }
 

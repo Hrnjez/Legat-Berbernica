@@ -163,8 +163,6 @@ $(document).ready(function () {
             "customerPhone": broj.value
         };
 
-        var json = JSON.stringify(term);
-
         if (
             datum.value !== "" &&
             usluga.value !== "" &&
@@ -174,27 +172,21 @@ $(document).ready(function () {
             broj.value !== ""
         ) {
 
-            var xhr = new XMLHttpRequest();
             var url = 'http://134.122.112.114:8080/legat/term';
             var urlLocal = 'http://localhost:8080/term';
-            xhr.open('POST', url, false);
 
-            xhr.onload = function () {
-                if (xhr.status != '200') {
-                    window.alert("Došlo je do grekse, molimo pokušajte ponovo.");
-                } else {
+            axios.post(url, term)
+                .then((response) => {
                     $('#zakazi').hide(500);
                     $('#inputBoxes').hide(500, function () {
                         $('.popup-box').fadeIn(1000);
                     });
-
-                }
-            };
-            xhr.setRequestHeader('Content-Type', 'application/json');
-            xhr.send(json);
+                }, (error) => {
+                    window.alert("Traženi termin je zauzet, pokušajte neki od slobodnih termina.");
+                    dohvatiTermine();
+                });
 
         } else {
-            console.warn("Nisu sva polja popunjena");
             if (ime.value == "") {
                 $('#ime').css('border', '3px solid red');
             } else {
@@ -212,7 +204,6 @@ $(document).ready(function () {
     function dohvatiTermine() {
 
         $("#demo").show();
-        var demo = document.getElementById("demo");
         var datum = document.getElementById("datum");
         var usluga = document.getElementById("usluga");
         var cvija = document.getElementById('cvija');
@@ -230,34 +221,28 @@ $(document).ready(function () {
             usluga.value !== "" &&
             frizer !== undefined
         ) {
-            console.warn("neophodna polja su popunjena");
-
             var url = 'http://134.122.112.114:8080/legat/freeTerms/';
             var urlLocal = 'http://localhost:8080/freeTerms/';
 
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', url + frizer + "/" + datum.value + "/" + usluga.value, false);
-
-            xhr.onload = function () {
-                var data = JSON.parse(xhr.responseText);
-                if (xhr.status != '200') {
-                    window.alert("Došlo je do grekse, molimo pokušajte ponovo.");
-                } else {
+            axios.get(url + frizer + "/" + datum.value + "/" + usluga.value).then(
+                (response) => {
+                    console.log(response.data);
+                    if (response.data.length == 0) {
+                        window.alert("Nema slobodnih termina za traženi datum i uslugu.");
+                    }
                     var terms = document.getElementById("vreme");
                     terms.innerHTML = '';
-                    for (var key in data) {
+                    for (var key in response.data) {
                         var option = document.createElement("option");
-                        option.text = data[key];
+                        option.text = response.data[key];
                         terms.add(option);
                     }
+                },
+                (error) => {
+                    window.alert("Došlo je do grekse, molimo pokušajte ponovo.");
                 }
-            };
-            xhr.setRequestHeader('Content-Type', 'application/json');
-            xhr.send(null);
+            );
 
-
-        } else {
-            console.warn("Nisu sva polja popunjena");
         }
     }
 
