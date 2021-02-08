@@ -40,7 +40,6 @@ function pauza(e) {
     };
 
     var json = JSON.stringify(term);
-    console.log(json);
 
     if (
         datum.value !== "" &&
@@ -55,8 +54,6 @@ function pauza(e) {
         xhr.setRequestHeader('Authorization', 'Bearer ' + token);
 
         xhr.onload = function () {
-            console.log(xhr.status);
-            console.log(xhr.responseText);
             if (xhr.status != '200') {
                 window.alert("Došlo je do grekse, molimo pokušajte ponovo.");
             } else {
@@ -96,7 +93,6 @@ function changeWorkingHours() {
     };
 
     var json = JSON.stringify(scheduler);
-    console.log(json);
 
     var xhr = new XMLHttpRequest();
     let url = 'http://134.122.112.114:8080/legat/admin/scheduler';
@@ -105,8 +101,6 @@ function changeWorkingHours() {
     const token = window.localStorage.getItem('token');
     xhr.setRequestHeader('Authorization', 'Bearer ' + token);
     xhr.onload = function () {
-        console.log(xhr.status);
-        console.log(xhr.responseText);
         if (xhr.status != '200') {
             window.alert("Doslo je do greske!" + xhr.responseText);
         } else {
@@ -144,7 +138,6 @@ function zakazivanje(e) {
     };
 
     var json = JSON.stringify(term);
-    console.log(json);
 
     if (
         datum.value !== "" &&
@@ -162,8 +155,6 @@ function zakazivanje(e) {
         xhr.setRequestHeader('Authorization', 'Bearer ' + token);
 
         xhr.onload = function () {
-            console.log(xhr.status);
-            console.log(xhr.responseText);
             if (xhr.status != '200') {
                 window.alert("Došlo je do grekse, molimo pokušajte ponovo.");
             } else {
@@ -220,7 +211,6 @@ function dohvatiTermine() {
         date !== "" &&
         barber !== ""
     ) {
-        console.log(date, barber)
 
         var xhr = new XMLHttpRequest();
         let urlLocal = 'http://localhost:8080/admin/terms/';

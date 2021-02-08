@@ -4,7 +4,6 @@ function login(e) {
 
     e.preventDefault();
 
-    console.log("login atempmt")
     username = document.getElementById('username').value;
     password = document.getElementById('password').value;
 
@@ -21,10 +20,8 @@ function login(e) {
     var json = JSON.stringify(user);
 
     xhr.onload = function () {
-        console.log(xhr.status);
-        console.log(xhr.responseText);
         if (xhr.status != '200') {
-            window.alert("pogresna lozinka");
+            window.alert("Pogresna lozinka!");
         } else {
             localStorage.setItem('token', xhr.responseText);
             window.location.href = 'admin.html';

@@ -111,7 +111,6 @@
     function autoRedirect() {
 
         const validLogin = isLoggedIn();
-        console.log("test:", validLogin);
         if (!validLogin && location.pathname !== '/login/') {
             localStorage.removeItem('token');
             window.location.href = 'login.html';

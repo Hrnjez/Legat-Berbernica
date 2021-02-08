@@ -9,7 +9,6 @@ $(document).ready(function () {
     function glavna() {
         var viewGlavna = document.getElementById("glavna");
         viewGlavna.scrollIntoView({block: "start", behavior: "smooth"});
-        console.log("Glavna");
         $("#glavna").show(1000);
         $("#oNama").show(1000);
         $("#nasiRadovi").show(1000);
@@ -35,7 +34,6 @@ $(document).ready(function () {
         $("#terminiDemo").hide();
         $("#login").hide(1000);
         $("#addImg").hide(1000);
-        console.log("O nama");
     }
 
     document.getElementById("btnCene").addEventListener("click", cene);
@@ -52,7 +50,6 @@ $(document).ready(function () {
         $("#terminiDemo").hide();
         $("#login").hide(1000);
         $("#addImg").hide(1000);
-        console.log("Cene");
     }
 
     document.getElementById("btnRez").addEventListener("click", rezervacija);
@@ -69,7 +66,6 @@ $(document).ready(function () {
         $("#login").hide(1000);
         $("#addImg").hide(1000);
         $("#terminiDemo").hide();
-        console.log("Rezervacija");
     }
 
     document.getElementById("btnKontakt").addEventListener("click", kontakt);
@@ -86,7 +82,6 @@ $(document).ready(function () {
         $("#terminiDemo").hide();
         $("#login").hide(1000);
         $("#addImg").hide(1000);
-        console.log("Kontakt");
     }
 
     document.getElementById("rezBtn").addEventListener("click", rezervacijaBtn);
@@ -103,7 +98,6 @@ $(document).ready(function () {
         $("#terminiDemo").hide();
         $("#login").hide(1000);
         $("#addImg").hide(1000);
-        console.log("Rezervacija");
     }
 
     // Zakazivanje termina jQuery
@@ -170,7 +164,6 @@ $(document).ready(function () {
         };
 
         var json = JSON.stringify(term);
-        console.log(json);
 
         if (
             datum.value !== "" &&
@@ -187,12 +180,9 @@ $(document).ready(function () {
             xhr.open('POST', url, false);
 
             xhr.onload = function () {
-                console.log(xhr.status);
-                console.log(xhr.responseText);
                 if (xhr.status != '200') {
                     window.alert("Došlo je do grekse, molimo pokušajte ponovo.");
                 } else {
-                    console.log('rezervisao!')
                     $('#zakazi').hide(500);
                     $('#inputBoxes').hide(500, function () {
                         $('.popup-box').fadeIn(1000);
@@ -229,8 +219,6 @@ $(document).ready(function () {
         var zabac = document.getElementById('zabac');
         var frizer = undefined;
 
-        console.log("get terms: ", datum.value);
-
         if (cvija.className == 'active') {
             frizer = cvija.id;
         } else if (zabac.className == 'active') {
@@ -251,8 +239,6 @@ $(document).ready(function () {
             xhr.open('GET', url + frizer + "/" + datum.value + "/" + usluga.value, false);
 
             xhr.onload = function () {
-                console.log(xhr.status);
-                console.log(xhr.responseText);
                 var data = JSON.parse(xhr.responseText);
                 if (xhr.status != '200') {
                     window.alert("Došlo je do grekse, molimo pokušajte ponovo.");
@@ -269,13 +255,7 @@ $(document).ready(function () {
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.send(null);
 
-            console.log(usluga.value)
 
-            console.log([
-                datum.value,
-                usluga.value,
-                frizer
-            ]);
         } else {
             console.warn("Nisu sva polja popunjena");
         }
@@ -309,7 +289,6 @@ $(document).ready(function () {
 //initial srb flag
 $('#srb').addClass('focusClass');
 $('#eng').removeClass('focusClass');
-console.log('srb')
 $('#eng').addClass('blurClass');
 
 
@@ -317,13 +296,11 @@ $('#eng').addClass('blurClass');
 $("#srb").on("click", function () {
     $('#srb').addClass('focusClass');
     $('#eng').removeClass('focusClass');
-    console.log('srb')
     $('#eng').addClass('blurClass');
 });
 
 $("#eng").on("click", function () {
     $('#eng').addClass('focusClass');
     $('#srb').removeClass('focusClass');
-    console.log('eng')
     $('#srb').addClass('blurClass');
 });
