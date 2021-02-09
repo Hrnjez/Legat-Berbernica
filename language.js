@@ -297,7 +297,7 @@ $(document).ready(function () {
             <h2>Working time :</h2>
 
             <p>
-              Monday - Fridayk . . . 11:00 - 21:00 <br/>
+              Monday - Friday . . . 11:00 - 21:00 <br/>
               <br/>
               Saturday . . . . . . . . . . . . 10:00 - 16:00
             </p>
