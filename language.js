@@ -103,16 +103,17 @@ $(document).ready(function () {
         napisiIme: 'Ime',
         brojTel: 'Broj telefona',
         usluge: `
-          <option>Šišanje (45min)</option>
-          <option>Šišanje Mašinicom (30min)</option>
-          <option>Šišanje, Deca (45min)</option>
-          <option>Brijanje (30min)</option>
-          <option>Korekcija brade (30min)</option>
-          <option>Komplet 1 (1h 45min)</option>
-          <option>Komplet 2 (1h 45min)</option>
-          <option>Komplet 3 (1h 45min)</option>
-          <option>Pranje kose i stilizovanje (30min)</option>`,
-          footer: `
+            <option value="sisanje">Šišanje (45min)</option>
+            <option value="sisanjeMasinica">Šišanje Mašinicom (30min)</option>
+            <option value="decjeSisanje">Dečje šišanje (30min)</option>
+            <option value="brijanje">Brijanje (30min)</option>
+            <option value="korekcijaBrade">Korekcija brade (30min)</option>
+            <option value="komplet1">Šišanje i korekcija brade (1h15min)</option>
+            <option value="komplet2">Šišanje i brijanje (1h15min)</option>
+            <option value="komplet3">Šišanje mašinicom i korekcija brade (1h)</option>
+            <option value="komplet4">Šišanje mašinicom i brijanje (1h)</option>
+            <option value="pranjeStilizovanje">Pranje kose i stilizovanje (20min)</option>`,
+        footer: `
           
             <div id="adresa">
               <h2>Адреса :</h2>
@@ -154,8 +155,8 @@ $(document).ready(function () {
             </div>
           
           `
-      }
-    
+    }
+
     const englishLanguage = {
         glavna: 'Home',
         oNama: 'About us',
@@ -267,16 +268,17 @@ $(document).ready(function () {
         napisiIme: 'Name',
         brojTel: 'Phone number',
         usluge: `
-          <option>Haircut (45min)</option>
-          <option>Haircut with a Clipper (30min)</option>
-          <option>Haircut, Children (45min)</option>
-          <option>Shaving (30min)</option>
-          <option>Chin correction (30min)</option>
-          <option>Set 1 (1h 45min)</option>
-          <option>Set 2 (1h 45min)</option>
-          <option>Set 3 (1h 45min)</option>
-          <option>Hair Washing and Styling (30min)</option>`,
-          footer: `
+            <option value="sisanje">Haircut (45min)</option>
+            <option value="sisanjeMasinica">Buzz cut (30min)</option>
+            <option value="decjeSisanje">Children's haircut (30min)</option>
+            <option value="brijanje">Shaving (30min)</option>
+            <option value="korekcijaBrade">Beard trim (30min)</option>
+            <option value="komplet1">Haircut and beard trim (1h15min)</option>
+            <option value="komplet2">Haircut and straight razor shave (1h15min)</option>
+            <option value="komplet3">Buzz cut and beard trim (1h)</option>
+            <option value="komplet4">Buzz cut and straight razor shave (1h)</option>
+            <option value="pranjeStilizovanje">Hair Wash and Styling (20min)</option>`,
+        footer: `
           
           <div id="adresa">
             <h2>Adress :</h2>
@@ -318,16 +320,16 @@ $(document).ready(function () {
           </div>
         
         `
-}
-    
-    $('#srb').on('click',function(){
+    }
+
+    $('#srb').on('click', function () {
         $('#btnGlavna').text(`${serbianLanguage.glavna}`);
         $('#btnONama').text(`${serbianLanguage.oNama}`);
         $('#btnCene').text(`${serbianLanguage.cene}`);
         $('#btnRez').text(`${serbianLanguage.rezervacija}`);
         $('#btnKontakt').text(`${serbianLanguage.kontakt}`);
-        $('#navBar button').css('font-family','font');
-        $('#navBar').css('padding','10px 3px');
+        $('#navBar button').css('font-family', 'font');
+        $('#navBar').css('padding', '10px 3px');
         $('#oNamaTekst h1').html(`<h1>${serbianLanguage.oNamaH1}</h1>`);
         $('#oNamaTekst p').html(`<p>${serbianLanguage.oNamaP}</p>`);
         $('#oNamaTekst p').css('line-height', '24px');
@@ -371,7 +373,7 @@ $(document).ready(function () {
         $('#napisi-ime').html(`${serbianLanguage.napisiIme}`);
         $('#broj-telefona').html(`${serbianLanguage.brojTel}`);
         $('#footer').html(`${serbianLanguage.footer}`);
-        $('#footer, #footer h2, #footer p, #footer a').css('font-family','OSC');
+        $('#footer, #footer h2, #footer p, #footer a').css('font-family', 'OSC');
     });
     $('#eng').on('click', function () {
         $('#btnGlavna').text(`${englishLanguage.glavna}`);
@@ -391,7 +393,7 @@ $(document).ready(function () {
           </p>
         </div>
         `)
-         $('#navBar').css('padding','7px 3px');
+        $('#navBar').css('padding', '7px 3px');
         $('#slogan h2, #slogan h4, #tekst h3, #tekst p').css('font-family', 'OSC');
         $('#oNamaTekst h1').html(`<h1>${englishLanguage.oNamaH1}</h1>`);
         $('#oNamaTekst p').html(` <p> ${englishLanguage.oNamaP}</p>`);
@@ -414,8 +416,8 @@ $(document).ready(function () {
         <div id="kontaktBtn">
           <button id="rezBtn">${englishLanguage.rezBtn}</button>
         </div>`);
-        $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('font-family','OSC');
-        $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('line-height','95%');
+        $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('font-family', 'OSC');
+        $('#boxKontakt h3,#boxKontakt h4, #boxKontakt p, #boxKontakt a, #rezBtn').css('line-height', '95%');
         $('#nasiRadovi h1').html(`<h1>${englishLanguage.nasiRadoviH1}</h1>`);
         $('#nasiRadovi h4').html(`<h4>${englishLanguage.nasiRadoviH4}</h4>`);
         $('#nasiRadovi h1, #nasiRadovi h4').css('font-family', 'OSC');
@@ -436,11 +438,11 @@ $(document).ready(function () {
         $('#zakazi strong').html(`${englishLanguage.btnZakazi}`);
         $('#zakazi strong').css('font-family', 'OSC');
         $('#usluga').html(`${englishLanguage.usluge}`)
-        $('#usluga option').css('font-family','OSC');
+        $('#usluga option').css('font-family', 'OSC');
         $('#izaberi-vreme').html(`${englishLanguage.izaberiVreme}`);
         $('#napisi-ime').html(`${englishLanguage.napisiIme}`);
         $('#broj-telefona').html(`${englishLanguage.brojTel}`);
         $('#footer').html(`${englishLanguage.footer}`);
-        $('#footer, #footer h2, #footer p, #footer a').css('font-family','OSC');
+        $('#footer, #footer h2, #footer p, #footer a').css('font-family', 'OSC');
     });
 });
