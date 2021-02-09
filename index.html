@@ -69,24 +69,28 @@
 	</div>
 	<div id="slika1">
 		<div id="boxKontakt">
-			<h3>Kontakt</h3>
-			<h4>Telefon: <a  href="tel:0665468186"> <i class="fas fa-phone-square-alt"></i> 0665468186</a></h4>
-			<hr style="border: 1px solid rgb(142, 45, 58);">
-			<h4>Adresa:</h4>
-			<p>Cara Nikolaja <span style="font-family:'Open Sans',sans-serif">II</span>-86. Beograd, Srbija</p>
-			<button id="vidiNaMapi">
-				<a href="https://www.google.com/maps/place/Berbernica+Legat/@44.7980856,20.4825592,18z/data=!3m1!4b1!4m5!3m4!1s0x475a710e4eed056f:0xc11cd971a02665b5!8m2!3d44.7980837!4d20.4836535?hl=sr"
-				   target="_blank">
-					Vidi na mapi</a>
-			</button>
-			<hr style="border: 1px solid rgb(142, 45, 58);">
-			<h4>Radno vreme:</h4>
-			<p>Ponedeqak - Petak ..10:00 - 21:00</p>
-			<p>Subota .............10:00 - 16:00</p>
+			<div id="box-info">
+				<h3 id="">Kontakt</h3>
+				<h4>Telefon: <a  href="tel:0665468186"> <i class="fas fa-phone-square-alt"></i> 0665468186</a></h4>
+				<hr style="border: 1px solid rgb(142, 45, 58);">
+				<h4>Adresa:</h4>
+				<p>Cara Nikolaja <span style="font-family:'Open Sans',sans-serif">II</span>-86. Beograd, Srbija</p>
+				<button id="vidiNaMapi">
+					<a href="https://www.google.com/maps/place/Berbernica+Legat/@44.7980856,20.4825592,18z/data=!3m1!4b1!4m5!3m4!1s0x475a710e4eed056f:0xc11cd971a02665b5!8m2!3d44.7980837!4d20.4836535?hl=sr"
+					   target="_blank">
+						Vidi na mapi</a>
+				</button>
+				<hr style="border: 1px solid rgb(142, 45, 58);">
+				<h4>Radno vreme:</h4>
+				<p>Ponedeqak - Petak ..10:00 - 21:00</p>
+				<p>Subota .............10:00 - 16:00</p>
+			</div>
+		
 			<div id="kontaktBtn">
 				<button id="rezBtn">Rezervacija</button>
 			</div>
 		</div>
+		
 
 		<img style="overflow: hidden;" src="img/brada.png" alt=""/>
 	</div>
@@ -337,14 +341,34 @@
 		</tr>
 	</table>
 </section>
+
+<!-- pop-up boxes -->
 <div class="popup-box">
 	<h3>Uspe{no ste rezervisali termin !</h3>
 	<div class="popup-btn">
 		<button>OK</button>
 	</div>
-
+</div>
+<div class="popup-box-2">
+	<h3>Traženi termin je zauzet, pokušajte neki od slobodnih termina.</h3>
+	<div class="popup-btn-2">
+		<button>OK</button>
+	</div>
 </div>
 
+<div class="popup-box-3">
+	<h3>Nema slobodnih termina za traženi datum i uslugu.</h3>
+	<div class="popup-btn-3">
+		<button>OK</button>
+	</div>
+</div>
+<div class="popup-box-4">
+	<h3>Došlo je do grekse, molimo pokušajte ponovo.</h3>
+	<div class="popup-btn-4">
+		<button>OK</button>
+	</div>
+</div>
+<!-- pop-up boxes -->
 <script src="main.js"></script>
 <script src="language.js"></script>
 <script src="slick.js"></script>
