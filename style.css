@@ -780,7 +780,7 @@ select {
 }
 @media (max-width: 999px) {
   .slider-nav .slick-track {
-    max-height: 7vh;
+    max-height: 6vh;
   }
   .small-letter {
     font-size:14px;
