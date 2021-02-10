@@ -497,7 +497,13 @@ cursor: grab;
 }
 .slick-track img {
   margin: 15px 5px;
+
 }
+.slick-track {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 /* .slideshow-container {
   width: 40%;
   height: 255px;
@@ -773,6 +779,9 @@ select {
   }
 }
 @media (max-width: 999px) {
+  .slider-nav .slick-track {
+    max-height: 7vh;
+  }
   .small-letter {
     font-size:14px;
   }
