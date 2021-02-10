@@ -194,7 +194,6 @@ $(document).ready(function () {
                         $('.popup-box').fadeIn(1000);
                     });
                 }, (error) => {
-                    // window.alert("Traženi termin je zauzet, pokušajte neki od slobodnih termina.");
                     $('.popup-box-2').fadeIn(1000);
                     dohvatiTermine();
                 });
@@ -241,7 +240,6 @@ $(document).ready(function () {
                 (response) => {
                     console.log(response.data);
                     if (response.data.length == 0) {
-                        // window.alert("Nema slobodnih termina za traženi datum i uslugu.");
                         $('.popup-box-3').fadeIn(1000);
                     }
                     var terms = document.getElementById("vreme");
@@ -253,7 +251,6 @@ $(document).ready(function () {
                     }
                 },
                 (error) => {
-                    // window.alert("Došlo je do grekse, molimo pokušajte ponovo.");
                     $('.popup-box-4').fadeIn(1000);
                 }
             );
