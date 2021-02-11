@@ -21,15 +21,6 @@ $(document).ready(function () {
     function glavna() {
         var viewGlavna = document.getElementById("glavna");
         viewGlavna.scrollIntoView({block: "start", behavior: "smooth"});
-        // $("#glavna").show(1000);
-        // $("#oNama").show(1000);
-        // $("#nasiRadovi").show(1000);
-        // $("#cenovnik").show(1000);
-        // $("#zakazivanje").show(1000);
-        // $("#footer").show(1000);
-        // $("#terminiDemo").hide();
-        // $("#login").hide(1000);
-        // $("#addImg").hide(1000);
     }
 
     document.getElementById("btnONama").addEventListener("click", oNama);
@@ -37,15 +28,6 @@ $(document).ready(function () {
     function oNama() {
         var viewONama = document.getElementById("oNama");
         viewONama.scrollIntoView({block: "start", behavior: "smooth"});
-        // $("#glavna").show(1000);
-        // $("#oNama").show(1000);
-        // $("#nasiRadovi").show(1000);
-        // $("#cenovnik").show(1000);
-        // $("#zakazivanje").show(1000);
-        // $("#footer").show(1000);
-        // $("#terminiDemo").hide();
-        // $("#login").hide(1000);
-        // $("#addImg").hide(1000);
     }
 
     document.getElementById("btnCene").addEventListener("click", cene);
@@ -53,15 +35,6 @@ $(document).ready(function () {
     function cene() {
         var viewCene = document.getElementById("cenovnik");
         viewCene.scrollIntoView({block: "start", behavior: "smooth"});
-        // $("#glavna").show(1000);
-        // $("#oNama").show(1000);
-        // $("#nasiRadovi").show(1000);
-        // $("#cenovnik").show(1000);
-        // $("#zakazivanje").show(1000);
-        // $("#footer").show(1000);
-        // $("#terminiDemo").hide();
-        // $("#login").hide(1000);
-        // $("#addImg").hide(1000);
     }
 
     document.getElementById("btnRez").addEventListener("click", rezervacija);
@@ -69,15 +42,6 @@ $(document).ready(function () {
     function rezervacija() {
         var viewZakazivanje = document.getElementById("zakazivanje");
         viewZakazivanje.scrollIntoView({block: "start", behavior: "smooth"});
-        // $("#glavna").show(1000);
-        // $("#oNama").show(1000);
-        // $("#nasiRadovi").show(1000);
-        // $("#cenovnik").show(1000);
-        // $("#zakazivanje").show(1000);
-        // $("#footer").show(1000);
-        // $("#login").hide(1000);
-        // $("#addImg").hide(1000);
-        // $("#terminiDemo").hide();
     }
 
     document.getElementById("btnKontakt").addEventListener("click", kontakt);
@@ -85,15 +49,6 @@ $(document).ready(function () {
     function kontakt() {
         var viewKontakt = document.getElementById("footer");
         viewKontakt.scrollIntoView({block: "start", behavior: "smooth"});
-        // $("#glavna").show(1000);
-        // $("#oNama").show(1000);
-        // $("#nasiRadovi").show(1000);
-        // $("#cenovnik").show(1000);
-        // $("#zakazivanje").show(1000);
-        // $("#footer").show(1000);
-        // $("#terminiDemo").hide();
-        // $("#login").hide(1000);
-        // $("#addImg").hide(1000);
     }
 
     document.getElementById("rezBtn").addEventListener("click", rezervacijaBtn);
@@ -101,15 +56,6 @@ $(document).ready(function () {
     function rezervacijaBtn() {
         var viewZakazivanje = document.getElementById("zakazivanje");
         viewZakazivanje.scrollIntoView({block: "start", behavior: "smooth"});
-        // $("#glavna").show(1000);
-        // $("#oNama").show(1000);
-        // $("#nasiRadovi").show(1000);
-        // $("#cenovnik").show(1000);
-        // $("#zakazivanje").show(1000);
-        // $("#footer").show(1000);
-        // $("#terminiDemo").hide();
-        // $("#login").hide(1000);
-        // $("#addImg").hide(1000);
     }
 
     // Zakazivanje termina jQuery
