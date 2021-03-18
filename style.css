@@ -1,3 +1,77 @@
+.testimonials {
+  background-color: rgb(16, 15, 22);
+  padding: 3rem 1rem 1rem 1rem;
+  overflow: hidden;
+  width: 100%;
+  border-top: 8px solid rgb(121, 39, 50);
+}
+
+.testimonials__content {
+  margin: 0 auto 0;
+  max-width: 800px;
+}
+
+.testimonials h2 {
+  margin: 0;
+  position: relative;
+}
+
+.testimonials h2,
+.testimonials p,
+.testimonials cite {
+  color: rgb(255, 255, 255);
+}
+
+.testimonials h2::after {
+  content: '';
+  display: inline-block;
+  height: 6px;
+  width: 80%;
+  position: absolute;
+  top: 18px;
+  margin-left: 10px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.testimonials p {
+  font-size: 2rem;
+  line-height: 2.5rem !important;
+  margin-top: 1rem !important;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+}
+
+.testimonials blockquote {
+  position: relative;
+  display: none;
+}
+
+.testimonials blockquote.visible {
+  display: block;
+}
+
+.testimonials blockquote::before {
+  content: '˵';
+  color: rgba(255, 255, 255, 0.3);
+  color: rgb(121, 39, 50);
+  position: absolute;
+  font-size: 200px;
+  top: -120px;
+  left: -120px;
+}
+
+.testimonials cite {
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-align: right;
+  display: block;
+  color: rgb(121, 39, 50);
+}
+
+.testimonials cite::before {
+  content: '– ';
+}
 .popup-box,
 .popup-box-2,
 .popup-box-3,
