@@ -82,12 +82,26 @@ $(document).ready(function () {
     function birajCviju() {
         $('#cvija').toggleClass('active');
         $('#cvijaCheck').toggleClass('active');
-        $('#zabac').removeClass('active');
-        $('#zabacCheck').removeClass('active');
+        $('#vanja').removeClass('active');
+        $('#vanjaCheck').removeClass('active');
         dohvatiTermine();
     }
+    function birajVanju() {
+        $('#vanja').toggleClass('active');
+        $('#vanjaCheck').toggleClass('active');
+        $('#cvija').removeClass('active');
+        $('#cvijaCheck').removeClass('active');
+        dohvatiTermine();
+    }
+    $('#cvija').on('click', function(){
+        birajCviju();
+    })
+    $('#vanja').on('click', function(){
+        birajVanju();
+    })
 
-    birajCviju(); //direktno biranje cvije
+   
+    
 
     $("#zakazi").on("click", zakazivanje);
     $("#datum").on("change", dohvatiTermine);
@@ -103,13 +117,13 @@ $(document).ready(function () {
         var ime = document.getElementById('ime');
         var broj = document.getElementById('broj');
         var cvija = document.getElementById('cvija');
-        var zabac = document.getElementById('zabac');
+        var vanja = document.getElementById('vanja');
         var frizer = undefined;
 
         if (cvija.className == 'active') {
             frizer = cvija.id;
-        } else if (zabac.className == 'active') {
-            frizer = zabac.id;
+        } else if (vanja.className == 'active') {
+            frizer = vanja.id;
         }
 
         var term = {
@@ -165,13 +179,13 @@ $(document).ready(function () {
         var datum = document.getElementById("datum");
         var usluga = document.getElementById("usluga");
         var cvija = document.getElementById('cvija');
-        var zabac = document.getElementById('zabac');
+        var vanja = document.getElementById('vanja');
         var frizer = undefined;
 
         if (cvija.className == 'active') {
             frizer = cvija.id;
-        } else if (zabac.className == 'active') {
-            frizer = zabac.id;
+        } else if (vanja.className == 'active') {
+            frizer = vanja.id;
         }
 
         if (

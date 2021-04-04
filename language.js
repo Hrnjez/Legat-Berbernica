@@ -92,7 +92,7 @@ $(document).ready(function () {
         `,
         zakazivanjeH1: 'Zakazivawe',
         dusan: 'Du{an',
-        jovan: 'Jovan',
+        vanja: 'Vawa',
         izaberiDatum: 'Izaberi datum:',
         vrstaUsluge: 'Vrsta Usluge:',
         nameLabel: 'Ime:',
@@ -260,7 +260,7 @@ $(document).ready(function () {
         `,
         zakazivanjeH1: 'Booking',
         dusan: 'Dusan',
-        jovan: 'Jovan',
+        vanja: 'Vanja',
         izaberiDatum: 'Select a Date:',
         vrstaUsluge: 'Type of Service:',
         btnZakazi: 'Schedule',
@@ -358,7 +358,7 @@ $(document).ready(function () {
         $('#cene span').css('margin-top', '-15px');
         $('#zakazivanje h1').html(`${serbianLanguage.zakazivanjeH1} `);
         $('#dusan').html(`${serbianLanguage.dusan}`);
-        $('#jovan').html(`${serbianLanguage.jovan}`);
+        $('#valentina').html(`${serbianLanguage.vanja}`);
         $('#izaberi-datum').html(`${serbianLanguage.izaberiDatum}`);
         $('#vrsta-usluge').html(`${serbianLanguage.vrstaUsluge}`);
         $('#time-label').html(`${serbianLanguage.timeLabel}`);
@@ -429,7 +429,7 @@ $(document).ready(function () {
         $('#cene span').css('margin-top', '-20px');
         $('#zakazivanje h1').html(`${englishLanguage.zakazivanjeH1} `);
         $('#dusan').html(`${englishLanguage.dusan}`);
-        $('#jovan').html(`${englishLanguage.jovan}`);
+        $('#valentina').html(`${englishLanguage.vanja}`);
         $('#izaberi-datum').html(`${englishLanguage.izaberiDatum}`);
         $('#vrsta-usluge').html(`${englishLanguage.vrstaUsluge}`);
         $('#time-label').html(`${englishLanguage.timeLabel}`);
