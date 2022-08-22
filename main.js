@@ -225,12 +225,18 @@ $(document).ready(function () {
         var usluga = document.getElementById("usluga");
         var cvija = document.getElementById('cvija');
         var vanja = document.getElementById('vanja');
+        var natalija = document.getElementById('natalija');
+        var artjom = document.getElementById('artjom');
         var frizer = undefined;
 
         if (cvija.className == 'active') {
             frizer = cvija.id;
         } else if (vanja.className == 'active') {
             frizer = vanja.id;
+        } else if (natalija.className == 'active') {
+            frizer = natalija.id;
+        } else if (artjom.className == 'active') {
+            frizer = artjom.id;
         }
 
         if (
