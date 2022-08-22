@@ -722,14 +722,33 @@ select {
 #inputBoxes {
   margin: auto;
   text-align: justify;
-  width: 60%;
-  max-width: 400px;
+  width: 80%;
+  max-width: 800px;
   display: grid;
   grid-template-columns: 1fr ;
   grid-gap: 20px;
   margin-top:3rem;
 }
 
+.team-content {
+  display: grid;
+  max-width: 800px;
+  width: 95%;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
+}
+
+.input-fields {
+  max-width: 400px;
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr ;
+}
+
+.input-fields div {
+  margin: 0.5rem;
+}
 
 #zakazivanje button {
   font-family: "font";

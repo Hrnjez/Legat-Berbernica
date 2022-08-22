@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
 
     $(function () {
@@ -6,7 +8,22 @@ $(document).ready(function () {
             dateFormat: 'dd.mm.yy'
         });
 
+        $('.next-day').on("click", function () {
+            var date = $('#datum').datepicker('getDate');
+            date.setDate(date.getDate() + 1)
+            $('#datum').datepicker("setDate", date);
+            dohvatiTermine();
+        });
+        
+        $('.prev-day').on("click", function () {
+            var date = $('#datum').datepicker('getDate');
+            date.setDate(date.getDate() - 1)
+            $('#datum').datepicker("setDate", date);
+            dohvatiTermine();
+        });
+
     });
+      
 
     $("#datum").on("change", dohvatiTermine);
     $("#berberin").on("change", dohvatiTermine);

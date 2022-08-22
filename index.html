@@ -83,7 +83,7 @@
 				</button>
 				<hr style="border: 1px solid rgb(142, 45, 58);">
 				<h4>Radno vreme:</h4>
-				<p>Ponedeqak - Petak ..10:00 - 21:00</p>
+				<p>Ponedeqak - Petak ..09:00 - 21:00</p>
 				<p>Subota .............10:00 - 16:00</p>
 			</div>
 		
@@ -328,53 +328,65 @@
 	
 
 		<div id="inputBoxes">
-			<div>
-				<h3 id="dusan">Du{an</h3>
-				<img id="cvija" src="img/Dusan.jpeg" alt="Berbernica Legat Berberin">
-				<i id="cvijaCheck" style="border:0px !important;" class="fas fa-check-circle fa-2x"></i>
+			<div class="team-content">
+				<div>
+					<img id="cvija" src="img/Dusan.jpeg" alt="Berbernica Legat Berberin">
+					<i id="cvijaCheck" style="border:0px !important;" class="fas fa-check-circle fa-2x"></i>
+					<h3 id="dusan">Du{an</h3>
+				</div>
+				<div>
+					<img id="vanja" src="img/Vanja.jpeg" alt="">
+					<i id="vanjaCheck" style="border:0px !important;" class="fas fa-check-circle fa-2x"></i>
+					<h3 id="valentina">Vawa</h3>
+				</div>
+				<div>
+					<img id="natalija" src="img/Natalija.jpeg" alt="Berbernica Legat Berberin">
+					<i id="natalijaCheck" style="border:0px !important;" class="fas fa-check-circle fa-2x"></i>
+					<h3 id="dusan">Natalija</h3>
+				</div>
+				<div>
+					<img id="artjom" src="img/Artjom.jpeg" alt="">
+					<i id="artjomCheck" style="border:0px !important;" class="fas fa-check-circle fa-2x"></i>
+					<h3 id="valentina">Artjom</h3>
+				</div>
 			</div>
-			<div>
-				<h3 id="valentina">Vawa</h3>
-				<img id="vanja" src="img/Vanja.jpeg" alt="">
-				<i id="vanjaCheck" style="border:0px !important;" class="fas fa-check-circle fa-2x"></i>
-			</div>
+			<div class="input-fields">
+				<div>
+					<h4 id="izaberi-datum">Izaberi datum:</h4>
+					<input required id="datum" autocomplete="off"/>
+				</div>
 
-			<div>
-				<h4 id="izaberi-datum">Izaberi datum:</h4>
-				<input required id="datum" autocomplete="off"/>
-			</div>
+				<div>
+					<h4 id="vrsta-usluge">Vrsta Usluge:</h4>
+					<select name="usluga" id="usluga" onchange="zakazivanje()">
+						<option value="sisanje">Šišanje (45min)</option>
+						<option value="sisanjeMasinica">Šišanje Mašinicom (30min)</option>
+						<option value="decjeSisanje">Dečje šišanje (30min)</option>
+						<option value="brijanje">Brijanje (30min)</option>
+						<option value="korekcijaBrade">Korekcija brade (30min)</option>
+						<option value="komplet1">Šišanje i korekcija brade (1h15min)</option>
+						<option value="komplet2">Šišanje i brijanje (1h15min)</option>
+						<option value="komplet3">Šišanje mašinicom i korekcija brade (1h)</option>
+						<option value="komplet4">Šišanje mašinicom i brijanje (1h)</option>
+						<option value="pranjeStilizovanje">Pranje kose i stilizovanje (20min)</option>
+					</select>
+				</div>
 
-			<div>
-				<h4 id="vrsta-usluge">Vrsta Usluge:</h4>
-				<select name="usluga" id="usluga" onchange="zakazivanje()">
-					<option value="sisanje">Šišanje (45min)</option>
-					<option value="sisanjeMasinica">Šišanje Mašinicom (30min)</option>
-					<option value="decjeSisanje">Dečje šišanje (30min)</option>
-					<option value="brijanje">Brijanje (30min)</option>
-					<option value="korekcijaBrade">Korekcija brade (30min)</option>
-					<option value="komplet1">Šišanje i korekcija brade (1h15min)</option>
-					<option value="komplet2">Šišanje i brijanje (1h15min)</option>
-					<option value="komplet3">Šišanje mašinicom i korekcija brade (1h)</option>
-					<option value="komplet4">Šišanje mašinicom i brijanje (1h)</option>
-					<option value="pranjeStilizovanje">Pranje kose i stilizovanje (20min)</option>
-				</select>
-			</div>
+				<div>
+					<h4 id="izaberi-vreme">Izaberi vreme:</h4>
+					<select required id="vreme">
+					</select>
+				</div>
 
-			<div>
-				<h4 id="izaberi-vreme">Izaberi vreme:</h4>
-				<select required id="vreme">
-				</select>
+				<div>
+					<h4 id="napisi-ime">Ime:</h4>
+					<input required type="text" id="ime"/>
+				</div>
+				<div>
+					<h4 id="broj-telefona">Broj telefona:</h4>
+					<input required type="number"  id="broj"/>
+				</div>
 			</div>
-
-			<div>
-				<h4 id="napisi-ime">Ime:</h4>
-				<input required type="text" id="ime"/>
-			</div>
-			<div>
-				<h4 id="broj-telefona">Broj telefona:</h4>
-				<input required type="number"  id="broj"/>
-			</div>
-
 		</div>
 		<button id="zakazi">
 			<strong>Zaka`i</strong>
@@ -408,7 +420,7 @@
 		<h2>Radno vreme:</h2>
 
 		<p>
-			Ponedeqak - Petak . . . 10:00 - 21:00 <br/>
+			Ponedeqak - Petak . . . 09:00 - 21:00 <br/>
 			<br/>
 			Subota . . . . . . . . . . . . 10:00 - 16:00
 		</p>

@@ -11,6 +11,7 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<title>Legat Admin</title>
 </head>
@@ -40,6 +41,8 @@
 						<option value=""></option>
 						<option value="cvija">Dusan</option>
 						<option value="vanja">Vanja</option>
+						<option value="natalija">Natalija</option>
+						<option value="artjom">Artjom</option>
 					</select>
 				</div>
 				<div><h4>Radno vreme:</h4></div>
@@ -101,9 +104,18 @@
 
 		<div id="demo"></div>
 	</form>
-	<div id="term_results">
-
+	<div class="results-table">
+		<div class="date__arrows">
+			<i id="arrow-left" data-diff="-1" class="fa-solid fa-circle-left prev-day"></i>
+		</div>
+		<div id="term_results">
+		
+		</div>
+		<div class="date__arrows">
+			<i  id="arrow-right" data-diff="1" class="fa-solid fa-circle-right next-day"></i>
+		</div>
 	</div>
+	
 
 </section>
 
