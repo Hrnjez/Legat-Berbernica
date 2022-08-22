@@ -1,0 +1,215 @@
+@font-face {
+    font-family: "font";
+    src: url(font/font.ttf);
+}
+
+@font-face {
+    font-family: "OSC";
+    src: url(font/OSC.ttf);
+}
+
+input:focus {
+    outline: none;
+}
+
+body {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+#zakazivanje {
+    font-family: 'OSC';
+    background-color: rgb(121, 39, 50);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 1rem;
+}
+
+#zakazivanje form {
+    width: 66%;
+    margin: 50px auto;
+    border-bottom: 5px solid rgb(121, 39, 50);
+}
+
+#zakazivanje #term_results {
+    width: 80%;
+    margin: 1rem auto;
+}
+
+#zakazivanje h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 40px;
+}
+
+#zakazivanje h4,
+#zakazivanje h2,
+#zakazivanje label,
+#berberin,
+#usluga,
+#scheduler,
+#booking,
+#break,
+#zakazi,
+#datum,
+#changeWorkingHours,
+#bookTerm,
+#setBreak,
+#btn-pauza,
+#zakazi,
+#btn-promeni {
+    color: #fff;
+    background: #b73a3a3b;
+    padding: 10px 20px;
+    border: 0;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+}
+
+#changeWorkingHours:hover,
+#bookTerm:hover,
+#setBreak:hover {
+    cursor: pointer;
+    background: #994f4fdc;
+}
+
+#inputBoxes {
+    padding: 10px 30px;
+}
+
+#scheduler,
+#booking,
+#break {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#scheduler label,
+#booking label,
+#break label {
+    border: 2px solid rgba(112, 42, 42, 0.479);
+}
+
+#scheduler input,
+#booking input,
+#break input {
+    width: 120px;
+    height: 25px;
+    margin: auto;
+    background: #994f4fdc;
+    border: 0;
+}
+
+#ui-datepicker-div,
+#ui-datepicker-div table tr,
+#ui-datepicker-div table tr td a {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    border: 0;
+    background: rgb(136, 37, 50);
+    color: #fff;
+}
+
+#ui-datepicker-div table tr td {
+    background: rgb(109, 34, 44);
+}
+
+#ui-datepicker-div table tr td:hover {
+    background: rgb(238, 74, 95);
+}
+
+#zakazi {
+    font-family: 'OSC';
+    text-align: center;
+    /* width: 100%; */
+    margin: 10px 0px;
+
+}
+
+table,
+table tr {
+    border: rgb(145, 46, 59) 3px solid;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+table tr td,
+table tr th {
+    padding: 10px 20px;
+    border: 1px solid rgb(145, 46, 59);
+    font-family: 'OSC';
+}
+
+table tr th {
+    background: rgba(183, 58, 58, 0.23);
+}
+
+select option {
+    margin: 40px;
+    background: rgb(145, 46, 59);
+    color: #fff;
+    border: 0;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.rem-btn {
+    background-color: rgb(150, 50, 63);
+    border: 0;
+    padding: 3px 16px;
+    color: #fff;
+
+}
+
+.rem-btn:focus {
+    outline: none;
+}
+
+.rem-btn:hover {
+    background-color: rgb(168, 56, 71);
+
+}
+
+.results-table {
+    margin: 135px auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.date__arrows {
+    margin-top: 3rem;
+}
+
+.date__arrows i {
+    color: #eee;
+    font-size: 25px;
+}
+
+@media (max-width: 1024px) {
+    #zakazivanje {
+        font-family: 'OSC';
+        background-color: rgb(121, 39, 50);
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #zakazivanje form {
+        width: 60%;
+        margin: 50px auto;
+        height: 99vh !important;
+    }
+
+    #zakazivanje #term_results {
+        width: 80%;
+        margin: 0 auto;
+
+    }
+
+    table {
+        margin: auto;
+    }
+}

@@ -1,0 +1,94 @@
+* {
+    background-color: rgb(121, 39, 50);
+}
+@font-face {
+    font-family: "OSC";
+    src: url(font/OSC.ttf);
+}
+
+
+
+form {
+margin-top: 5rem;
+background-image: url('img/legat-logo.png');
+background-position: center;
+background-size: 20%;
+background-repeat: no-repeat;
+height: 80vh;
+}
+h1 {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 3rem;
+    color:#fff;
+    font-family: "OSC";
+    background: rgba(121, 39, 50, 0.95);
+}
+.container {
+    background: rgba(121, 39, 50, 0.95);
+    width: 80%;
+    font-family: "OSC";
+    margin: 0 auto;
+    text-align: center;
+    color:#fff;
+    height: 60vh;
+    padding-top:3rem;
+}
+.container input {
+    height: 2rem;
+    font-size: 18px;
+    border:0;
+    background:#b73a3a3b;
+    margin: 1rem;
+    padding-left:1rem;
+}
+.container label {
+    font-size: 18px;
+}
+input:focus {
+    outline: none;
+}
+#login {
+    background:#b73a3a3b;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    font-size: 18px;
+    border: 0;
+    box-shadow: 3px 3px 5px rgb(73, 15, 15);
+    color:#fff;
+    outline: none;
+}
+#login:hover {
+    cursor: pointer;
+    background:#942d2d3b;
+}
+
+@media (max-width: 999px) {
+    form {
+        margin-top: 5rem;
+        background-image: url('img/legat-logo.png');
+        background-position: center;
+        background-size: 60%;
+        background-repeat: no-repeat;
+        height: 80vh;
+        }
+    .container input {
+        height: 5rem;
+        width: 25rem;
+        font-size: 38px;
+
+    }
+    .container label {
+        font-size: 42px;
+    }
+    #login {
+        background:#b73a3a3b;
+        padding: 2rem 6rem;
+        margin: 2rem;
+        font-size: 38px;
+
+    }
+    h1 {
+        font-size:60px;
+    }
+}

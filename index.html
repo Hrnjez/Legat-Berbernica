@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="Berbernica Legat" content="Berbernica, Legat, Berberin, Vracar, Beograd"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<meta name="google-site-verification" content="FmbLIh9Yn-BBRf0YwFY9aznrGWTtQ_NBIy6F36Rm6jI" />
+	<meta name="description" content="Berbernica Legat se nalazi u jednom od 
+	najlepsih delova Vracara, u samom srcu Beograda.">
+	<link rel="stylesheet" href="style.css"/>
+	<script src="https://kit.fontawesome.com/6c8d2143a1.js"></script>
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<script src="jquery.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+	<title>Berbernica Legat</title>
+</head>
+<link rel="shortcut icon" href="img/legat-logo.png" alt="Berbernica Legat Logo" type="image/x-icon" />
+<body>
+<div id="navBar">
+	<button id="btnEmpty"></button>
+	<button id="btnGlavna">Glavna</button>
+	<button id="btnONama">O nama</button>
+	<button id="btnCene">Cene</button>
+	<button id="btnRez">Rezervacija</button>
+	<button id="btnKontakt">Kontakt</button>
+</div>
+
+<div id="langChange">
+	<img src="/img/srb.jpg" id="srb" name="lang" value="srb" alt="Berbernica Legat Flag" ></img>
+	<img src="/img/eng.webp" id="eng" name="lang" value="eng" alt="Berbernica Legat Flag"></img>
+</div>
+
+<section id="glavna">
+	<div id="celaGlavna">
+
+		<div id="slogan">
+			<img src="img/legat-logo.png" alt="Berbernica Legat Logo"/>
+			<h1 style="color:rgba(0, 0, 0, 0); font-size:1px;">Berbernica Legat</h1>
+			<h2 id="logoH2"></h2>
+			<div id="tekst">
+				<h3></h3>
+				<p style="color:rgba(0, 0, 0, 0); font-size:1px;">Berbernica Legat</p>
+			</div>
+		</div>
+	</div>
+	<img id="img1" src="img/img1.png" alt="Berbernica Legat Logo"/>
+
+</section>
+
+<section id="oNama">
+	<h2 style="color:rgba(0, 0, 0, 0); font-size:1px; position:absolute;">Berbernica Legat</h2>
+	<div id="oNamaTekst">
+		<h1>O nama</h1>
+		<p>
+			Berbernica Legat se nalazi u jednom od najlep{ih delova Vra<span class="small-letter">^</span>ara, u samom srcu Beograda.
+			Legat nije obi<span class="small-letter">^</span>na berberbnica, to je klub u kome }e svaki gospodin u`ivati u komforu
+			entrerijera fino}i pi}a i visokom kvalitetu usluga. Verujemo da svaki mu{karac treba
+			da nosi frizuru koja pristaje wegovom karakteru, stilu i na<span class="small-letter">^</span>inu `ivota. Bilo da `elite
+			klasi<span class="small-letter">^</span>nu frizuru '50-ih, fejd sa bezbroj varijacija ili neprevazi<span class="small-letter">\</span>eni rokabili stil,
+			na{i berberi }e biti na visini zadatka. Negujemo tradiciju dok pratimo novitete. Pored
+			frizura, tu smo da se postaramo i za izgled Va{e brade i brkova. Verujemo u kvalitet
+			i nastojimo da vam pru`imo prvoklasnu uslugu. Britva je na{ omiljeni alat, zato je brijawe na{a u`a specijalnost.
+
+		</p>
+	</div>
+	<div id="slika1">
+		<div id="boxKontakt">
+			<div id="box-info">
+				<h3 id="">Kontakt</h3>
+				<h4>Telefon: <a  href="tel:0665468186"> <i class="fas fa-phone-square-alt"></i> 0665468186</a></h4>
+				<hr style="border: 1px solid rgb(142, 45, 58);">
+				<h4>Adresa:</h4>
+				<p>Cara Nikolaja <span style="font-family:'Open Sans',sans-serif">II</span>-86. Beograd, Srbija</p>
+				<button id="vidiNaMapi">
+					<a href="https://www.google.com/maps/place/Berbernica+Legat/@44.7980856,20.4825592,18z/data=!3m1!4b1!4m5!3m4!1s0x475a710e4eed056f:0xc11cd971a02665b5!8m2!3d44.7980837!4d20.4836535?hl=sr"
+					   target="_blank">
+						Vidi na mapi</a>
+				</button>
+				<hr style="border: 1px solid rgb(142, 45, 58);">
+				<h4>Radno vreme:</h4>
+				<p>Ponedeqak - Petak ..09:00 - 21:00</p>
+				<p>Subota .............10:00 - 16:00</p>
+			</div>
+		
+			<div id="kontaktBtn">
+				<button id="rezBtn">Rezervacija</button>
+			</div>
+		</div>
+		
+
+		<img style="overflow: hidden;" src="img/brada.png" alt="Berbernica Legat Background" alt=""/>
+	</div>
+</section>
+<section id="nasiRadovi">
+	<img id="img1" src="img/img1.png" alt=""/>
+	<h2 style="color:rgba(0, 0, 0, 0); font-size:1px; position:absolute;">Berbernica Legat</h2>
+	<h1>NA[I RADOVI</h1>
+	<h4>Neki od na{ih zadovoqnih klijenata</h4>
+	<section class="gallery" style="width:80%; margin:auto;">
+		<div class="slider-for" style="width:80%;  margin:auto;">
+			<img src="img/img4.jpg" alt="">
+			<img src="img/img21.jpg" alt="">
+			<img src="img/img17.jpg" alt="">
+			<img src="img/img19.jpg" alt="">
+			<img src="img/img20.jpg" alt="">
+			<img src="img/img5.jpg" alt="">
+			<img src="img/img6.jpg" alt="">
+			<img src="img/img7.jpg" alt="">
+			<img src="img/img13.jpg" alt="">
+			<img src="img/img8.jpg" alt="">
+			<img src="img/img9.jpg" alt="">
+			<img src="img/img10.jpg" alt="">
+			<img src="img/img11.jpg" alt="">
+			<img src="img/img12.jpg" alt="">
+			<img src="img/img14.jpg" alt="">
+			<img src="img/img15.jpg" alt="">
+			<img src="img/img16.jpg" alt="">
+			<img src="img/img18.jpg" alt="">
+		</div>
+		<div class="slider-nav" style=" margin:auto;">
+			<img src="img/img4.jpg" alt="">
+			<img src="img/img21.jpg" alt="">
+			<img src="img/img17.jpg" alt="">
+			<img src="img/img19.jpg" alt="">
+			<img src="img/img20.jpg" alt="">
+			<img src="img/img5.jpg" alt="">
+			<img src="img/img6.jpg" alt="">
+			<img src="img/img7.jpg" alt="">
+			<img src="img/img13.jpg" alt="">
+			<img src="img/img8.jpg" alt="">
+			<img src="img/img9.jpg" alt="">
+			<img src="img/img10.jpg" alt="">
+			<img src="img/img11.jpg" alt="">
+			<img src="img/img12.jpg" alt="">
+			<img src="img/img14.jpg" alt="">
+			<img src="img/img15.jpg" alt="">
+			<img src="img/img16.jpg" alt="">
+			<img src="img/img18.jpg" alt="">
+		</div>
+	</section>
+
+
+</section>
+
+<section id="cenovnik">
+	<h2 style="color:rgba(0, 0, 0, 0); font-size:1px; position:absolute;">Berbernica Legat</h2>
+	<img src="img/img2.png" alt="Berbernica Legat"/>
+	<div id="cene">
+		<h1>Cenovnik usluga</h1>
+		<br/>
+		<h2>[i{awe</h2>
+		<h4>
+			Vreme trajawa 45 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+			<span id="ceneSisanja">РСД 1400</span>
+		</h4>
+		<h2>[i{awe ma{inicom</h2>
+		<h4>
+			Vreme trajawa 30 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+			<span id="ceneSisanja"> РСД 1100</span>
+		</h4>
+
+		<h2>De<span style='font-size:23px;'>^</span>je {i{awe</h2>
+		<h4>
+			Vreme trajawa 30 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+			<span id="ceneSisanja">РСД 900</span>
+		</h4>
+		<h2>Brijawe</h2>
+		<h4>
+			Vreme trajawa 30 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+			<span id="ceneSisanja">РСД 1000</span>
+		</h4>
+		<h2>Korekcija brade</h2>
+		<h4>
+			Vreme trajawa 30 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+			<span id="ceneSisanja">РСД 1000</span>
+		</h4>
+		<h2>Komplet 1</h2>
+		<h4>
+			[i{awe i korekcija brade
+		</h4>
+		<h4>
+			Vreme trajawa 1 sat i 15 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . .
+			<span id="ceneSisanja">РСД 2100</span>
+		</h4>
+		<h2>Komplet 2</h2>
+		<h4>
+			[i{awe i brijawe
+		</h4>
+		<h4>
+			Vreme trajawa 1 sat i 15 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . .
+			<span id="ceneSisanja">РСД 2100</span>
+		</h4>
+		<h2>Komplet 3</h2>
+		<h4>
+			[i{awe ma{inicom i korekcija brade
+		</h4>
+		<h4>
+			Vreme trajawa 1 sat . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+			<span id="ceneSisanja">РСД 1800</span>
+		</h4>
+		<h2>Komplet 4</h2>
+		<h4>
+			[i{awe ma{inicom i brijawe
+		</h4>
+		<h4>
+			Vreme trajawa 1 sat . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+			<span id="ceneSisanja">РСД 1800</span>
+		</h4>
+		<h2>Prawe kose i stilizovawe</h2>
+		<h4>
+			Vreme trajawa 20 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+			<span id="ceneSisanja">РСД 700</span>
+		</h4>
+	</div>
+
+	<img src="img/img2.png" alt="Berbernica Legat"/>
+</section>
+<!-- <section class="testimonials">
+	
+		<div class="testimonials__content">
+		  <blockquote>
+			<p>
+			  He did an amazing job on my Challenger and 1955 Chevy! He took great care of both of my convertibles and my challenger, so I decided to take my baby to him. My 1955 Chevy bel air. I took it to him and he treated it like a baby, just the way I would have. I highly recommend his services. He left the vehicle spotless and looking just like new. The prices are very affordable, especially for his ceramic coatings. And a killer website too!
+			</p>
+			<cite>Steve S.</cite>
+		  </blockquote>
+	  
+		  <blockquote>
+			<p>First time customer, now a life long customer. The value, quality and professionalism was second to none. I had two very large, very filthy vehicles fully detailed and they are better than new, including removal of items in storage compartments, under seats and in every nook and cranny!</p>
+			<cite>Frank W.</cite>
+		  </blockquote>
+	  
+		  <blockquote>
+			<p>M&S Auto is by far the best. I have dealt with many places over the years, but they don’t come close to the knowledge and experience here. No one else will ever touch my vehicles now. I have had both of my vehicles ceramic coated and its amazing. Washing my cars have never been so easy. M&S are definitely professionals.</p>
+			<cite>Hardik P.</cite>
+		  </blockquote>
+	  
+		  <blockquote>
+			<p>Had our 2018 Equinox ceramic coated and it looks better than when we drove it off the lot 10 months ago.  Can't recommend M & S highly enough. Great service and quality work.  Ken's a super nice guy and great to work with.</p>
+			<cite>Bill F.</cite>
+		  </blockquote>
+	  
+		  <blockquote>
+			<p>Superb service. Had an interior detail done. Truck came out great. Looks as good as when I bought it. Very pleased with the work. Ken is super nice and did a great job. Very thorough. Thanks and I will be back for additional services.</p>
+			<cite>Gary</cite>
+		  </blockquote>
+	  
+		  <blockquote>
+			<p>My '03 Jeep Grand Cherokee has never looked as good as it does now and it's 16 years old.  The men at M&S Auto Detailing did a fantastic job making it shine again on the inside and out!  I definitely recommend them to anyone that wants to keep their ride looking sharp.  Thanks guys!</p>
+			<cite>Jeri D.</cite>
+		  </blockquote>
+	  
+		  <blockquote>
+			<p>Awesome work! Very impressed with the work. My seats look amazing! Interior and exterior cleaned! Highly recommend!</p>
+			<cite>B. D.</cite>
+		  </blockquote>
+	  
+		  <blockquote>
+			<p>M & S Auto Detailing did an amazing job on my 2017 GMC Acadia. They were nice and professional to work with. They were able to get all the spots that I got all over the upholstery using a deodorizer. They even had it ready before they thought they would. Thank you M & S</p>
+			<cite>Debra S.</cite>
+		  </blockquote>
+	  
+		  <blockquote>
+			<p>I found this shop on Facebook. I’m from West Virginia. Call and talked to ken. The customer service is amazing and decided to let him coat my dually farm truck. Let me say. It looks better than it did when I bought it off the lot. He does great work and would recommend to anyone!!!! 5 stars.</p>
+			<cite>Carl H.</cite>
+		  </blockquote>
+	  
+		  <blockquote>
+			<p>Took a lil bit of time to get my truck in for detailing but man it was worth it.  The owner is a very nice guy and easy to talk to,  you can tell he is passionate about detailing vehicles.  Had my truck ceramic coated and man it looks good.  Price was very reasonable for the amount of work that goes into this process. Would definitely recommend.</p>
+			<cite>Earl</cite>
+		  </blockquote>
+	  
+		  <blockquote>
+			<p>M&S did such an amazing job! My Expedition is a full time kid hauler with the occasional dog/chicken/cat/duck and now you'd never know 😉. Thanks again! It even smells good!</p>
+			<cite>Jocelyn M.</cite>
+		  </blockquote>
+	  
+		  <blockquote>
+			<p>Ken went above and beyond to make sure my ceramic coating was fabulous.  He spent extra time and attention to detail to treat my car as his own.   I would highly recommend him for all services due to his dependability and his careful attention with each vehicle.</p>
+			<cite>Jess G.</cite>
+		  </blockquote>
+	  
+		  <blockquote>
+			<p>This is the 2nd vehicle I've taken to Ken. I've been very happy both times. I've got one more vehicle to get done and I'm definitely going to have Ken do it.</p>
+			<cite>Garland D.</cite>
+		  </blockquote>
+	  
+		  <blockquote>
+			<p>The service is very friendly. I could not believe how good they did! I took my grandfather’s ‘99 Camry and it looks almost brand new! Great job.</p>
+			<cite>Abbey A.</cite>
+		  </blockquote>
+	  
+		  <blockquote>
+			<p>Just had my first detail here and they are great! Super nice people. Professional and they deliver on service. My Jeep looks better than it has in years. I will be back on a regular basis. Try them and you will be to. Thank you so much and also "Thank you for your service 🇺🇸"!</p>
+			<cite>Debbie G.</cite>
+		  </blockquote>
+		</div>
+	  
+	  <script>
+		(function() {
+		  var time = 10000;
+		  if (window.testimonialsInterval) {
+			clearInterval(window.testimonialsInterval);
+		  }
+		  var rotate = function() {
+			var $els = $(".testimonials blockquote");
+			var random = Math.floor(Math.random() * $els.length);
+			$els.removeClass('visible');
+			$els.eq(random).addClass('visible');
+		  }
+		  window.testimonialsInterval = setInterval(rotate, time);
+		  rotate();
+		})()
+	  </script>
+
+</section> -->
+<section id="zakazivanje">
+	<h2 style="color:rgba(0, 0, 0, 0); font-size:1px; position:absolute;">Berbernica Legat</h2>
+	<form action="">
+		<h1 id="zakaziOvde">
+			Zakazivawe <span> <i class="fas fa-caret-down"></i> </span>
+		</h1>
+	
+
+		<div id="inputBoxes">
+			<div class="team-content">
+				<div>
+					<img id="cvija" src="img/Dusan.jpeg" alt="Berbernica Legat Berberin">
+					<i id="cvijaCheck" style="border:0px !important;" class="fas fa-check-circle fa-2x"></i>
+					<h3 id="dusan">Du{an</h3>
+				</div>
+				<div>
+					<img id="vanja" src="img/Vanja.jpeg" alt="">
+					<i id="vanjaCheck" style="border:0px !important;" class="fas fa-check-circle fa-2x"></i>
+					<h3 id="valentina">Vawa</h3>
+				</div>
+				<div>
+					<img id="natalija" src="img/Natalija.jpeg" alt="Berbernica Legat Berberin">
+					<i id="natalijaCheck" style="border:0px !important;" class="fas fa-check-circle fa-2x"></i>
+					<h3 id="dusan">Natalija</h3>
+				</div>
+				<div>
+					<img id="artjom" src="img/Artjom.jpeg" alt="">
+					<i id="artjomCheck" style="border:0px !important;" class="fas fa-check-circle fa-2x"></i>
+					<h3 id="valentina">Artjom</h3>
+				</div>
+			</div>
+			<div class="input-fields">
+				<div>
+					<h4 id="izaberi-datum">Izaberi datum:</h4>
+					<input required id="datum" autocomplete="off"/>
+				</div>
+
+				<div>
+					<h4 id="vrsta-usluge">Vrsta Usluge:</h4>
+					<select name="usluga" id="usluga" onchange="zakazivanje()">
+						<option value="sisanje">Šišanje (45min)</option>
+						<option value="sisanjeMasinica">Šišanje Mašinicom (30min)</option>
+						<option value="decjeSisanje">Dečje šišanje (30min)</option>
+						<option value="brijanje">Brijanje (30min)</option>
+						<option value="korekcijaBrade">Korekcija brade (30min)</option>
+						<option value="komplet1">Šišanje i korekcija brade (1h15min)</option>
+						<option value="komplet2">Šišanje i brijanje (1h15min)</option>
+						<option value="komplet3">Šišanje mašinicom i korekcija brade (1h)</option>
+						<option value="komplet4">Šišanje mašinicom i brijanje (1h)</option>
+						<option value="pranjeStilizovanje">Pranje kose i stilizovanje (20min)</option>
+					</select>
+				</div>
+
+				<div>
+					<h4 id="izaberi-vreme">Izaberi vreme:</h4>
+					<select required id="vreme">
+					</select>
+				</div>
+
+				<div>
+					<h4 id="napisi-ime">Ime:</h4>
+					<input required type="text" id="ime"/>
+				</div>
+				<div>
+					<h4 id="broj-telefona">Broj telefona:</h4>
+					<input required type="number"  id="broj"/>
+				</div>
+			</div>
+		</div>
+		<button id="zakazi">
+			<strong>Zaka`i</strong>
+		</button>
+		<div id="demo"></div>
+	</form>
+</section>
+<section>
+	<div style="width: 100vw; margin: 0 auto; border-top:8px solid rgb(16, 15, 22);">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11324.609402961682!2d20.4836535!3d44.7980837!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc11cd971a02665b5!2sBerbernica%20Legat!5e0!3m2!1sen!2srs!4v1612775004490!5m2!1sen!2srs" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+	   </div>
+</section>
+<section id="footer">
+	<h3 style="color:rgba(0, 0, 0, 0); font-size:1px; position:absolute;">Berbernica Legat</h3>
+	<div id="adresa">
+		<h2>Adresa :</h2>
+		<p id="pAdresa">
+			Cara Nikolaja <span style="font-family:'Open Sans',sans-serif">II</span>-86. Beograd <br/>
+			<br/>
+			Srbija
+		</p>
+		<button id="vidiNaMapi">
+			<a href="https://goo.gl/maps/rKbjUWZPrmwat5fa7"
+			   target="_blank">
+				Vidi na mapi</a>
+		</button>
+		<br/>
+
+	</div>
+	<div id="radnoVreme">
+		<h2>Radno vreme:</h2>
+
+		<p>
+			Ponedeqak - Petak . . . 09:00 - 21:00 <br/>
+			<br/>
+			Subota . . . . . . . . . . . . 10:00 - 16:00
+		</p>
+	</div>
+	<div id="dMreze">
+		<h2>Dru{tvene mre`e :</h2>
+		<p>Pratite nas na dru{tvenim mre`ama.</p>
+		<button id="btnFace">
+			<a href="https://www.facebook.com/berbernica.legat" target="_blank"><i
+					class="fab fa-facebook-square fa-2x"></i></a>
+		</button>
+		<button id="btnInsta">
+			<a href="https://www.instagram.com/berbernicalegat.rs/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+		</button>
+	</div>
+	<div>
+		<p id="copyright">Copyright &copy; 2019 - Berbernica Legat</p>
+	</div>
+</section>
+
+<section id="login">
+	<h3>Administrator</h3>
+	<input type="text" id="adminIme" placeholder="Ime"/>
+	<input type="text" id="adminPw" placeholder="Šifra"/>
+	<br/>
+	<button id="adminLogin">Ok</button>
+</section>
+<section id="terminiDemo">
+	<h2 id="termini">Termini:</h2>
+	<table id="table">
+		<tr id="nemaRez">
+			<td>Nema rezervisanih termina</td>
+		</tr>
+	</table>
+</section>
+
+<!-- pop-up boxes -->
+<div class="popup-box">
+	<h3>Uspe{no ste rezervisali termin.</h3>
+	<div class="popup-btn">
+		<button>OK</button>
+	</div>
+</div>
+<div class="popup-box-2">
+	<h3>Tra`eni termin je zauzet, poku{ajte neki od slobodnih termina.</h3>
+	<div class="popup-btn-2">
+		<button>OK</button>
+	</div>
+</div>
+
+<div class="popup-box-3">
+	<h3>Nema slobodnih termina za tra`eni datum i uslugu.</h3>
+	<div class="popup-btn-3">
+		<button>OK</button>
+	</div>
+</div>
+<div class="popup-box-4">
+	<h3>Do{lo je do gre{ke, molimo poku{ajte ponovo.</h3>
+	<div class="popup-btn-4">
+		<button>OK</button>
+	</div>
+</div>
+<!-- pop-up boxes -->
+<script src="main.js"></script>
+<script src="language.js"></script>
+<script src="slick.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</body>
+
+</html>
