@@ -86,8 +86,6 @@ $(document).ready(function () {
         $('#vanjaCheck').removeClass('active');
         $('#natalija').removeClass('active');
         $('#natalijaCheck').removeClass('active');
-        $('#artjom').removeClass('active');
-        $('#artjomCheck').removeClass('active');
         dohvatiTermine();
     }
 
@@ -98,8 +96,6 @@ $(document).ready(function () {
         $('#cvijaCheck').removeClass('active');
         $('#natalija').removeClass('active');
         $('#natalijaCheck').removeClass('active');
-        $('#artjom').removeClass('active');
-        $('#artjomCheck').removeClass('active');
         dohvatiTermine();
     }
 
@@ -110,22 +106,9 @@ $(document).ready(function () {
         $('#vanjaCheck').removeClass('active');
         $('#natalija').toggleClass('active');
         $('#natalijaCheck').toggleClass('active');
-        $('#artjom').removeClass('active');
-        $('#artjomCheck').removeClass('active');
         dohvatiTermine();
     }
 
-    function birajArtjoma() {
-        $('#vanja').removeClass('active');
-        $('#vanjaCheck').removeClass('active');
-        $('#cvija').removeClass('active');
-        $('#cvijaCheck').removeClass('active');
-        $('#natalija').removeClass('active');
-        $('#natalijaCheck').removeClass('active');
-        $('#artjom').toggleClass('active');
-        $('#artjomCheck').toggleClass('active');
-        dohvatiTermine();
-    }
     $('#cvija').on('click', function(){
         birajCviju();
     })
@@ -135,12 +118,7 @@ $(document).ready(function () {
     $('#natalija').on('click', function(){
         birajNataliju();
     })
-    $('#artjom').on('click', function(){
-        birajArtjoma();
-    })
 
-   
-    
 
     $("#zakazi").on("click", zakazivanje);
     $("#datum").on("change", dohvatiTermine);
@@ -158,7 +136,6 @@ $(document).ready(function () {
         var cvija = document.getElementById('cvija');
         var vanja = document.getElementById('vanja');
         var natalija = document.getElementById('natalija');
-        var artjom = document.getElementById('artjom');
         var frizer = undefined;
 
         if (cvija.className == 'active') {
@@ -167,8 +144,6 @@ $(document).ready(function () {
             frizer = vanja.id;
         } else if (natalija.className == 'active') {
             frizer = natalija.id;
-        } else if (artjom.className == 'active') {
-            frizer = artjom.id;
         }
 
         var term = {
@@ -226,7 +201,6 @@ $(document).ready(function () {
         var cvija = document.getElementById('cvija');
         var vanja = document.getElementById('vanja');
         var natalija = document.getElementById('natalija');
-        var artjom = document.getElementById('artjom');
         var frizer = undefined;
 
         if (cvija.className == 'active') {
@@ -235,8 +209,6 @@ $(document).ready(function () {
             frizer = vanja.id;
         } else if (natalija.className == 'active') {
             frizer = natalija.id;
-        } else if (artjom.className == 'active') {
-            frizer = artjom.id;
         }
 
         if (
