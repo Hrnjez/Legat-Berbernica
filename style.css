@@ -732,10 +732,10 @@ select {
 
 .team-content {
   display: grid;
-  max-width: 800px;
+  max-width: 900px;
   width: 95%;
   margin: auto;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .input-fields {
@@ -887,6 +887,15 @@ select {
   .slider-nav .slick-track {
     max-height: 6vh;
   }
+
+  .team-content {
+    display: grid;
+    max-width: 600px;
+    width: 95%;
+    margin: auto;
+    grid-template-columns: 1fr ;
+  }
+
   .small-letter {
     font-size:14px;
   }
