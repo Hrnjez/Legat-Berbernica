@@ -120,11 +120,11 @@ $(document).ready(function () {
     })
 
 
-    $("#zakazi").on("click", zakazivanje);
+    $("#zakazi").on("click", zakazivanjeTermina);
     $("#datum").on("change", dohvatiTermine);
     $("#usluga").on("change", dohvatiTermine);
 
-    function zakazivanje(e) {
+    function zakazivanjeTermina(e) {
         e.preventDefault();
         $("#demo").show();
         var demo = document.getElementById("demo");
@@ -210,6 +210,7 @@ $(document).ready(function () {
         } else if (natalija.className == 'active') {
             frizer = natalija.id;
         }
+        console.log(usluga.value)
 
         if (
             datum.value !== "" &&
@@ -239,6 +240,9 @@ $(document).ready(function () {
             );
 
         }
+        console.log(datum.value);
+        console.log(usluga.value);
+        console.log(frizer);
     }
 
     function unavailable(date) {
