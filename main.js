@@ -210,7 +210,6 @@ $(document).ready(function () {
         } else if (natalija.className == 'active') {
             frizer = natalija.id;
         }
-        console.log(usluga.value)
 
         if (
             datum.value !== "" &&
@@ -240,9 +239,6 @@ $(document).ready(function () {
             );
 
         }
-        console.log(datum.value);
-        console.log(usluga.value);
-        console.log(frizer);
     }
 
     function unavailable(date) {
