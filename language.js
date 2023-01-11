@@ -20,80 +20,80 @@ $(document).ready(function () {
         nasiRadoviH4: 'Neki od na{ih zadovoqnih klijenata',
         cenovnik: `
         <h1>Cenovnik usluga</h1>
-        <br />
-        <div>
-          <h2>[i{awe</h2>
-          <h4>
-            Vreme trajawa 45 minuta . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . 
-            <span id="ceneSisanja">РСД 1400</span>
-          </h4>
-        </div>
-        <div>
-          <h2>[i{awe ma{inicom</h2>
-          <h4>
-            Vreme trajawa 30 minuta . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . .
-            <span id="ceneSisanja"> РСД 1100</span>
-          </h4>
-        </div>
-  
-        <h2>[i{awe, Deca </h2>
-        <h4>
-          Vreme trajawa 45 minuta . . . . . . . . . . . . . . . . . . . . . . .
-          . . . . . 
-          <span id="ceneSisanja">РСД 900</span>
-        </h4>
-        <h2>Brijawe</h2>
-        <h4>
-          Vreme trajawa 30 minuta . . . . . . . . . . . . . . . . . . . . . . .
-          . . . . . 
-          <span id="ceneSisanja">РСД 1000</span>
-        </h4>
-        <h2>Korekcija brade</h2>
-        <h4>
-          Vreme trajawa 30 minuta . . . . . . . . . . . . . . . . . . . . . . .
-          . . . . . 
-          <span id="ceneSisanja">РСД 1000</span>
-        </h4>
-        <h2>Komplet 1</h2>
-        <h4>
-            [i{awe i korekcija brade
-        </h4>
-        <h4>
+      <br/>
+      <h2>[i{awe</h2>
+      <h4>
+        Vreme trajawa 45 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        <span id="ceneSisanja">РСД 1700</span>
+      </h4>
+      <h2>[i{awe ma{inicom</h2>
+      <h4>
+        Vreme trajawa 30 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        <span id="ceneSisanja"> РСД 1300</span>
+      </h4>
+
+      <h2>De<span id='special' style='font-size:23px;'>^</span>je {i{awe</h2>
+      <h4>
+        Vreme trajawa 30 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        <span id="ceneSisanja">РСД 1300</span>
+      </h4>
+      <h2>Brijawe</h2>
+      <h4>
+        Vreme trajawa 30 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        <span id="ceneSisanja">РСД 1100</span>
+      </h4>
+      <h2>Korekcija brade</h2>
+      <h4>
+        Vreme trajawa 30 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        <span id="ceneSisanja">РСД 1000</span>
+      </h4>
+      <h2>Komplet 1</h2>
+      <h4>
+        [i{awe i korekcija brade
+      </h4>
+      <h4>
         Vreme trajawa 1 sat i 15 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        <span id="ceneSisanja">РСД 2100</span>
-        </h4>
-        <h2>Komplet 2</h2>
-        <h4>
+        <span id="ceneSisanja">РСД 2400</span>
+      </h4>
+      <h2>Komplet 2</h2>
+      <h4>
         [i{awe i brijawe
-        </h4>
-        <h4>
+      </h4>
+      <h4>
         Vreme trajawa 1 sat i 15 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        <span id="ceneSisanja">РСД 2100</span>
-        </h4>
-        <h2>Komplet 3</h2>
-        <h4>
+        <span id="ceneSisanja">РСД 2500</span>
+      </h4>
+      <h2>Komplet 3</h2>
+      <h4>
         [i{awe ma{inicom i korekcija brade
-        </h4>
-        <h4>
+      </h4>
+      <h4>
         Vreme trajawa 1 sat . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        <span id="ceneSisanja">РСД 1800</span>
-        </h4>
-        <h2>Komplet 4</h2>
-        <h4>
+        <span id="ceneSisanja">РСД 2000</span>
+      </h4>
+      <h2>Komplet 4</h2>
+      <h4>
         [i{awe ma{inicom i brijawe
-        </h4>
-        <h4>
+      </h4>
+      <h4>
         Vreme trajawa 1 sat . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        <span id="ceneSisanja">РСД 1800</span>
-        </h4>
-        <h2>Prawe kose i stilizovawe</h2>
-        <h4>
-          Vreme trajawa 30 minuta . . . . . . . . . . . . . . . . . . . . . . .
-          . . . . . 
-          <span id="ceneSisanja">РСД 700</span>
-        </h4>
+        <span id="ceneSisanja">РСД 2100</span>
+      </h4>
+      <h2>Prawe kose i stilizovawe</h2>
+      <h4>
+        Vreme trajawa 20 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        <span id="ceneSisanja">РСД 800</span>
+      </h4>
+      <h2>Farbawe kose</h2>
+      <h4>
+        Vreme trajawa 45 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        <span id="ceneSisanja">РСД 1200</span>
+      </h4>
+      <h2>Farbawe brade</h2>
+      <h4>
+        Vreme trajawa 45 minuta . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        <span id="ceneSisanja">РСД 1000</span>
+      </h4>
         `,
         zakazivanjeH1: 'Zakazivawe',
         dusan: 'Du{an',
@@ -190,7 +190,7 @@ $(document).ready(function () {
           <h4>
               Duration 45 minutes . . . . . . . . . . . . . . . . . . . . . .
             . . . . . . . . .
-            <span id="ceneSisanja">RSD 1400</span>
+            <span id="ceneSisanja">RSD 1700</span>
           </h4>
         </div>
         <div>
@@ -198,7 +198,7 @@ $(document).ready(function () {
           <h4>
           Duration 30 minutes . . . . . . . . . . . . . . . . . . . . . .
             . . . . . . . . .
-            <span id="ceneSisanja"> RSD 1100</span>
+            <span id="ceneSisanja"> RSD 1300</span>
           </h4>
         </div>
   
@@ -206,13 +206,13 @@ $(document).ready(function () {
         <h4>
             Duration 30 minutes  . . . . . . . . . . . . . . . . . . . . . . .
           . . . . . . . .
-          <span id="ceneSisanja">RSD 900</span>
+          <span id="ceneSisanja">RSD 1300</span>
         </h4>
         <h2>Shaving</h2>
         <h4>
            Duration 30 minutes  . . . . . . . . . . . . . . . . . . . . . . .
           . . . . . . . .
-          <span id="ceneSisanja">RSD 1000</span>
+          <span id="ceneSisanja">RSD 1100</span>
         </h4>
         <h2>Beard trim</h2>
         <h4>
@@ -227,7 +227,7 @@ $(document).ready(function () {
         <h4>
             Duration 1 hour and 15 minutes . . . . . . . . . . . . . . . . . . .
           . . . . . .
-          <span id="ceneSisanja">RSD 2100</span>
+          <span id="ceneSisanja">RSD 2400</span>
         </h4>
         <h2>Set 2</h2>
         <h4>
@@ -236,7 +236,7 @@ $(document).ready(function () {
         <h4>
             Duration 1 hour and 15 minutes . . . . . . . . . . . . . . . . . . .
           . . . . . .
-          <span id="ceneSisanja">RSD 2100</span>
+          <span id="ceneSisanja">RSD 2500</span>
         </h4>
         <h2>Set 3</h2>
         <h4>
@@ -245,7 +245,7 @@ $(document).ready(function () {
         <h4>
            Duration 1 hour . . . . . . . . . . . . . . . . . . . .
           . . . . . .
-          <span id="ceneSisanja">RSD 1800</span>
+          <span id="ceneSisanja">RSD 2000</span>
         </h4>
         <h2>Set 4</h2>
         <h4>
@@ -254,13 +254,23 @@ $(document).ready(function () {
         <h4>
            Duration 1 hour . . . . . . . . . . . . . . . . . . .
           . . . . . .
-          <span id="ceneSisanja">RSD 1800</span>
+          <span id="ceneSisanja">RSD 2100</span>
         </h4>
         <h2>Hair Wash and Styling</h2>
         <h4>
             Duration 20 minutes  . . . . . . . . . . . . . . . . . . . . . . .
           . . . . . . . .
-          <span id="ceneSisanja">RSD 700</span>
+          <span id="ceneSisanja">RSD 800</span>
+        </h4>
+        <h2>Hair Dye</h2>
+        <h4>
+          Duration 45 minutes  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+          <span id="ceneSisanja">РСД 1200</span>
+        </h4>
+        <h2>Beard Dye</h2>
+        <h4>
+          Duration 45 minutes  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+          <span id="ceneSisanja">РСД 1000</span>
         </h4>
         `,
         zakazivanjeH1: 'Booking',
@@ -360,6 +370,7 @@ $(document).ready(function () {
         $('#cene h1, #cene h2, #cene h4, #cene span').css('font-family', 'font');
         $('#cene').html(`${serbianLanguage.cenovnik}`);
         $('#cene span').css('float', 'right');
+        $('#cene #special').css('float', 'none');
         $('#cene span').css('margin-top', '-15px');
         $('#zakazivanje h1').html(`${serbianLanguage.zakazivanjeH1} `);
         $('#dusan').html(`${serbianLanguage.dusan}`);
