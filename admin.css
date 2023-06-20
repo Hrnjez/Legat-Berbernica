@@ -103,6 +103,65 @@ body {
     border: 0;
 }
 
+.istorija {
+    background: rgb(132 42 54);
+    outline: 1rem solid rgb(132 42 54);
+    text-align:center;
+    margin: 0rem auto;
+    font-family: 'OSC';
+    position:relative;
+    padding: 2rem 1rem;
+    
+}
+
+
+
+.istorija div {
+    padding: 0rem 1rem;
+    margin: 0rem auto;
+    max-width: 1200px;
+    width: 90%;
+    text-align:center;
+    color: #eee;
+}
+
+.istorija .tt {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.5rem;
+    border-top: 1px solid #eee1;
+}
+
+#tTermin {
+    display: none;
+}
+
+.prikazi {
+    display: block !important;
+}
+
+.istorija .btn {
+    background: rgb(154 54 68);
+    color: #eee;
+    border: 0;
+    padding: 0.25rem 0.75rem;
+    transition: 300ms;
+}
+
+.istorija .btn:hover {
+    cursor: pointer;
+}
+
+.istButtons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem !important;
+}
+
+
 #ui-datepicker-div,
 #ui-datepicker-div table tr,
 #ui-datepicker-div table tr td a {

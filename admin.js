@@ -183,7 +183,16 @@ function zakazivanje(e) {
 
 }
 
+const istorijaBtn = document.querySelector('#istBtn');
+const istorijaContent = document.querySelector('#tTermin')
+istorijaBtn.addEventListener('click', () => {
+    istorijaContent.className = istorijaContent.className === "prikazi" ? "" : "prikazi";
+})
+
+const tTermin = document.querySelector('#tTermin');
+
 function removeTerm() {
+    const date = document.getElementById('datum').value;
     const token = window.localStorage.getItem('token');
 
     const headers = {
@@ -193,15 +202,51 @@ function removeTerm() {
     let urlRemoveLocal = 'http://localhost:8080/admin/term/';
     let urlRemove = 'http://134.122.112.114:8080/legat/admin/term/';
 
-    axios.delete(urlRemove + $(this).attr('id'), headers)
-        .then((response) => {
-            window.alert("Uspešno ste obrisali termin.")
-            dohvatiTermine();
-        }, (error) => {
-            window.alert("Došlo je do greške, molimo pokušajte ponovo.");
-        });
+    //nov kod
+    const now = new Date();
+    
+    const tacanTerm = $(this).parent().parent().html();
+    const tacanTermin = tacanTerm.split('<button')[0].replace(/<td>/g, ' ');
+    console.log(tacanTermin);
+    
+    function zabeleziBrisanje() {
+        const htmlTermin = `
+            <div class='tt'>
+                    <p>Datum termina: ${date}</p>
+                    <p>Vreme brisanja: ${now.toLocaleString()}</p>
+                ${tacanTermin}
+            </div>
+           `;
+        //    const htmlVreme = `<p>${now.toLocaleString()}</p>`;
+           
+           
+           localStorage.setItem("lastData", htmlTermin);
+           tTermin.innerHTML += localStorage.getItem('lastData');
+           console.log(localStorage.getItem('lastData'));
+    }
+    zabeleziBrisanje();
+
+    //kraj novog koda
+
+axios.delete(urlRemove + $(this).attr('id'), headers)
+    .then((response) => {
+        window.alert("Uspešno ste obrisali termin.")
+        dohvatiTermine();
+    }, (error) => {
+        window.alert("Došlo je do greške, molimo pokušajte ponovo.");
+    });
 
 }
+
+tTermin.innerHTML += localStorage.getItem('lastData');
+console.log(localStorage.getItem('lastData'));
+
+let brisanjeIstorijeBtn = document.getElementById('brisanjeIstorije');
+brisanjeIstorijeBtn.addEventListener("click", () => {
+    localStorage.removeItem('lastData')
+    tTermin.innerHTML = '';
+    console.log('obrisano');
+})
 
 function dohvatiTermine() {
 
