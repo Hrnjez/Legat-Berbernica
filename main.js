@@ -84,8 +84,8 @@ $(document).ready(function () {
         $('#cvijaCheck').toggleClass('active');
         $('#vanja').removeClass('active');
         $('#vanjaCheck').removeClass('active');
-        $('#natalija').removeClass('active');
-        $('#natalijaCheck').removeClass('active');
+        $('#nikola').removeClass('active');
+        $('#nikolaCheck').removeClass('active');
         dohvatiTermine();
     }
 
@@ -94,8 +94,8 @@ $(document).ready(function () {
         $('#vanjaCheck').toggleClass('active');
         $('#cvija').removeClass('active');
         $('#cvijaCheck').removeClass('active');
-        $('#natalija').removeClass('active');
-        $('#natalijaCheck').removeClass('active');
+        $('#nikola').removeClass('active');
+        $('#nikolaCheck').removeClass('active');
         dohvatiTermine();
     }
 
@@ -104,8 +104,8 @@ $(document).ready(function () {
         $('#cvijaCheck').removeClass('active');
         $('#vanja').removeClass('active');
         $('#vanjaCheck').removeClass('active');
-        $('#natalija').toggleClass('active');
-        $('#natalijaCheck').toggleClass('active');
+        $('#nikola').toggleClass('active');
+        $('#nikolaCheck').toggleClass('active');
         dohvatiTermine();
     }
 
@@ -115,7 +115,7 @@ $(document).ready(function () {
     $('#vanja').on('click', function(){
         birajVanju();
     })
-    $('#natalija').on('click', function(){
+    $('#nikola').on('click', function(){
         birajNataliju();
     })
 
@@ -135,15 +135,15 @@ $(document).ready(function () {
         var broj = document.getElementById('broj');
         var cvija = document.getElementById('cvija');
         var vanja = document.getElementById('vanja');
-        var natalija = document.getElementById('natalija');
+        var nikola = document.getElementById('nikola');
         var frizer = undefined;
 
         if (cvija.className == 'active') {
             frizer = cvija.id;
         } else if (vanja.className == 'active') {
             frizer = vanja.id;
-        } else if (natalija.className == 'active') {
-            frizer = natalija.id;
+        } else if (nikola.className == 'active') {
+            frizer = nikola.id;
         }
 
         var term = {
@@ -200,15 +200,15 @@ $(document).ready(function () {
         var usluga = document.getElementById("usluga");
         var cvija = document.getElementById('cvija');
         var vanja = document.getElementById('vanja');
-        var natalija = document.getElementById('natalija');
+        var nikola = document.getElementById('nikola');
         var frizer = undefined;
 
         if (cvija.className == 'active') {
             frizer = cvija.id;
         } else if (vanja.className == 'active') {
             frizer = vanja.id;
-        } else if (natalija.className == 'active') {
-            frizer = natalija.id;
+        } else if (nikola.className == 'active') {
+            frizer = nikola.id;
         }
 
         if (
