@@ -728,7 +728,7 @@ select {
   width: 80%;
   max-width: 800px;
   display: grid;
-  grid-template-columns: 1fr ;
+  grid-template-columns: 1fr 1fr ;
   grid-gap: 20px;
   margin-top:3rem;
 }
@@ -738,13 +738,13 @@ select {
   max-width: 900px;
   width: 95%;
   margin: auto;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .input-fields {
   max-width: 400px;
   width: 95%;
-  margin: auto;
+  margin: 0 auto auto;
   display: grid;
   grid-template-columns: 1fr ;
 }
@@ -756,12 +756,11 @@ select {
 #zakazivanje button {
   font-family: "font";
   padding: 20px 30px;
-  margin-top: 20px;
-  margin-bottom: 20px;
   background-color: white;
   color: brown;
-  width: 200px;
+  width: 96%;
   font-size: 20px;
+  margin: 35px 8px;
 }
 #zakazivanje button:hover {
   background-color: rgb(231, 222, 222);
