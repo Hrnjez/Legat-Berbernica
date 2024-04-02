@@ -200,6 +200,7 @@ $(document).ready(function () {
         var usluga = document.getElementById("usluga");
         var cvija = document.getElementById('cvija');
         var vanja = document.getElementById('vanja');
+        var vlada = document.getElementById('vlada');
         var frizer = undefined;
 
         if (cvija.className == 'active') {
