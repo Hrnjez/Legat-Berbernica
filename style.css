@@ -725,20 +725,20 @@ select {
 #inputBoxes {
   margin: auto;
   text-align: justify;
-  width: 80%;
-  max-width: 800px;
+  width: 90%;
+  max-width: 1000px;
   display: grid;
-  grid-template-columns: 1fr 1fr ;
+  grid-template-columns: 1fr ;
   grid-gap: 20px;
   margin-top:3rem;
 }
 
 .team-content {
   display: grid;
-  max-width: 900px;
-  width: 95%;
+  max-width: 1000px;
+  width: 100%;
   margin: auto;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .input-fields {
@@ -1093,7 +1093,7 @@ select {
     margin: 3rem auto;
   }
   #inputBoxes {
-    width: 50%;
+    width: 90%;
   }
   #inputBoxes .fas {
     margin-left: -80px;
