@@ -84,8 +84,8 @@ $(document).ready(function () {
         $('#cvijaCheck').toggleClass('active');
         $('#vanja').removeClass('active');
         $('#vanjaCheck').removeClass('active');
-        // $('#vlada').removeClass('active');
-        // $('#vladaCheck').removeClass('active');
+        $('#teodora').removeClass('active');
+        $('#teodoraCheck').removeClass('active');
         dohvatiTermine();
     }
 
@@ -94,20 +94,20 @@ $(document).ready(function () {
         $('#vanjaCheck').toggleClass('active');
         $('#cvija').removeClass('active');
         $('#cvijaCheck').removeClass('active');
-        // $('#vlada').removeClass('active');
-        // $('#vladaCheck').removeClass('active');
+        $('#teodora').removeClass('active');
+        $('#teodoraCheck').removeClass('active');
         dohvatiTermine();
     }
 
-    // function birajVladu() {
-    //     $('#vanja').removeClass('active');
-    //     $('#vanjaCheck').removeClass('active');
-    //     $('#cvija').removeClass('active');
-    //     $('#cvijaCheck').removeClass('active');
-    //     $('#vlada').toggleClass('active');
-    //     $('#vladaCheck').toggleClass('active');
-    //     dohvatiTermine();
-    // }
+    function birajTeodoru() {
+        $('#vanja').removeClass('active');
+        $('#vanjaCheck').removeClass('active');
+        $('#cvija').removeClass('active');
+        $('#cvijaCheck').removeClass('active');
+        $('#teodora').toggleClass('active');
+        $('#teodoraCheck').toggleClass('active');
+        dohvatiTermine();
+    }
 
     $('#cvija').on('click', function(){
         birajCviju();
@@ -115,9 +115,9 @@ $(document).ready(function () {
     $('#vanja').on('click', function(){
         birajVanju();
     })
-    // $('#vlada').on('click', function(){
-    //     birajVladu();
-    // })
+    $('#teodora').on('click', function(){
+        birajTeodoru();
+    })
 
 
     $("#zakazi").on("click", zakazivanjeTermina);
@@ -135,7 +135,7 @@ $(document).ready(function () {
         var broj = document.getElementById('broj');
         var cvija = document.getElementById('cvija');
         var vanja = document.getElementById('vanja');
-        // var vlada = document.getElementById('vlada');
+        var teodora = document.getElementById('teodora');
         var frizer = undefined;
 
         if (cvija.className == 'active') {
@@ -143,9 +143,9 @@ $(document).ready(function () {
         } else if (vanja.className == 'active') {
             frizer = vanja.id;
         } 
-        // else if (vlada.className == 'active') {
-        //     frizer = vlada.id;
-        // }
+        else if (teodora.className == 'active') {
+            frizer = teodora.id;
+        }
 
         var term = {
             "barber": frizer,
@@ -201,7 +201,7 @@ $(document).ready(function () {
         var usluga = document.getElementById("usluga");
         var cvija = document.getElementById('cvija');
         var vanja = document.getElementById('vanja');
-        // var vlada = document.getElementById('vlada');
+        var teodora = document.getElementById('teodora');
         var frizer = undefined;
 
         if (cvija.className == 'active') {
@@ -209,9 +209,9 @@ $(document).ready(function () {
         } else if (vanja.className == 'active') {
             frizer = vanja.id;
         } 
-        // else if (vlada.className == 'active') {
-        //     frizer = vlada.id;
-        // }
+        else if (teodora.className == 'active') {
+            frizer = teodora.id;
+        }
 
         if (
             datum.value !== "" &&
