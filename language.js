@@ -7,6 +7,7 @@ $(document).ready(function () {
         rezervacija: 'Rezervacija',
         kontakt: 'Kontakt',
         oNamaH1: ' O nama',
+        recenzija: 'Ostavi recenziju',
         oNamaP: "Berbernica Legat se nalazi u jednom od najlep{ih delova Vra<span class='small-letter'>^</span>ara, u samom srcu Beograda. Legat nije obi<span class='small-letter'>^</span>na berberbnica, to je klub u kome }e svaki gospodin u`ivati u komforu entrerijera, fino}i pi}a i visokom kvalitetu usluga. Verujemo da svaki mu{karac treba da nosi frizuru koja pristaje wegovom karakteru, stilu i na<span class='small-letter'>^</span>inu `ivota. Bilo da `elite klasi<span class='small-letter'>^</span>nu frizuru '50-ih, <span class='eng-word'>fade</span> sa bezbroj varijacija ili neprevazi<span class=\"small-letter\">\\</span>eni <span class='eng-word'>rockabilly</span> stil,na{i berberi }e biti na visini zadatka. Negujemo tradiciju dok pratimo novitete. Pored frizura, tu smo da se postaramo i za izgled Va{e brade i brkova. Verujemo u kvalitet i nastojimo da vam pru`imo prvoklasnu uslugu. Britva je na{ omiljeni alat, zato je brijawe na{a u`a specijalnost.",
         kontaktH3: 'Kontakt',
         kontaktP: 'Telefon: <a  href="tel:0665468186"> <i class="fas fa-phone-square-alt"></i> 0665468186</a>',
@@ -172,6 +173,7 @@ $(document).ready(function () {
         bradaIFriz: '',
         bradaIFrizP: '',
         oNamaH1: 'About Us',
+        recenzija: 'Write a review',
         oNamaP: 'Тhe barbershop “Legacy” is located in one of the most beautiful parts of Vracar, in the heart of Belgrade. The “Legacy” is not an ordinary barbershop, it is a club where every gentleman can enjoy in the comfort of the interior, fine liquor  and the high quality services. We believe that every man should wear a hairstyle that suits his character, and lifestyle. Whether you want a classic ’50s hairstyle, a fade, with countless variations, or a superior rockabilly style, our barbers will be up to the task. While we respect the old school, we keep up with new trends. Aside from hairstyling, we are here to take care of your beard and mustache.  We believe in quality, аnd we take our time to ensure you get the best haircut and shave possible. The razor is our favorite tool,therefore, shaving is our specialty.',
         kontaktH3: 'Contact',
         kontaktP: 'Phone: <a  href="tel:0665468186"> <i class="fas fa-phone-square-alt"></i> 0665468186</a>',
@@ -343,7 +345,9 @@ $(document).ready(function () {
         $('#btnCene').text(`${serbianLanguage.cene}`);
         $('#btnRez').text(`${serbianLanguage.rezervacija}`);
         $('#btnKontakt').text(`${serbianLanguage.kontakt}`);
+        $('.btn-review').text(`${serbianLanguage.recenzija}`);
         $('#navBar button').css('font-family', 'font');
+        $('#navBar a').css('font-family', 'font');
         $('#navBar').css('padding', '10px 3px');
         $('#oNamaTekst h1').html(`<h1>${serbianLanguage.oNamaH1}</h1>`);
         $('#oNamaTekst p').html(`<p>${serbianLanguage.oNamaP}</p>`);
@@ -398,7 +402,9 @@ $(document).ready(function () {
         $('#btnCene').text(`${englishLanguage.cene}`);
         $('#btnRez').text(`${englishLanguage.rezervacija}`);
         $('#btnKontakt').text(`${englishLanguage.kontakt}`);
+        $('.btn-review').text(`${englishLanguage.recenzija}`);
         $('#navBar button').css('font-family', 'OSC');
+        $('#navBar a').css('font-family', 'OSC');
         $('#slogan').html(`
         <img src="img/legat-logo.png" alt="" />
 
