@@ -701,8 +701,9 @@ cursor: grab;
 }
 #zakazivanje h1 {
   font-family: "font";
-  padding: 20px;
-  margin-bottom: 0px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 
 }
 #zakazivanje p {
