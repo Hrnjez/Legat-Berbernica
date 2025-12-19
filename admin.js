@@ -66,7 +66,7 @@ function pauza(e) {
         vreme.value !== ""
     ) {
 
-        var url = 'http://134.122.112.114:8080/legat/admin/break';
+        var url = 'https://berbernicalegat.rs/legat/admin/break';
         var urlLocal = 'http://localhost:8080/admin/break';
 
         axios.post(url, term, headers)
@@ -106,7 +106,7 @@ function changeWorkingHours() {
 
     endTime = document.getElementById('endTime').value;
 
-    let url = 'http://134.122.112.114:8080/legat/admin/scheduler';
+    let url = 'https://berbernicalegat.rs/legat/admin/scheduler';
     let urlLocal = 'http://localhost:8080/admin/scheduler';
 
     var scheduler = {
@@ -161,7 +161,7 @@ function zakazivanje(e) {
         ime.value !== "" &&
         broj.value !== ""
     ) {
-        var url = 'http://134.122.112.114:8080/legat/admin/term';
+        var url = 'https://berbernicalegat.rs/legat/admin/term';
         var urlLocal = 'http://localhost:8080/admin/term';
 
         axios.post(url, term, headers)
@@ -200,7 +200,7 @@ function removeTerm() {
     };
 
     let urlRemoveLocal = 'http://localhost:8080/admin/term/';
-    let urlRemove = 'http://134.122.112.114:8080/legat/admin/term/';
+    let urlRemove = 'https://berbernicalegat.rs/legat/admin/term/';
 
     //nov kod
     const now = new Date();
@@ -266,7 +266,7 @@ function dohvatiTermine() {
     ) {
 
         let urlLocal = 'http://localhost:8080/admin/terms/';
-        let url = 'http://134.122.112.114:8080/legat/admin/terms/';
+        let url = 'https://berbernicalegat.rs/legat/admin/terms/';
 
         axios.get(url + barber + '/' + date, headers).then(
             (response) => {
@@ -337,7 +337,7 @@ function dohvatiTermine() {
         );
 
         let urlSchedulerLocal = 'http://localhost:8080/admin/scheduler/';
-        let urlScheduler = 'http://134.122.112.114:8080/legat/admin/scheduler/';
+        let urlScheduler = 'https://berbernicalegat.rs/legat/admin/scheduler/';
 
         axios.get(urlScheduler + barber + '/' + date, headers).then(
             (response) => {

@@ -165,7 +165,7 @@ $(document).ready(function () {
             broj.value !== ""
         ) {
 
-            var url = 'http://134.122.112.114:8080/legat/term';
+            var url = 'https://berbernicalegat.rs/legat/term';
             var urlLocal = 'http://localhost:8080/term';
 
             axios.post(url, term)
@@ -218,7 +218,7 @@ $(document).ready(function () {
             usluga.value !== "" &&
             frizer !== undefined
         ) {
-            var url = 'http://134.122.112.114:8080/legat/freeTerms/';
+            var url = 'https://berbernicalegat.rs/legat/freeTerms/';
             var urlLocal = 'http://localhost:8080/freeTerms/';
 
             axios.get(url + frizer + "/" + datum.value + "/" + usluga.value).then(

@@ -13,7 +13,7 @@ function login(e) {
     };
 
 
-    let url = 'http://134.122.112.114:8080/legat/login';
+    let url = 'https://berbernicalegat.rs/legat/login';
     let urlLocal = 'http://localhost:8080/login';
 
     axios.post(url, user)
